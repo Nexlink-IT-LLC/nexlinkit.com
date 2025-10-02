@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Billing - Customer Portal - Nexlink IT LLC</title>
+    <meta name="description" content="View your billing history, invoices, and manage payment methods." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Theme bootstrap -->
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = stored || (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch (_) {}
+      })();
+    </script>
+
+    <!-- Tailwind via CDN for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eff9ff',
+                100: '#dff2ff',
+                200: '#b9e6ff',
+                300: '#7fd3ff',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+            },
+            boxShadow: {
+              glow: '0 10px 30px -10px rgba(14,165,233,.45)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="portal-styles.css" />
+  </head>
+  <body class="min-h-screen bg-neutral-50 text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+    <!-- Decorative background -->
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute left-1/2 top-[5%] h-64 w-64 -translate-x-1/2 rounded-full bg-brand-500/10 blur-3xl filter"></div>
+    </div>
+
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/80 supports-[backdrop-filter]:dark:bg-neutral-900/80 border-b border-neutral-200 dark:border-neutral-800">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-4">
+          <a href="../index.html" class="group inline-flex items-center gap-2">
+            <div>
+              <div class="font-semibold leading-tight">Nexlink IT</div>
+              <div class="text-xs text-neutral-500 dark:text-neutral-400">Customer Portal</div>
+            </div>
+          </a>
+        </div>
+        
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="index.html" class="portal-nav-link">Dashboard</a>
+          <a href="account.html" class="portal-nav-link">Account</a>
+          <a href="billing.html" class="portal-nav-link active">Billing</a>
+          <a href="support.html" class="portal-nav-link">Support</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">🌙</button>
+          <div class="flex items-center gap-2 text-sm">
+            <div class="w-8 h-8 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center font-semibold text-brand-700 dark:text-brand-300">JD</div>
+            <span class="hidden sm:inline">John Doe</span>
+          </div>
+          <button class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="md:hidden bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800 px-4 py-2">
+      <div class="flex gap-4 overflow-x-auto">
+        <a href="index.html" class="portal-nav-link-mobile">Dashboard</a>
+        <a href="account.html" class="portal-nav-link-mobile">Account</a>
+        <a href="billing.html" class="portal-nav-link-mobile active">Billing</a>
+        <a href="support.html" class="portal-nav-link-mobile">Support</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+      <!-- Page Header -->
+      <div class="mb-8" data-animate>
+        <h1 class="text-3xl font-bold tracking-tight">Billing & Invoices</h1>
+        <p class="mt-2 text-neutral-600 dark:text-neutral-300">Manage your billing information, view invoices, and track payments.</p>
+      </div>
+
+      <!-- Billing Summary Cards -->
+      <div class="mb-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-animate>
+        <div class="dashboard-card">
+          <div class="dashboard-card-icon">💳</div>
+          <div>
+            <div class="dashboard-card-label">Current Balance</div>
+            <div class="dashboard-card-value">$0.00</div>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <div class="dashboard-card-icon">📅</div>
+          <div>
+            <div class="dashboard-card-label">Next Payment</div>
+            <div class="dashboard-card-value">Oct 21</div>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <div class="dashboard-card-icon">💰</div>
+          <div>
+            <div class="dashboard-card-label">Monthly Cost</div>
+            <div class="dashboard-card-value">$75.00</div>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <div class="dashboard-card-icon">📊</div>
+          <div>
+            <div class="dashboard-card-label">YTD Spending</div>
+            <div class="dashboard-card-value">$675.00</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-3">
+        <!-- Invoice History -->
+        <div class="lg:col-span-2">
+          <div class="dashboard-panel" data-animate>
+            <div class="dashboard-panel-header">
+              <h2 class="dashboard-panel-title">Recent Invoices</h2>
+              <button class="btn-secondary">Download All</button>
+            </div>
+            <div class="dashboard-panel-content">
+              <div class="overflow-x-auto">
+                <table class="w-full">
+                  <thead>
+                    <tr class="border-b border-neutral-200 dark:border-neutral-800">
+                      <th class="text-left py-3 font-semibold">Invoice</th>
+                      <th class="text-left py-3 font-semibold">Date</th>
+                      <th class="text-left py-3 font-semibold">Amount</th>
+                      <th class="text-left py-3 font-semibold">Status</th>
+                      <th class="text-left py-3 font-semibold">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b border-neutral-100 dark:border-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-900/50">
+                      <td class="py-4">
+                        <div class="font-semibold">#INV-2025-0021</div>
+                        <div class="text-sm text-neutral-600 dark:text-neutral-400">September 2025</div>
+                      </td>
+                      <td class="py-4">Sep 21, 2025</td>
+                      <td class="py-4 font-semibold">$75.00</td>
+                      <td class="py-4">
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Paid</span>
+                      </td>
+                      <td class="py-4">
+                        <button class="text-brand-600 hover:text-brand-700 font-medium">Download</button>
+                      </td>
+                    </tr>
+                    <tr class="border-b border-neutral-100 dark:border-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-900/50">
+                      <td class="py-4">
+                        <div class="font-semibold">#INV-2025-0020</div>
+                        <div class="text-sm text-neutral-600 dark:text-neutral-400">August 2025</div>
+                      </td>
+                      <td class="py-4">Aug 21, 2025</td>
+                      <td class="py-4 font-semibold">$75.00</td>
+                      <td class="py-4">
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Paid</span>
+                      </td>
+                      <td class="py-4">
+                        <button class="text-brand-600 hover:text-brand-700 font-medium">Download</button>
+                      </td>
+                    </tr>
+                    <tr class="border-b border-neutral-100 dark:border-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-900/50">
+                      <td class="py-4">
+                        <div class="font-semibold">#INV-2025-0019</div>
+                        <div class="text-sm text-neutral-600 dark:text-neutral-400">July 2025</div>
+                      </td>
+                      <td class="py-4">Jul 21, 2025</td>
+                      <td class="py-4 font-semibold">$75.00</td>
+                      <td class="py-4">
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Paid</span>
+                      </td>
+                      <td class="py-4">
+                        <button class="text-brand-600 hover:text-brand-700 font-medium">Download</button>
+                      </td>
+                    </tr>
+                    <tr class="border-b border-neutral-100 dark:border-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-900/50">
+                      <td class="py-4">
+                        <div class="font-semibold">#INV-2025-0018</div>
+                        <div class="text-sm text-neutral-600 dark:text-neutral-400">June 2025</div>
+                      </td>
+                      <td class="py-4">Jun 21, 2025</td>
+                      <td class="py-4 font-semibold">$75.00</td>
+                      <td class="py-4">
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Paid</span>
+                      </td>
+                      <td class="py-4">
+                        <button class="text-brand-600 hover:text-brand-700 font-medium">Download</button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-neutral-50 dark:hover:bg-neutral-900/50">
+                      <td class="py-4">
+                        <div class="font-semibold">#INV-2025-0017</div>
+                        <div class="text-sm text-neutral-600 dark:text-neutral-400">May 2025</div>
+                      </td>
+                      <td class="py-4">May 21, 2025</td>
+                      <td class="py-4 font-semibold">$75.00</td>
+                      <td class="py-4">
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Paid</span>
+                      </td>
+                      <td class="py-4">
+                        <button class="text-brand-600 hover:text-brand-700 font-medium">Download</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="mt-4 flex justify-center">
+                <button class="btn-secondary">Load More Invoices</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment & Plan Info -->
+        <div class="space-y-8">
+          <!-- Current Plan -->
+          <div class="dashboard-panel" data-animate>
+            <div class="dashboard-panel-header">
+              <h2 class="dashboard-panel-title">Current Plan</h2>
+            </div>
+            <div class="dashboard-panel-content">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-brand-600">Business Pro</div>
+                <div class="text-3xl font-bold mt-2">$75<span class="text-lg text-neutral-600 dark:text-neutral-400">/month</span></div>
+                <div class="mt-4 space-y-2 text-sm">
+                  <div class="flex items-center gap-2">
+                    <span class="text-green-500">✓</span>
+                    <span>Priority Support</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-green-500">✓</span>
+                    <span>1-hour Response Time</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-green-500">✓</span>
+                    <span>Unlimited Tickets</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-green-500">✓</span>
+                    <span>Monthly Health Check</span>
+                  </div>
+                </div>
+                <div class="mt-6 space-y-2">
+                  <button class="btn-primary w-full">Upgrade Plan</button>
+                  <button class="btn-secondary w-full">Change Plan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment Method -->
+          <div class="dashboard-panel" data-animate>
+            <div class="dashboard-panel-header">
+              <h2 class="dashboard-panel-title">Payment Method</h2>
+            </div>
+            <div class="dashboard-panel-content">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between p-4 border border-neutral-200 dark:border-neutral-800 rounded-lg">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded flex items-center justify-center text-white font-bold text-sm">💳</div>
+                    <div>
+                      <div class="font-semibold">•••• •••• •••• 4567</div>
+                      <div class="text-sm text-neutral-600 dark:text-neutral-400">Expires 12/27</div>
+                    </div>
+                  </div>
+                  <span class="badge">Primary</span>
+                </div>
+                <button class="btn-secondary w-full">Update Payment Method</button>
+                <button class="btn-secondary w-full">Add Payment Method</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Billing Address -->
+          <div class="dashboard-panel" data-animate>
+            <div class="dashboard-panel-header">
+              <h2 class="dashboard-panel-title">Billing Address</h2>
+            </div>
+            <div class="dashboard-panel-content">
+              <div class="space-y-2 text-sm">
+                <div class="font-semibold">John Doe</div>
+                <div>Acme Corp</div>
+                <div>123 Business Street</div>
+                <div>Suite 100</div>
+                <div>New York, NY 10001</div>
+                <div>United States</div>
+              </div>
+              <div class="mt-4">
+                <button class="btn-secondary w-full">Update Address</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Billing Contacts -->
+          <div class="dashboard-panel" data-animate>
+            <div class="dashboard-panel-header">
+              <h2 class="dashboard-panel-title">Billing Contacts</h2>
+            </div>
+            <div class="dashboard-panel-content">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <div class="font-semibold">john.doe@example.com</div>
+                    <div class="text-sm text-neutral-600 dark:text-neutral-400">Primary</div>
+                  </div>
+                  <span class="badge">Active</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <div class="font-semibold">billing@acmecorp.com</div>
+                    <div class="text-sm text-neutral-600 dark:text-neutral-400">Secondary</div>
+                  </div>
+                  <span class="badge">Active</span>
+                </div>
+              </div>
+              <div class="mt-4">
+                <button class="btn-secondary w-full">Manage Contacts</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 dark:border-neutral-800 mt-16">
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div class="text-sm text-neutral-600 dark:text-neutral-400">
+            © 2025 Nexlink IT LLC. All rights reserved.
+          </div>
+          <div class="flex items-center gap-6 text-sm">
+            <a href="../contact.html" class="footer-link">Support</a>
+            <a href="../legal/privacy-policy.html" class="footer-link">Privacy</a>
+            <a href="../legal/terms-of-service.html" class="footer-link">Customer Agreement</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="portal-script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support - Customer Portal - Nexlink IT LLC</title>
+    <meta name="description" content="View your support tickets, create new requests, and get help." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Theme bootstrap -->
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = stored || (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch (_) {}
+      })();
+    </script>
+
+    <!-- Tailwind via CDN for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eff9ff',
+                100: '#dff2ff',
+                200: '#b9e6ff',
+                300: '#7fd3ff',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+            },
+            boxShadow: {
+              glow: '0 10px 30px -10px rgba(14,165,233,.45)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="portal-styles.css" />
+  </head>
+  <body class="min-h-screen bg-neutral-50 text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+    <!-- Decorative background -->
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute left-1/2 top-[5%] h-64 w-64 -translate-x-1/2 rounded-full bg-brand-500/10 blur-3xl filter"></div>
+    </div>
+
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/80 supports-[backdrop-filter]:dark:bg-neutral-900/80 border-b border-neutral-200 dark:border-neutral-800">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-4">
+          <a href="../index.html" class="group inline-flex items-center gap-2">
+            <div>
+              <div class="font-semibold leading-tight">Nexlink IT</div>
+              <div class="text-xs text-neutral-500 dark:text-neutral-400">Customer Portal</div>
+            </div>
+          </a>
+        </div>
+        
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="index.html" class="portal-nav-link">Dashboard</a>
+          <a href="account.html" class="portal-nav-link">Account</a>
+          <a href="billing.html" class="portal-nav-link">Billing</a>
+          <a href="support.html" class="portal-nav-link active">Support</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">🌙</button>
+          <div class="flex items-center gap-2 text-sm">
+            <div class="w-8 h-8 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center font-semibold text-brand-700 dark:text-brand-300">JD</div>
+            <span class="hidden sm:inline">John Doe</span>
+          </div>
+          <button class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="md:hidden bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800 px-4 py-2">
+      <div class="flex gap-4 overflow-x-auto">
+        <a href="index.html" class="portal-nav-link-mobile">Dashboard</a>
+        <a href="account.html" class="portal-nav-link-mobile">Account</a>
+        <a href="billing.html" class="portal-nav-link-mobile">Billing</a>
+        <a href="support.html" class="portal-nav-link-mobile active">Support</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+      <!-- Page Header -->
+      <div class="mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4" data-animate>
+        <div>
+          <h1 class="text-3xl font-bold tracking-tight">Support Center</h1>
+          <p class="mt-2 text-neutral-600 dark:text-neutral-300">Get help with your services and manage support tickets.</p>
+        </div>
+        <button class="btn-primary">Create New Ticket</button>
+      </div>
+
+      <!-- Support Stats -->
+      <div class="mb-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-animate>
+        <div class="dashboard-card">
+          <div class="dashboard-card-icon">🎫</div>
+          <div>
+            <div class="dashboard-card-label">Open Tickets</div>
+            <div class="dashboard-card-value text-orange-600 dark:text-orange-400">2</div>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <div class="dashboard-card-icon">✅</div>
+          <div>
+            <div class="dashboard-card-label">Resolved This Month</div>
+            <div class="dashboard-card-value text-green-600 dark:text-green-400">5</div>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <div class="dashboard-card-icon">⏱️</div>
+          <div>
+            <div class="dashboard-card-label">Avg Response Time</div>
+            <div class="dashboard-card-value">45 min</div>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <div class="dashboard-card-icon">🌟</div>
+          <div>
+            <div class="dashboard-card-label">Satisfaction</div>
+            <div class="dashboard-card-value">98%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-3">
+        <!-- Support Tickets -->
+        <div class="lg:col-span-2">
+          <div class="dashboard-panel" data-animate>
+            <div class="dashboard-panel-header">
+              <h2 class="dashboard-panel-title">Recent Support Tickets</h2>
+              <div class="flex gap-2">
+                <select class="text-sm border border-neutral-200 dark:border-neutral-800 rounded-lg px-3 py-1 bg-white dark:bg-neutral-900">
+                  <option>All Tickets</option>
+                  <option>Open</option>
+                  <option>In Progress</option>
+                  <option>Resolved</option>
+                </select>
+              </div>
+            </div>
+            <div class="dashboard-panel-content">
+              <div class="space-y-4">
+                <!-- Ticket 1 -->
+                <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 hover:border-brand-200 dark:hover:border-brand-800 transition cursor-pointer">
+                  <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                      <div class="flex items-center gap-3 mb-2">
+                        <span class="font-semibold">#1234</span>
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200">In Progress</span>
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">High Priority</span>
+                      </div>
+                      <h3 class="font-semibold text-lg mb-1">Nextcloud Migration Assistance</h3>
+                      <p class="text-neutral-600 dark:text-neutral-400 text-sm mb-3">Need help migrating my Nextcloud instance to a new server. Current setup is running on Ubuntu 20.04 and I want to upgrade to 24.04.</p>
+                      <div class="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
+                        <span>Created: Sep 19, 2025</span>
+                        <span>Last update: 2 hours ago</span>
+                        <span>Assigned to: Mike Johnson</span>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-sm text-neutral-500 dark:text-neutral-400">90% Complete</div>
+                      <div class="w-16 h-2 bg-neutral-200 dark:bg-neutral-700 rounded-full mt-1">
+                        <div class="w-14 h-2 bg-brand-500 rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Ticket 2 -->
+                <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 hover:border-brand-200 dark:hover:border-brand-800 transition cursor-pointer">
+                  <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                      <div class="flex items-center gap-3 mb-2">
+                        <span class="font-semibold">#1235</span>
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">Open</span>
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Medium Priority</span>
+                      </div>
+                      <h3 class="font-semibold text-lg mb-1">SSL Certificate Renewal</h3>
+                      <p class="text-neutral-600 dark:text-neutral-400 text-sm mb-3">My SSL certificate expires next month. Please help renew it and ensure automatic renewal is configured.</p>
+                      <div class="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
+                        <span>Created: Sep 20, 2025</span>
+                        <span>Last update: 1 day ago</span>
+                        <span>Unassigned</span>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-sm text-neutral-500 dark:text-neutral-400">Pending</div>
+                      <div class="w-16 h-2 bg-neutral-200 dark:bg-neutral-700 rounded-full mt-1">
+                        <div class="w-1 h-2 bg-blue-500 rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Ticket 3 - Resolved -->
+                <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 hover:border-brand-200 dark:hover:border-brand-800 transition cursor-pointer opacity-75">
+                  <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                      <div class="flex items-center gap-3 mb-2">
+                        <span class="font-semibold">#1233</span>
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Resolved</span>
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Low Priority</span>
+                      </div>
+                      <h3 class="font-semibold text-lg mb-1">Server Performance Optimization</h3>
+                      <p class="text-neutral-600 dark:text-neutral-400 text-sm mb-3">Server seems slower than usual. Please check for any performance issues and optimize if needed.</p>
+                      <div class="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
+                        <span>Created: Sep 15, 2025</span>
+                        <span>Resolved: Sep 18, 2025</span>
+                        <span>Resolved by: Sarah Chen</span>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-sm text-green-600 dark:text-green-400">Completed</div>
+                      <div class="w-16 h-2 bg-green-200 dark:bg-green-800 rounded-full mt-1">
+                        <div class="w-16 h-2 bg-green-500 rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-6 flex justify-center">
+                <button class="btn-secondary">View All Tickets</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Support Info & Actions -->
+        <div class="space-y-8">
+          <!-- Quick Actions -->
+          <div class="dashboard-panel" data-animate>
+            <div class="dashboard-panel-header">
+              <h2 class="dashboard-panel-title">Quick Actions</h2>
+            </div>
+            <div class="dashboard-panel-content">
+              <div class="space-y-3">
+                <button class="quick-action-btn">
+                  <span class="quick-action-icon">🎫</span>
+                  <span>Create Support Ticket</span>
+                </button>
+                <button class="quick-action-btn">
+                  <span class="quick-action-icon">💬</span>
+                  <span>Live Chat Support</span>
+                </button>
+                <button class="quick-action-btn">
+                  <span class="quick-action-icon">📞</span>
+                  <span>Schedule Phone Call</span>
+                </button>
+                <button class="quick-action-btn">
+                  <span class="quick-action-icon">📚</span>
+                  <span>Browse Knowledge Base</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Support Team -->
+          <div class="dashboard-panel" data-animate>
+            <div class="dashboard-panel-header">
+              <h2 class="dashboard-panel-title">Your Support Team</h2>
+            </div>
+            <div class="dashboard-panel-content">
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center font-semibold text-brand-700 dark:text-brand-300">MJ</div>
+                  <div>
+                    <div class="font-semibold">Mike Johnson</div>
+                    <div class="text-sm text-neutral-600 dark:text-neutral-400">Senior Technician</div>
+                  </div>
+                  <div class="ml-auto">
+                    <span class="inline-flex items-center w-2 h-2 bg-green-500 rounded-full"></span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center font-semibold text-purple-700 dark:text-purple-300">SC</div>
+                  <div>
+                    <div class="font-semibold">Sarah Chen</div>
+                    <div class="text-sm text-neutral-600 dark:text-neutral-400">System Administrator</div>
+                  </div>
+                  <div class="ml-auto">
+                    <span class="inline-flex items-center w-2 h-2 bg-green-500 rounded-full"></span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900 flex items-center justify-center font-semibold text-orange-700 dark:text-orange-300">DR</div>
+                  <div>
+                    <div class="font-semibold">David Rodriguez</div>
+                    <div class="text-sm text-neutral-600 dark:text-neutral-400">Network Specialist</div>
+                  </div>
+                  <div class="ml-auto">
+                    <span class="inline-flex items-center w-2 h-2 bg-yellow-500 rounded-full"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Support Hours -->
+          <div class="dashboard-panel" data-animate>
+            <div class="dashboard-panel-header">
+              <h2 class="dashboard-panel-title">Support Hours</h2>
+            </div>
+            <div class="dashboard-panel-content">
+              <div class="space-y-3 text-sm">
+                <div class="flex justify-between">
+                  <span>Monday - Friday</span>
+                  <span class="font-semibold">24/7</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Saturday</span>
+                  <span class="font-semibold">24/7</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Sunday</span>
+                  <span class="font-semibold">24/7</span>
+                </div>
+                <hr class="border-neutral-200 dark:border-neutral-800">
+                <div class="flex justify-between">
+                  <span>Emergency Support</span>
+                  <span class="font-semibold text-brand-600">Always Available</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Response Time (Priority)</span>
+                  <span class="font-semibold text-green-600">1 hour</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="dashboard-panel" data-animate>
+            <div class="dashboard-panel-header">
+              <h2 class="dashboard-panel-title">Contact Information</h2>
+            </div>
+            <div class="dashboard-panel-content">
+              <div class="space-y-3">
+                <div class="flex items-center gap-3">
+                  <span class="text-brand-600">📧</span>
+                  <div>
+                    <div class="font-semibold">Email</div>
+                    <div class="text-sm">support@nexlink.website</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-brand-600">📞</span>
+                  <div>
+                    <div class="font-semibold">Phone</div>
+                    <div class="text-sm">(307) 289-5340</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-brand-600">💬</span>
+                  <div>
+                    <div class="font-semibold">Live Chat</div>
+                    <div class="text-sm">Available in portal</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 dark:border-neutral-800 mt-16">
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div class="text-sm text-neutral-600 dark:text-neutral-400">
+            © 2025 Nexlink IT LLC. All rights reserved.
+          </div>
+          <div class="flex items-center gap-6 text-sm">
+            <a href="../contact.html" class="footer-link">Support</a>
+            <a href="../legal/privacy-policy.html" class="footer-link">Privacy</a>
+            <a href="../legal/terms-of-service.html" class="footer-link">Customer Agreement</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="portal-script.js"></script>
+  </body>
+</html>

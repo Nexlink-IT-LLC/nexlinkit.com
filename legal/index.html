@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Customer Agreement - Nexlink IT LLC</title>
+    <meta name="description" content="Terms of Service for Nexlink IT LLC - Professional IT services including Nextcloud, Linux servers, hosting, and technical support." />
+    <meta property="og:title" content="Terms of Service - Nexlink IT LLC" />
+    <meta property="og:description" content="Terms of Service for Nexlink IT LLC professional IT services." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Theme bootstrap -->
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = stored || (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch (_) {}
+      })();
+    </script>
+
+    <!-- Tailwind via CDN for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eff9ff',
+                100: '#dff2ff',
+                200: '#b9e6ff',
+                300: '#7fd3ff',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+            },
+            boxShadow: {
+              glow: '0 10px 30px -10px rgba(14,165,233,.45)',
+            },
+            backgroundImage: {
+              grid: 'radial-gradient(rgba(14,165,233,0.15) 1px, transparent 1px)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="min-h-screen bg-white text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+    <!-- Decorative background -->
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute left-1/2 top-[10%] h-72 w-72 -translate-x-1/2 rounded-full bg-brand-500/20 blur-3xl filter"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-neutral-900/60">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="../index.html" class="group inline-flex items-center gap-2">
+          <div>
+            <div class="font-semibold leading-tight">Nexlink IT</div>
+            <div class="text-xs text-neutral-500 dark:text-neutral-400">Professional managed IT Services</div>
+          </div>
+        </a>
+        <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
+          <a href="../about.html" class="nav-link">About</a>
+          <!-- <a href="../services.html" class="nav-link">Services</a> -->
+          <!-- <a href="../portfolio.html" class="nav-link">Portfolio</a> -->
+          <a href="../pricing.html" class="nav-link">Pricing</a>
+          <a href="../contact.html" class="nav-link">Contact</a>
+        </nav>
+        <p>☎️ (307) 289-5340</p>
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">🌙</button>
+          <button onclick="window.location.href = 'https://api.nexlink.website/portal/'" id="loginBtn" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900">Customer login</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <section class="relative overflow-hidden">
+      <div class="mx-auto max-w-4xl px-4 py-16 sm:py-20 lg:px-8">
+        <div class="mx-auto max-w-3xl">
+          <div data-animate>
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Legal agreements & policies</h1>
+            <br>
+            <p>Below you will find the legal agreements and policies that govern your use of our services.</p>
+            <br>
+            <h5><strong>Agreements</strong></h5>
+
+            <ul class="list-disc list-inside space-y-2 ml-4">
+                <li><a href="/legal/terms-of-service.html" class="text-brand-600 hover:text-brand-500">Customer Agreement (Terms of Service)</a> — rquired agreement for all Customer Portal users and other individuals that interact with us.</li>
+                <li><a href="/legal/privacy-policy.html" class="text-brand-600 hover:text-brand-500">Privacy Policy</a> — agreement outlining our data collection/processing and privacy practices.</li>
+                <li><a href="/legal/remote-access-agreement.html" class="text-brand-600 hover:text-brand-500">Remote Access Agreement</a> — required agreement for all customers that we provide remote support or remote management services to.</li>
+            </ul>
+            
+            <p></p>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 py-10 text-sm dark:border-neutral-800">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:flex-row sm:text-left lg:px-8">
+        <div>
+          <div class="text-neutral-500 dark:text-neutral-400">© 2025 Nexlink IT LLC. All rights reserved.</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a class="text-neutral-600 underline-offset-4 hover:underline dark:text-neutral-300" href="../about.html">About</a>
+          <!-- Sitemap -->
+          <nav aria-label="Sitemap" class="flex flex-wrap gap-4 justify-center">
+            <a class="footer-link" href="../index.html">Home</a>
+            <a class="footer-link" href="../about.html">About</a>
+            <!-- <a class="footer-link" href="../services.html">Services</a>
+            <a class="footer-link" href="../portfolio.html">Portfolio</a> -->
+            <a class="footer-link" href="../pricing.html">Pricing</a>
+            <a class="footer-link" href="../contact.html">Contact</a>
+            <a class="footer-link" href="terms-of-service.html">Terms</a>
+            <a class="footer-link" href="privacy-policy.html">Privacy</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

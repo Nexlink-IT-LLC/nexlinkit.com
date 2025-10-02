@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nexlink IT LLC</title>
+    <meta name="description" content="Professional IT services. Get expert help with Linux, servers, hosting, Nextcloud and much more — at affordable prices. Fast, reliable, and secure." />
+    <meta property="og:title" content="Nexlink IT — Professional IT Services" />
+    <meta property="og:description" content="Get expert help with Linux, servers, hosting, Nextcloud and much more — at affordable prices. Average response: 1 hour. Europe-based, serving clients worldwide." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Theme bootstrap -->
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = stored || (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch (_) {}
+      })();
+    </script>
+
+    <!-- Tailwind via CDN for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eff9ff',
+                100: '#dff2ff',
+                200: '#b9e6ff',
+                300: '#7fd3ff',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+            },
+            boxShadow: {
+              glow: '0 10px 30px -10px rgba(14,165,233,.45)',
+            },
+            backgroundImage: {
+              grid: 'radial-gradient(rgba(14,165,233,0.15) 1px, transparent 1px)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- <link rel="icon" href="favicon.svg" type="image/svg+xml" /> -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="min-h-screen bg-white text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+    <!-- Decorative background -->
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+      <!-- <div class="absolute inset-0 bg-grid [background-size:20px_20px] opacity-40 dark:opacity-20"></div> -->
+      <div class="absolute left-1/2 top-[10%] h-72 w-72 -translate-x-1/2 rounded-full bg-brand-500/20 blur-3xl filter"></div>
+      <!-- <div class="absolute right-[10%] top-[60%] h-72 w-72 rounded-full bg-brand-400/20 blur-3xl filter"></div> -->
+    </div>
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-neutral-900/60">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="#home" class="group inline-flex items-center gap-2">
+          <div>
+            <div class="font-semibold leading-tight">Nexlink IT</div>
+            <div class="text-xs text-neutral-500 dark:text-neutral-400">Professional managed IT Services</div>
+          </div>
+        </a>
+        <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
+          <a href="about.html" class="nav-link">About</a>
+          <!-- <a href="services.html" class="nav-link">Services</a> -->
+          <!-- <a href="portfolio.html" class="nav-link">Portfolio</a> -->
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <p>☎️ (307) 289-5340</p>
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">🌙</button>
+          <button onclick="window.location.href = 'https://api.nexlink.website/portal/'" id="loginBtn" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900">Customer login</button>
+          <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 sm:inline-flex">Request Support</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="relative overflow-hidden">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:py-20 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <div data-animate>
+            <span class="inline-flex items-center gap-2 rounded-full border border-brand-200/60 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 ring-1 ring-brand-100/60 dark:border-brand-900/40 dark:bg-brand-900/30 dark:text-brand-200">Average response: 1 hour</span>
+            <h1 class="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Delivering reliable, affordable IT solutions</h1>
+            <p class="mt-4 max-w-prose text-neutral-600 dark:text-neutral-300">Get expert help with Linux, servers, hosting, Nextcloud, and much more — at affordable prices. Serving clients worldwide accross the US and beyond.</p>
+            <div class="mt-6 flex flex-wrap justify-center gap-3">
+              <button id="requestSupportBtnHero" class="inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">Request Support</button>
+              <a href="contact.html" class="inline-flex items-center justify-center rounded-full border border-neutral-200 px-6 py-3 font-semibold text-neutral-700 transition hover:bg-neutral-50 dark:border-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-900">Contact</a>
+            </div>
+            <div class="mt-6 flex items-center justify-center gap-3 text-sm text-neutral-600 dark:text-neutral-300">
+              <div class="flex items-center gap-1 text-brand-600" aria-label="5.0 out of 5 stars">
+                <span>★★★★★</span>
+              </div>
+              <div>5.0 stars (9 reviews)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="relative">
+      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-animate>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">What we can help you with</h2>
+          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Practical, production‑grade IT services.</p>
+        </div>
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="card" data-animate>
+            <div class="card-icon">🧩</div>
+            <h3 class="card-title">Nextcloud</h3>
+            <p class="card-body">Installation, update, migration, apps, Collabora/ONLYOFFICE integration, troubleshooting.</p>
+          </article>
+          <article class="card" data-animate>
+            <div class="card-icon">🐧</div>
+            <h3 class="card-title">Linux & Servers</h3>
+            <p class="card-body">Installation, management, services, troubleshooting.</p>
+          </article>
+          <article class="card" data-animate>
+            <div class="card-icon">🌐</div>
+            <h3 class="card-title">Hosting & DNS</h3>
+            <p class="card-body">DNS, reverse proxies, web servers, HTTPS/TLS.</p>
+          </article>
+          <article class="card" data-animate>
+            <div class="card-icon">🔐</div>
+            <h3 class="card-title">Security</h3>
+            <p class="card-body">Firewalls, updates, release migration.</p>
+          </article>
+          <article class="card" data-animate>
+            <div class="card-icon">📦</div>
+            <h3 class="card-title">Containers & VMs</h3>
+            <p class="card-body">Docker, TrueNAS SCALE, Unraid, app deployment & containerization.</p>
+          </article>
+          <article class="card" data-animate>
+            <div class="card-icon">📈</div>
+            <h3 class="card-title">Monitoring & Backups</h3>
+            <p class="card-body">Observability, alerting, backup strategy, restore testing.</p>
+          </article>
+          <article class="card" data-animate>
+            <div class="card-icon">🔧</div>
+            <h3 class="card-title">Troubleshooting</h3>
+            <p class="card-body">Analysis and fixes for apps, performance, and networking.</p>
+          </article>
+          <article class="card" data-animate>
+            <div class="card-icon">⚙️</div>
+            <h3 class="card-title">Operating systems</h3>
+            <p class="card-body">Linux, Windows & Windows Server, Unraid, TrueNAS, and more.</p>
+          </article>
+        </div>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-3 text-sm text-neutral-600 dark:text-neutral-300" data-animate>
+          <span class="badge">Home</span>
+          <span class="badge">Business</span>
+          <span class="badge">Enterprise</span>
+          <span class="badge">Worldwide</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="relative">
+      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-animate>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">What clients say</h2>
+          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Real feedback from recent projects.</p>
+        </div>
+
+        <div class="mt-10" data-animate>
+          <div class="relative">
+            <div id="reviewsTrack" class="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 [scrollbar-width:none] [-ms-overflow-style:none]"></div>
+            <div class="mt-4 flex items-center justify-center gap-2">
+              <button id="reviewsPrev" class="nav-btn" aria-label="Previous">◀</button>
+              <button id="reviewsNext" class="nav-btn" aria-label="Next">▶</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="relative">
+      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+        <div class="grid items-center gap-8 md:grid-cols-2">
+          <div data-animate>
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Contact & Support</h2>
+            <p class="mt-3 text-neutral-600 dark:text-neutral-300">Choose your preferred platform to get in touch.</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <button id="requestSupportBtnContact" class="btn-primary">Request Support</button>
+              <button onclick="window.location.href='https://www.fiverr.com/nexlink_norway?public_mode=true'" class="btn-primary bg-green-600 hover:bg-green-500">View on Fiverr</button>
+              <a href="mailto:support@nexlink.website" class="btn-secondary">Email</a>
+              <!-- <a href="https://m.me/" target="_blank" rel="noopener" class="btn-secondary">Messenger</a> -->
+            </div>
+          </div>
+          <!-- <div class="relative" data-animate> -->
+            <!-- <div class="relative overflow-hidden rounded-2xl border border-neutral-200 bg-white p-6 shadow-xl dark:border-neutral-800 dark:bg-neutral-950"> -->
+              <!-- <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-brand-500/10 blur-2xl"></div> -->
+              <!-- <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <div>
+                  <dt class="text-sm text-neutral-500">Average response</dt>
+                  <dd class="text-lg font-semibold">1 hour</dd>
+                </div> -->
+                <!-- <div>
+                  <dt class="text-sm text-neutral-500">Location</dt>
+                  <dd class="text-lg font-semibold">Akershus, Norway</dd>
+                </div>
+                <div>
+                  <dt class="text-sm text-neutral-500">Coverage</dt>
+                  <dd class="text-lg font-semibold">Europe, US, and beyond</dd>
+                </div> -->
+                <!-- <div>
+                  <dt class="text-sm text-neutral-500">Focus</dt>
+                  <dd class="text-lg font-semibold">IT & Nextcloud</dd>
+                </div> -->
+              <!-- </dl> -->
+            <!-- </div> -->
+          <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 py-10 text-sm dark:border-neutral-800">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:flex-row sm:text-left lg:px-8">
+        <div>
+          <div class="text-neutral-500 dark:text-neutral-400">© 2025 Nexlink IT LLC. All rights reserved.</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <!-- Sitemap -->
+          <nav aria-label="Sitemap" class="flex flex-wrap gap-4 justify-center">
+            <a class="footer-link" href="index.html">Home</a>
+            <a class="footer-link" href="about.html">About</a>
+            <!-- <a class="footer-link" href="services.html">Services</a> -->
+            <!-- <a class="footer-link" href="portfolio.html">Portfolio</a> -->
+            <a class="footer-link" href="pricing.html">Pricing</a>
+            <a class="footer-link" href="contact.html">Contact</a>
+            <a class="footer-link" href="legal/terms-of-service.html">Customer Agreement</a>
+            <a class="footer-link" href="legal/privacy-policy.html">Privacy</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Request Support Modal -->
+    <div id="supportModal" class="invisible fixed inset-0 z-[100] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative mx-4 w-full max-w-4xl scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
+        <div class="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-brand-500/10 blur-3xl"></div>
+        <div class="relative flex items-center justify-between border-b border-neutral-200 p-4 dark:border-neutral-800">
+          <h3 class="text-lg font-semibold">Request Support</h3>
+          <button id="supportModalClose" class="rounded-full p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">✕</button>
+        </div>
+        <form id="supportForm" class="relative space-y-4 p-6">
+          <div>
+            <label for="serviceType" class="label">Service Type</label>
+            <select id="serviceType" name="serviceType" class="input">
+              <option>General IT</option>
+              <option>Nextcloud</option>
+              <option>Linux/Servers</option>
+              <option>Hosting/DNS</option>
+              <option>Security</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="name" class="label">Name</label>
+              <input id="name" name="name" type="text" required class="input" placeholder="Jane Doe" />
+            </div>
+            <div>
+              <label for="email" class="label">Email</label>
+              <input id="email" name="email" type="email" required class="input" placeholder="you@example.com" />
+            </div>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="company" class="label">Organization</label>
+              <input id="company" name="company" type="text" class="input" placeholder="Optional" />
+            </div>
+            <div>
+              <label for="region" class="label">Region</label>
+              <select id="region" name="region" class="input">
+                <option>Europe</option>
+                <option>North America</option>
+                <option>South America</option>
+                <option>Asia</option>
+                <option>Oceania</option>
+                <option>Africa</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="platform" class="label">Platform / Environment</label>
+              <select id="platform" name="platform" class="input">
+                <option>Linux</option>
+                <option>Windows Server</option>
+                <option>Docker</option>
+                <option>TrueNAS SCALE</option>
+                <option>Proxmox</option>
+                <option>Hosting/Cloud</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="versions" class="label">Version details (optional)</label>
+              <input id="versions" name="versions" type="text" class="input" placeholder="e.g., Ubuntu 22.04, Docker 27, Nextcloud 28.x" />
+            </div>
+          </div>
+          <div>
+            <label for="urgency" class="label">Urgency</label>
+            <select id="urgency" name="urgency" class="input">
+              <option>Normal</option>
+              <option>High</option>
+              <option>Low</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="label">How can we help?</label>
+            <textarea id="message" name="message" rows="4" class="input" placeholder="Short description (systems affected, errors, goals)"></textarea>
+          </div>
+          <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+            <div class="text-xs text-neutral-500">You can also contact me via the Contact section or by US phone at (307) 289-5340.</div>
+            <div class="flex gap-3">
+              <button type="button" class="btn-secondary" data-close>Cancel</button>
+              <button type="submit" class="btn-primary">Send Request</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="invisible fixed inset-0 z-[110] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative mx-4 w-full max-w-md scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
+        <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-emerald-500/10 blur-3xl"></div>
+        <div class="relative p-6 text-center">
+          <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">✓</div>
+          <h3 class="text-lg font-semibold">Request sent successfully</h3>
+          <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Thanks! I'll get back to you shortly.</p>
+          <div class="mt-6 flex justify-center">
+            <button id="successOk" class="btn-primary inline-flex items-center justify-center rounded-full bg-brand-600 px-5 py-2 font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  
+</html>
+
+

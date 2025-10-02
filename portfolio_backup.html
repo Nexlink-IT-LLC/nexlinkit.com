@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio - Nexlink IT LLC</title>
+    <meta name="description" content="View our recent projects and case studies. See how we've helped businesses with Nextcloud, Linux servers, hosting, and IT solutions." />
+    <meta property="og:title" content="Portfolio - Nexlink IT LLC" />
+    <meta property="og:description" content="View our recent projects and case studies showcasing our IT expertise." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Theme bootstrap -->
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = stored || (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch (_) {}
+      })();
+    </script>
+
+    <!-- Tailwind via CDN for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eff9ff',
+                100: '#dff2ff',
+                200: '#b9e6ff',
+                300: '#7fd3ff',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+            },
+            boxShadow: {
+              glow: '0 10px 30px -10px rgba(14,165,233,.45)',
+            },
+            backgroundImage: {
+              grid: 'radial-gradient(rgba(14,165,233,0.15) 1px, transparent 1px)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="min-h-screen bg-white text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+    <!-- Decorative background -->
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute left-1/2 top-[10%] h-72 w-72 -translate-x-1/2 rounded-full bg-brand-500/20 blur-3xl filter"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-neutral-900/60">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="index.html" class="group inline-flex items-center gap-2">
+          <div>
+            <div class="font-semibold leading-tight">Nexlink IT</div>
+            <div class="text-xs text-neutral-500 dark:text-neutral-400">Professional managed IT Services</div>
+          </div>
+        </a>
+        <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
+          <a href="about.html" class="nav-link">About</a>
+          <!-- <a href="services.html" class="nav-link">Services</a> -->
+          <!-- <a href="portfolio.html" class="nav-link text-brand-600 dark:text-brand-400">Portfolio</a> -->
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <p>☎️ (307) 289-5340</p>
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">🌙</button>
+          <button onclick="window.location.href = 'https://api.nexlink.website/portal/'" id="loginBtn" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900">Customer login</button>
+          <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 sm:inline-flex">Request Support</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:py-20 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <div data-animate>
+            <span class="inline-flex items-center gap-2 rounded-full border border-brand-200/60 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 ring-1 ring-brand-100/60 dark:border-brand-900/40 dark:bg-brand-900/30 dark:text-brand-200">Recent Projects</span>
+            <h1 class="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Our Portfolio</h1>
+            <p class="mt-4 max-w-prose text-neutral-600 dark:text-neutral-300">Explore our recent projects and see how we've helped businesses solve complex IT challenges with innovative solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="relative">
+      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-animate>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Featured Projects</h2>
+          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Some of our most impactful recent work.</p>
+        </div>
+        <div class="mt-10 grid gap-8 lg:grid-cols-2">
+          <article class="card" data-animate>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="card-icon">🧩</div>
+              <div>
+                <h3 class="text-lg font-semibold">Enterprise Nextcloud Migration</h3>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400">Large Corporation • 2024</p>
+              </div>
+            </div>
+            <p class="card-body">Migrated a 500+ user organization from Google Workspace to self-hosted Nextcloud with Collabora integration, achieving 60% cost savings while improving data sovereignty.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="badge">Nextcloud</span>
+              <span class="badge">Collabora</span>
+              <span class="badge">Migration</span>
+              <span class="badge">500+ Users</span>
+            </div>
+            <div class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">
+              <strong>Results:</strong> 60% cost reduction, improved security, full data control
+            </div>
+          </article>
+
+          <article class="card" data-animate>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="card-icon">🐧</div>
+              <div>
+                <h3 class="text-lg font-semibold">High-Availability Server Cluster</h3>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400">Tech Startup • 2024</p>
+              </div>
+            </div>
+            <p class="card-body">Designed and implemented a fault-tolerant Linux server cluster with automated failover, load balancing, and monitoring for a growing SaaS application.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="badge">Linux</span>
+              <span class="badge">High Availability</span>
+              <span class="badge">Load Balancing</span>
+              <span class="badge">Monitoring</span>
+            </div>
+            <div class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">
+              <strong>Results:</strong> 99.9% uptime, 3x performance improvement
+            </div>
+          </article>
+
+          <article class="card" data-animate>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="card-icon">🔐</div>
+              <div>
+                <h3 class="text-lg font-semibold">Security Hardening Project</h3>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400">Financial Services • 2024</p>
+              </div>
+            </div>
+            <p class="card-body">Comprehensive security audit and hardening of critical financial systems, implementing zero-trust architecture and advanced threat detection.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="badge">Security</span>
+              <span class="badge">Zero Trust</span>
+              <span class="badge">Compliance</span>
+              <span class="badge">Financial</span>
+            </div>
+            <div class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">
+              <strong>Results:</strong> 100% compliance, zero security incidents
+            </div>
+          </article>
+
+          <article class="card" data-animate>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="card-icon">📦</div>
+              <div>
+                <h3 class="text-lg font-semibold">Containerized Application Stack</h3>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400">E-commerce Platform • 2024</p>
+              </div>
+            </div>
+            <p class="card-body">Modernized legacy application architecture using Docker containers and Kubernetes, enabling rapid scaling and simplified deployment processes.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="badge">Docker</span>
+              <span class="badge">Kubernetes</span>
+              <span class="badge">Microservices</span>
+              <span class="badge">CI/CD</span>
+            </div>
+            <div class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">
+              <strong>Results:</strong> 5x faster deployments, 50% infrastructure cost reduction
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="relative bg-neutral-50 dark:bg-neutral-900/50">
+      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-animate>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Detailed Case Studies</h2>
+          <p class="mt-3 text-neutral-600 dark:text-neutral-300">In-depth look at our problem-solving approach.</p>
+        </div>
+        <div class="mt-10 space-y-8">
+          <div class="card" data-animate>
+            <div class="grid gap-6 md:grid-cols-2">
+              <div>
+                <h3 class="text-xl font-semibold">Nextcloud Migration for Healthcare Provider</h3>
+                <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">Healthcare • 200+ Users • 3 months</p>
+                <p class="mt-4 text-neutral-600 dark:text-neutral-300">
+                  A regional healthcare provider needed to migrate from Microsoft 365 to a self-hosted solution for better HIPAA compliance and data control. We designed a comprehensive migration strategy that included data migration, user training, and ongoing support.
+                </p>
+                <div class="mt-4">
+                  <h4 class="font-semibold text-sm">Challenges:</h4>
+                  <ul class="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
+                    <li>• HIPAA compliance requirements</li>
+                    <li>• Complex file sharing workflows</li>
+                    <li>• Integration with existing EMR systems</li>
+                    <li>• User adoption concerns</li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-semibold text-sm">Solution:</h4>
+                <ul class="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
+                  <li>• Custom Nextcloud installation with security hardening</li>
+                  <li>• Collabora Office integration for document editing</li>
+                  <li>• Automated data migration with integrity verification</li>
+                  <li>• Comprehensive user training program</li>
+                  <li>• 24/7 monitoring and support</li>
+                </ul>
+                <div class="mt-4 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                  <h4 class="font-semibold text-sm text-green-800 dark:text-green-200">Results:</h4>
+                  <ul class="mt-2 space-y-1 text-sm text-green-700 dark:text-green-300">
+                    <li>• 100% HIPAA compliance achieved</li>
+                    <li>• 40% cost reduction vs Microsoft 365</li>
+                    <li>• 95% user satisfaction rate</li>
+                    <li>• Zero data loss during migration</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" data-animate>
+            <div class="grid gap-6 md:grid-cols-2">
+              <div>
+                <h3 class="text-xl font-semibold">Infrastructure Modernization for Manufacturing</h3>
+                <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">Manufacturing • 50+ Servers • 6 months</p>
+                <p class="mt-4 text-neutral-600 dark:text-neutral-300">
+                  A manufacturing company with aging Windows Server infrastructure needed a complete modernization to support their digital transformation initiatives. We migrated their entire infrastructure to Linux-based solutions with containerization.
+                </p>
+                <div class="mt-4">
+                  <h4 class="font-semibold text-sm">Challenges:</h4>
+                  <ul class="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
+                    <li>• Legacy Windows Server 2008/2012 systems</li>
+                    <li>• High maintenance costs</li>
+                    <li>• Security vulnerabilities</li>
+                    <li>• Limited scalability</li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-semibold text-sm">Solution:</h4>
+                <ul class="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
+                  <li>• Ubuntu Server 22.04 LTS deployment</li>
+                  <li>• Docker containerization of applications</li>
+                  <li>• Automated backup and monitoring systems</li>
+                  <li>• Security hardening and compliance</li>
+                  <li>• Staff training and documentation</li>
+                </ul>
+                <div class="mt-4 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                  <h4 class="font-semibold text-sm text-green-800 dark:text-green-200">Results:</h4>
+                  <ul class="mt-2 space-y-1 text-sm text-green-700 dark:text-green-300">
+                    <li>• 70% reduction in maintenance costs</li>
+                    <li>• 3x improvement in system performance</li>
+                    <li>• 99.9% uptime achieved</li>
+                    <li>• Future-proof scalable architecture</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="relative">
+      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-animate>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Technologies We Work With</h2>
+          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Our expertise spans across modern and proven technologies.</p>
+        </div>
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="card text-center" data-animate>
+            <div class="card-icon text-2xl">🐧</div>
+            <h3 class="card-title">Linux Systems</h3>
+            <p class="card-body text-sm">Ubuntu, CentOS, Debian, RHEL, Alpine</p>
+          </div>
+          <div class="card text-center" data-animate>
+            <div class="card-icon text-2xl">📦</div>
+            <h3 class="card-title">Containers</h3>
+            <p class="card-body text-sm">Docker, Kubernetes, Podman, LXC</p>
+          </div>
+          <div class="card text-center" data-animate>
+            <div class="card-icon text-2xl">☁️</div>
+            <h3 class="card-title">Cloud Platforms</h3>
+            <p class="card-body text-sm">AWS, DigitalOcean, Linode, Vultr</p>
+          </div>
+          <div class="card text-center" data-animate>
+            <div class="card-icon text-2xl">🔧</div>
+            <h3 class="card-title">Monitoring</h3>
+            <p class="card-body text-sm">Prometheus, Grafana, Zabbix, Nagios</p>
+          </div>
+          <div class="card text-center" data-animate>
+            <div class="card-icon text-2xl">🌐</div>
+            <h3 class="card-title">Web Servers</h3>
+            <p class="card-body text-sm">Nginx, Apache, Caddy, Traefik</p>
+          </div>
+          <div class="card text-center" data-animate>
+            <div class="card-icon text-2xl">🗄️</div>
+            <h3 class="card-title">Databases</h3>
+            <p class="card-body text-sm">PostgreSQL, MySQL, Redis, MongoDB</p>
+          </div>
+          <div class="card text-center" data-animate>
+            <div class="card-icon text-2xl">🔐</div>
+            <h3 class="card-title">Security</h3>
+            <p class="card-body text-sm">SSL/TLS, Firewalls, VPN, 2FA</p>
+          </div>
+          <div class="card text-center" data-animate>
+            <div class="card-icon text-2xl">⚡</div>
+            <h3 class="card-title">Automation</h3>
+            <p class="card-body text-sm">Ansible, Terraform, CI/CD, Scripts</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative">
+      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center" data-animate>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Ready to start your project?</h2>
+          <p class="mt-4 text-neutral-600 dark:text-neutral-300">Let's discuss how we can help you achieve similar results for your business.</p>
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <button id="requestSupportBtnHero" class="btn-primary">Start Your Project</button>
+            <a href="contact.html" class="btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 py-10 text-sm dark:border-neutral-800">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:flex-row sm:text-left lg:px-8">
+        <div>
+          <div class="text-neutral-500 dark:text-neutral-400">© 2025 Nexlink IT LLC. All rights reserved.</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <!-- Sitemap -->
+          <nav aria-label="Sitemap" class="flex flex-wrap gap-4 justify-center">
+            <a class="footer-link" href="index.html">Home</a>
+            <a class="footer-link" href="about.html">About</a>
+            <!-- <a class="footer-link" href="services.html">Services</a> -->
+            <a class="footer-link" href="portfolio.html">Portfolio</a>
+            <a class="footer-link" href="pricing.html">Pricing</a>
+            <a class="footer-link" href="contact.html">Contact</a>
+            <a class="footer-link" href="legal/terms-of-service.html">Customer Agreement</a>
+            <a class="footer-link" href="legal/privacy-policy.html">Privacy</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Request Support Modal -->
+    <div id="supportModal" class="invisible fixed inset-0 z-[100] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative mx-4 w-full max-w-4xl scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
+        <div class="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-brand-500/10 blur-3xl"></div>
+        <div class="relative flex items-center justify-between border-b border-neutral-200 p-4 dark:border-neutral-800">
+          <h3 class="text-lg font-semibold">Request Support</h3>
+          <button id="supportModalClose" class="rounded-full p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">✕</button>
+        </div>
+        <form id="supportForm" class="relative space-y-4 p-6">
+          <div>
+            <label for="serviceType" class="label">Service Type</label>
+            <select id="serviceType" name="serviceType" class="input">
+              <option>General IT</option>
+              <option>Nextcloud</option>
+              <option>Linux/Servers</option>
+              <option>Hosting/DNS</option>
+              <option>Security</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="name" class="label">Name</label>
+              <input id="name" name="name" type="text" required class="input" placeholder="Jane Doe" />
+            </div>
+            <div>
+              <label for="email" class="label">Email</label>
+              <input id="email" name="email" type="email" required class="input" placeholder="you@example.com" />
+            </div>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="company" class="label">Organization</label>
+              <input id="company" name="company" type="text" class="input" placeholder="Optional" />
+            </div>
+            <div>
+              <label for="region" class="label">Region</label>
+              <select id="region" name="region" class="input">
+                <option>Europe</option>
+                <option>North America</option>
+                <option>South America</option>
+                <option>Asia</option>
+                <option>Oceania</option>
+                <option>Africa</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="platform" class="label">Platform / Environment</label>
+              <select id="platform" name="platform" class="input">
+                <option>Linux</option>
+                <option>Windows Server</option>
+                <option>Docker</option>
+                <option>TrueNAS SCALE</option>
+                <option>Proxmox</option>
+                <option>Hosting/Cloud</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="versions" class="label">Version details (optional)</label>
+              <input id="versions" name="versions" type="text" class="input" placeholder="e.g., Ubuntu 22.04, Docker 27, Nextcloud 28.x" />
+            </div>
+          </div>
+          <div>
+            <label for="urgency" class="label">Urgency</label>
+            <select id="urgency" name="urgency" class="input">
+              <option>Normal</option>
+              <option>High</option>
+              <option>Low</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="label">How can we help?</label>
+            <textarea id="message" name="message" rows="4" class="input" placeholder="Short description (systems affected, errors, goals)"></textarea>
+          </div>
+          <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+            <div class="text-xs text-neutral-500">You can also contact me via the Contact section or by US phone at (307) 289-5340.</div>
+            <div class="flex gap-3">
+              <button type="button" class="btn-secondary" data-close>Cancel</button>
+              <button type="submit" class="btn-primary">Send Request</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="invisible fixed inset-0 z-[110] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative mx-4 w-full max-w-md scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
+        <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-emerald-500/10 blur-3xl"></div>
+        <div class="relative p-6 text-center">
+          <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">✓</div>
+          <h3 class="text-lg font-semibold">Request sent successfully</h3>
+          <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Thanks! I'll get back to you shortly.</p>
+          <div class="mt-6 flex justify-center">
+            <button id="successOk" class="btn-primary inline-flex items-center justify-center rounded-full bg-brand-600 px-5 py-2 font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

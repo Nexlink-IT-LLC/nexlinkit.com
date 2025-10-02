@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Customer Portal - Nexlink IT LLC</title>
+    <meta name="description" content="Nexlink IT Customer Portal - Manage your account, view billing, access support tickets, and more." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Theme bootstrap -->
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = stored || (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch (_) {}
+      })();
+    </script>
+
+    <!-- Tailwind via CDN for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eff9ff',
+                100: '#dff2ff',
+                200: '#b9e6ff',
+                300: '#7fd3ff',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+            },
+            boxShadow: {
+              glow: '0 10px 30px -10px rgba(14,165,233,.45)',
+            },
+            backgroundImage: {
+              grid: 'radial-gradient(rgba(14,165,233,0.15) 1px, transparent 1px)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="portal-styles.css" />
+  </head>
+  <body class="min-h-screen bg-neutral-50 text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+    <!-- Decorative background -->
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute left-1/2 top-[5%] h-64 w-64 -translate-x-1/2 rounded-full bg-brand-500/10 blur-3xl filter"></div>
+      <div class="absolute right-[15%] top-[70%] h-48 w-48 rounded-full bg-brand-400/10 blur-3xl filter"></div>
+    </div>
+
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/80 supports-[backdrop-filter]:dark:bg-neutral-900/80 border-b border-neutral-200 dark:border-neutral-800">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-4">
+          <a href="../index.html" class="group inline-flex items-center gap-2">
+            <div>
+              <div class="font-semibold leading-tight">Nexlink IT</div>
+              <div class="text-xs text-neutral-500 dark:text-neutral-400">Customer Portal</div>
+            </div>
+          </a>
+        </div>
+        
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#dashboard" class="portal-nav-link active">Dashboard</a>
+          <a href="account.html" class="portal-nav-link">Account</a>
+          <a href="billing.html" class="portal-nav-link">Billing</a>
+          <a href="support.html" class="portal-nav-link">Support</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">🌙</button>
+          <div class="flex items-center gap-2 text-sm">
+            <div class="w-8 h-8 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center font-semibold text-brand-700 dark:text-brand-300">JD</div>
+            <span class="hidden sm:inline">John Doe</span>
+          </div>
+          <button class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="md:hidden bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800 px-4 py-2">
+      <div class="flex gap-4 overflow-x-auto">
+        <a href="#dashboard" class="portal-nav-link-mobile active">Dashboard</a>
+        <a href="account.html" class="portal-nav-link-mobile">Account</a>
+        <a href="billing.html" class="portal-nav-link-mobile">Billing</a>
+        <a href="support.html" class="portal-nav-link-mobile">Support</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <!-- Welcome Section -->
+      <div class="mb-8" data-animate>
+        <h1 class="text-3xl font-bold tracking-tight">Welcome back, John!</h1>
+        <p class="mt-2 text-neutral-600 dark:text-neutral-300">Here's an overview of your account and recent activity.</p>
+      </div>
+
+      <!-- Status Cards -->
+      <div class="mb-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-animate>
+        <div class="dashboard-card">
+          <div class="dashboard-card-icon">📊</div>
+          <div>
+            <div class="dashboard-card-label">Account Status</div>
+            <div class="dashboard-card-value text-green-600 dark:text-green-400">Active</div>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <div class="dashboard-card-icon">💰</div>
+          <div>
+            <div class="dashboard-card-label">Current Balance</div>
+            <div class="dashboard-card-value">$0.00</div>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <div class="dashboard-card-icon">🎫</div>
+          <div>
+            <div class="dashboard-card-label">Open Tickets</div>
+            <div class="dashboard-card-value">2</div>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <div class="dashboard-card-icon">📅</div>
+          <div>
+            <div class="dashboard-card-label">Next Billing</div>
+            <div class="dashboard-card-value">Oct 21, 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Dashboard Grid -->
+      <div class="grid gap-8 lg:grid-cols-3">
+        <!-- Recent Activity -->
+        <div class="lg:col-span-2">
+          <div class="dashboard-panel" data-animate>
+            <div class="dashboard-panel-header">
+              <h2 class="dashboard-panel-title">Recent Activity</h2>
+              <a href="activity.html" class="dashboard-link">View all</a>
+            </div>
+            <div class="dashboard-panel-content">
+              <div class="space-y-4">
+                <div class="activity-item">
+                  <div class="activity-icon">🎫</div>
+                  <div class="flex-1">
+                    <div class="activity-title">Support ticket #1234 updated</div>
+                    <div class="activity-subtitle">Your Nextcloud migration is 90% complete</div>
+                  </div>
+                  <div class="activity-time">2 hours ago</div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon">💳</div>
+                  <div class="flex-1">
+                    <div class="activity-title">Payment processed</div>
+                    <div class="activity-subtitle">Monthly service fee - $75.00</div>
+                  </div>
+                  <div class="activity-time">1 day ago</div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon">🔧</div>
+                  <div class="flex-1">
+                    <div class="activity-title">Server maintenance completed</div>
+                    <div class="activity-subtitle">All services restored to normal operation</div>
+                  </div>
+                  <div class="activity-time">3 days ago</div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon">📧</div>
+                  <div class="flex-1">
+                    <div class="activity-title">New support ticket created</div>
+                    <div class="activity-subtitle">SSL certificate renewal request</div>
+                  </div>
+                  <div class="activity-time">5 days ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions & Info -->
+        <div class="space-y-8">
+          <!-- Quick Actions -->
+          <div class="dashboard-panel" data-animate>
+            <div class="dashboard-panel-header">
+              <h2 class="dashboard-panel-title">Quick Actions</h2>
+            </div>
+            <div class="dashboard-panel-content">
+              <div class="space-y-3">
+                <button class="quick-action-btn">
+                  <span class="quick-action-icon">🎫</span>
+                  <span>Create Support Ticket</span>
+                </button>
+                <button class="quick-action-btn">
+                  <span class="quick-action-icon">💳</span>
+                  <span>View Billing History</span>
+                </button>
+                <button class="quick-action-btn">
+                  <span class="quick-action-icon">🔧</span>
+                  <span>Update Account Info</span>
+                </button>
+                <button class="quick-action-btn">
+                  <span class="quick-action-icon">📞</span>
+                  <span>Schedule Consultation</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Account Summary -->
+          <div class="dashboard-panel" data-animate>
+            <div class="dashboard-panel-header">
+              <h2 class="dashboard-panel-title">Account Summary</h2>
+            </div>
+            <div class="dashboard-panel-content">
+              <div class="space-y-4">
+                <div class="summary-item">
+                  <span class="summary-label">Plan</span>
+                  <span class="summary-value">Business Pro</span>
+                </div>
+                <div class="summary-item">
+                  <span class="summary-label">Services</span>
+                  <span class="summary-value">3 Active</span>
+                </div>
+                <div class="summary-item">
+                  <span class="summary-label">Monthly Cost</span>
+                  <span class="summary-value">$75.00</span>
+                </div>
+                <div class="summary-item">
+                  <span class="summary-label">Support Level</span>
+                  <span class="summary-value">Priority</span>
+                </div>
+                <div class="summary-item">
+                  <span class="summary-label">Response Time</span>
+                  <span class="summary-value">1 hour</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- System Status -->
+          <div class="dashboard-panel" data-animate>
+            <div class="dashboard-panel-header">
+              <h2 class="dashboard-panel-title">System Status</h2>
+            </div>
+            <div class="dashboard-panel-content">
+              <div class="space-y-3">
+                <div class="status-item">
+                  <div class="status-indicator bg-green-500"></div>
+                  <span>Web Server</span>
+                  <span class="status-label text-green-600 dark:text-green-400">Online</span>
+                </div>
+                <div class="status-item">
+                  <div class="status-indicator bg-green-500"></div>
+                  <span>Database</span>
+                  <span class="status-label text-green-600 dark:text-green-400">Online</span>
+                </div>
+                <div class="status-item">
+                  <div class="status-indicator bg-yellow-500"></div>
+                  <span>Nextcloud</span>
+                  <span class="status-label text-yellow-600 dark:text-yellow-400">Maintenance</span>
+                </div>
+                <div class="status-item">
+                  <div class="status-indicator bg-green-500"></div>
+                  <span>Email Service</span>
+                  <span class="status-label text-green-600 dark:text-green-400">Online</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 dark:border-neutral-800 mt-16">
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div class="text-sm text-neutral-600 dark:text-neutral-400">
+            © 2025 Nexlink IT LLC. All rights reserved.
+          </div>
+          <div class="flex items-center gap-6 text-sm">
+            <a href="../contact.html" class="footer-link">Support</a>
+            <a href="../legal/privacy-policy.html" class="footer-link">Privacy</a>
+            <a href="../legal/terms-of-service.html" class="footer-link">Customer Agreement</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="portal-script.js"></script>
+  </body>
+</html>

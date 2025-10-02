@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - Customer Portal - Nexlink IT LLC</title>
+    <meta name="description" content="Sign in to your Nexlink IT Customer Portal to manage your account, billing, and support tickets." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Theme bootstrap -->
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = stored || (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch (_) {}
+      })();
+    </script>
+
+    <!-- Tailwind via CDN for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eff9ff',
+                100: '#dff2ff',
+                200: '#b9e6ff',
+                300: '#7fd3ff',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+            },
+            boxShadow: {
+              glow: '0 10px 30px -10px rgba(14,165,233,.45)',
+            },
+            backgroundImage: {
+              grid: 'radial-gradient(rgba(14,165,233,0.15) 1px, transparent 1px)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="portal-styles.css" />
+  </head>
+  <body class="min-h-screen bg-neutral-50 text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100 flex flex-col">
+    <!-- Decorative background -->
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute inset-0 bg-grid [background-size:20px_20px] opacity-20 dark:opacity-10"></div>
+      <div class="absolute left-1/2 top-[20%] h-96 w-96 -translate-x-1/2 rounded-full bg-brand-500/20 blur-3xl filter"></div>
+      <div class="absolute right-[10%] top-[60%] h-64 w-64 rounded-full bg-brand-400/15 blur-3xl filter"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="relative z-10">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 sm:px-6 lg:px-8">
+        <a href="../index.html" class="group inline-flex items-center gap-2">
+          <div>
+            <div class="font-semibold leading-tight text-lg">Nexlink IT LLC</div>
+            <div class="text-sm text-neutral-500 dark:text-neutral-400">Professional managed IT Services</div>
+          </div>
+        </a>
+        
+        <div class="flex items-center gap-4">
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">🌙</button>
+          <a href="../contact.html" class="text-sm font-medium text-neutral-600 hover:text-brand-600 dark:text-neutral-300 dark:hover:text-brand-400 transition">Need Help?</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Login Section -->
+    <main class="relative z-10 flex items-center justify-center flex-grow px-4 py-12">
+      <div class="w-full max-w-md" data-animate>
+        <!-- Login Card -->
+        <div class="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-xl p-8">
+          <!-- Header -->
+          <div class="text-center mb-8">
+            <h1 class="text-2xl font-bold tracking-tight mb-2">Welcome Back</h1>
+            <p class="text-neutral-600 dark:text-neutral-400">Sign in to your customer portal</p>
+          </div>
+
+          <!-- Login Form -->
+          <form id="loginForm" class="space-y-6">
+            <div>
+              <label for="email" class="label">Email Address</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="input" 
+                placeholder="your.email@example.com"
+                required 
+                autocomplete="email"
+              >
+            </div>
+
+            <div>
+              <label for="password" class="label">Password</label>
+              <div class="relative">
+                <input 
+                  type="password" 
+                  id="password" 
+                  name="password" 
+                  class="input pr-10" 
+                  placeholder="Enter your password"
+                  required 
+                  autocomplete="current-password"
+                >
+                <button 
+                  type="button" 
+                  id="togglePassword" 
+                  class="absolute inset-y-0 right-0 flex items-center pr-3 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300"
+                  aria-label="Toggle password visibility"
+                >
+                  <span id="passwordIcon">👁️</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Remember Me & Forgot Password -->
+            <div class="flex items-center justify-between">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="remember" name="remember" class="w-4 h-4 text-brand-600 border-neutral-300 rounded focus:ring-brand-500 dark:border-neutral-600 dark:bg-neutral-800">
+                <span class="text-sm text-neutral-600 dark:text-neutral-400">Remember me</span>
+              </label>
+              <a href="#" class="text-sm font-medium text-brand-600 hover:text-brand-500 dark:text-brand-400 dark:hover:text-brand-300">
+                Forgot password?
+              </a>
+            </div>
+
+            <!-- Login Button -->
+            <button 
+              type="submit" 
+              class="w-full btn-primary text-center"
+              id="loginButton"
+            >
+              <span id="loginButtonText">Sign In</span>
+              <span id="loginSpinner" class="hidden ml-2">
+                <svg class="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </span>
+            </button>
+          </form>
+
+          <!-- Sign Up Link -->
+          <div class="mt-8 text-center">
+            <p class="text-sm text-neutral-600 dark:text-neutral-400">
+              Don't have an account? 
+              <a href="#" class="font-medium text-brand-600 hover:text-brand-500 dark:text-brand-400 dark:hover:text-brand-300">
+                Contact sales
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Additional Info -->
+        <div class="mt-8 text-center">
+          <div class="flex items-center justify-center gap-6 text-sm text-neutral-500 dark:text-neutral-400">
+            <a href="../legal/privacy-policy.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition">Privacy</a>
+            <a href="../legal/terms-of-service.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition">Terms</a>
+            <a href="../contact.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition">Support</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Demo Credentials Notice -->
+    <div class="fixed bottom-4 right-4 bg-brand-100 dark:bg-brand-900 border border-brand-200 dark:border-brand-800 rounded-lg p-4 max-w-sm z-50" data-animate>
+      <div class="flex items-start gap-3">
+        <div class="text-brand-600 dark:text-brand-400">💡</div>
+        <div>
+          <div class="font-semibold text-brand-800 dark:text-brand-200 text-sm">Demo Credentials</div>
+          <div class="text-xs text-brand-700 dark:text-brand-300 mt-1">
+            Email: demo@example.com<br>
+            Password: demo123
+          </div>
+        </div>
+        <button id="closeDemoNotice" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 dark:hover:text-brand-200 ml-auto">×</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-neutral-200 dark:border-neutral-800 mt-auto">
+      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div class="text-sm text-neutral-600 dark:text-neutral-400">
+            © 2025 Nexlink IT LLC. All rights reserved.
+          </div>
+          <div class="flex items-center gap-3 text-sm text-neutral-600 dark:text-neutral-400">
+            <div class="flex items-center gap-1 text-brand-600" aria-label="5.0 out of 5 stars">
+              <span>★★★★★</span>
+            </div>
+            <div>Trusted by businesses in 8+ countries</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="login-script.js"></script>
+  </body>
+</html>

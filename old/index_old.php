@@ -1,3 +1,5 @@
+<!-- Old website project - keep for reference, not in use anymore. -->
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -10,24 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <meta name="description" content="Freelance Linux & Unraid system administrator based in Norway">
 
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MDQXTVPF');</script>
-    <!-- End Google Tag Manager -->
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B38C9QERF9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-B38C9QERF9');
-</script>
-
     <style>
         :root {
             --primary: #0078d4;
@@ -37,6 +21,29 @@
             --card-bg: #fff;
             --radius: 18px;
             --shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        .archived-banner {
+            background: linear-gradient(135deg, #ff6b35 0%, #f9ca24 100%);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            position: relative;
+            z-index: 1000;
+        }
+        .archived-banner i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+        .archived-banner a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+        .archived-banner a:hover {
+            text-decoration: none;
         }
 
         html, body {
@@ -55,80 +62,31 @@
         }
 
         header {
-            background: var(--primary);
-            color: #fff;
-            padding: 0;
+            /* background: linear-gradient(90deg, var(--primary) 60%, var(--primary-dark) 100%); */
+			background: #0078d4;
+			color: #fff;
+            /* padding: 36px 0; */
+            padding: 0 0 36px 0; /* Remove top padding, keep bottom */
+            text-align: center;
             box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        .header-content {
-            max-width: 980px;
-            margin: 0 auto;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            padding: 0 32px;
-            height: 68px;
+            justify-content: center;
         }
-        .logo h1 {
-            font-size: 2rem;
+
+        h1 {
+            font-size: 2.7rem;
             font-weight: 700;
-            margin: 0;
             letter-spacing: 1px;
+            margin-bottom: 10px;
         }
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-        .header-nav .description {
-            font-size: 1.1rem;
-            font-weight: 500;
+
+        .description {
+            font-size: 1.3rem;
+            font-weight: 400;
             opacity: 0.92;
-            margin-right: 12px;
-            color: #e5f1fb;
-        }
-        .header-nav a {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: 600;
-            font-size: 1.07rem;
-            background: rgba(255,255,255,0.08);
-            padding: 8px 18px;
-            border-radius: 8px;
-            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-        }
-        .header-nav a img {
-            filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
-        }
-        .header-nav a:hover {
-            background: #fff;
-            color: var(--primary);
-            box-shadow: 0 2px 8px rgba(0,120,212,0.10);
-        }
-        .header-nav a:hover img {
-            filter: brightness(0) saturate(100%) invert(26%) sepia(94%) saturate(749%) hue-rotate(176deg) brightness(97%) contrast(101%);
-        }
-        @media (max-width: 700px) {
-            .header-content {
-                flex-direction: column;
-                align-items: flex-start;
-                height: auto;
-                padding: 12px 4vw;
-                gap: 10px;
-            }
-            .header-nav {
-                gap: 12px;
-                flex-wrap: wrap;
-            }
-            .logo h1 {
-                font-size: 1.4rem;
-            }
+            margin-bottom: 0;
         }
 
         .container {
@@ -148,6 +106,43 @@
             margin-bottom: 28px;
             color: #333;
             text-align: center;
+        }
+
+        #linkStrip {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            margin: 24px 0 0 0;
+        }
+
+        #linkStrip a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.07rem;
+            background: var(--accent);
+            padding: 10px 22px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+
+        #linkStrip a img {
+            /* Fiverr icon blue by default */
+            filter: brightness(0) saturate(100%) invert(26%) sepia(94%) saturate(749%) hue-rotate(176deg) brightness(97%) contrast(101%);
+        }
+        #linkStrip a:hover {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(0,120,212,0.10);
+        }
+        #linkStrip a:hover img {
+            /* Fiverr icon white on hover */
+            filter: brightness(0) invert(1);
         }
 
         .js-warning {
@@ -252,26 +247,6 @@
             background: none;
         }
 
-        .five-star-summary {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 18px;
-            margin-top: 18px;
-        }
-        .big-stars {
-            color: #ffc107;
-            font-size: 1.5rem;
-            letter-spacing: 6px;
-            margin-bottom: 8px;
-        }
-        .five-star-count {
-            font-size: 1.15rem;
-            color: #444;
-            font-weight: 600;
-            opacity: 0.92;
-        }
-
         @media (max-width: 600px) {
             .container {
                 padding: 18px 6vw 18px 6vw;
@@ -293,39 +268,17 @@
         }
     </style>
 </head>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/687634c6169bb91912b96edd/1j06rs9te';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
+
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDQXTVPF"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <!-- Archived Website Banner -->
+    <div class="archived-banner">
+        <i class="fas fa-archive"></i>
+        This is an archived version of our website. Visit our <a href="../index.html">current website</a> for up-to-date information and services.
+    </div>
+    
     <header>
-        <div class="header-content">
-            <div class="logo">
-                <h1>Daniel Hammer</h1>
-            </div>
-            <nav class="header-nav">
-                <span class="description">IT Services</span>
-                <a href="https://www.fiverr.com/nexlink_norway" target="_blank" rel="noopener">
-                    <img src="/public/fiverr.png" alt="Fiverr" style="width:1.3em;height:1.3em;" /> Fiverr
-                </a>
-                <a id="emailCopyLink" href="#" onclick="emailCopy(event)">
-                    <i class="fas fa-envelope"></i> Contact
-                </a>
-            </nav>
-        </div>
+        <h1>Daniel Hammer</h1>
+        <h2 class="description">IT Services</h2>
     </header>
 
     <div class="container">
@@ -338,18 +291,18 @@
             I can help you with anything IT, Linux, unRAID, or Nextcloud related for your home or business projects!
         </div>
 
-        <br>
+        <div id="linkStrip">
+            <a href="https://www.fiverr.com/nexlink_norway" target="_blank" rel="noopener">
+                <img src="/public/fiverr.png" alt="Fiverr" style="width:1.3em;height:1.3em;" />
+                Fiverr
+            </a>
+            <a id="emailCopyLink" href="#" onclick="emailCopy(event)">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
 
-        <!-- 5 big stars and review count -->
-        <div class="five-star-summary">
-            <div class="big-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <div class="five-star-count" id="fiveStarCount">What customers say</div>
+            <!-- <a id="emailCopyLink" href="https://blog.nexlink.website">
+                <i class="fas fa-laptop"></i> Blog
+            </a> -->
         </div>
 
         <div class="review-carousel">
@@ -480,31 +433,32 @@
             e.preventDefault();
 
             const emailCopyLink = document.getElementById("emailCopyLink");
-            if (!emailCopyLink) return;
+            const p = document.createElement("span");
 
-            // Save original content
-            const originalHTML = emailCopyLink.innerHTML;
-            const originalStyle = emailCopyLink.style.cssText;
+            p.innerHTML = "Please wait...";
+            p.style.color = "#0078d4";
+            p.style.fontWeight = "600";
+            emailCopyLink.replaceWith(p);
 
-            emailCopyLink.innerHTML = '<span style="color:#0078d4;font-weight:600;">Please wait...</span>';
-            emailCopyLink.style.pointerEvents = 'none';
-            emailCopyLink.style.opacity = '0.7';
+            
+            const response = await fetch("/api/email.php");
+            const encoded = await response.text();
 
-            try {
-                const response = await fetch("/api/email.php");
-                const encoded = await response.text();
-                // Decode from base64
-                const email = atob(encoded);
-                navigator.clipboard.writeText(email);
-                emailCopyLink.innerHTML = '<i class="fas fa-check"></i> Email copied!';
-            } catch (err) {
-                emailCopyLink.innerHTML = '<span style="color:#d32f2f;font-weight:600;">Error copying email</span>';
+            console.log(`Received encoded email from server: ${encoded}`);
+
+            // Decode from base64
+            const email = atob(encoded);
+
+            navigator.clipboard.writeText(email);
+
+            if (emailCopyLink) {
+                p.innerHTML = '<i class="fas fa-check"></i> Email copied!';
+                emailCopyLink.replaceWith(p);
+
+                setTimeout(() => {
+                    p.replaceWith(emailCopyLink);
+                }, 1200);
             }
-
-            setTimeout(() => {
-                emailCopyLink.innerHTML = originalHTML;
-                emailCopyLink.style.cssText = originalStyle;
-            }, 1200);
         }
     </script>
 </body>

@@ -1,3 +1,5 @@
+<!-- Old website project - keep for reference, not in use anymore. -->
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -16,6 +18,29 @@
             --card-bg: #fff;
             --radius: 18px;
             --shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        .archived-banner {
+            background: linear-gradient(135deg, #ff6b35 0%, #f9ca24 100%);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            position: relative;
+            z-index: 1000;
+        }
+        .archived-banner i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+        .archived-banner a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+        .archived-banner a:hover {
+            text-decoration: none;
         }
         html, body { height: 100%; }
         body {
@@ -378,6 +403,12 @@
     <link rel="icon" type="image/svg+xml" href="assets/cloud-blue.svg">
 </head>
 <body>
+    <!-- Archived Website Banner -->
+    <div class="archived-banner">
+        <i class="fas fa-archive"></i>
+        This is an archived version of our website. Visit our <a href="../index.html">current website</a> for up-to-date information and services.
+    </div>
+    
     <header>
         <div class="header-content">
             <div class="logo">

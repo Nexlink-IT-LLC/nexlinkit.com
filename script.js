@@ -198,17 +198,26 @@ const reviews = [
     stars: 5,
     text: "I am very happy with Daniel's work, he is supper professional. He immediately understood my needs with installing Nextcloud & Peertube in my hardware and suggested and installed Unraid server and the and software diligently. He responds super fast to my messages. I will definitely use his services in the future.",
     reviewer: "Renanto (reneleda)",
+    title: "Small Business Owner",
     country: "California, USA",
     platform: "Fiverr"
   },
+  // {
+  //   stars: 5,
+  //   text: "[Translated from Swedish] Finding the right person on Fiverr can sometimes feel like a lottery, but with Daniel I really hit the jackpot. I hired him for help with Nextcloud, Proxy Manager, and TrueNAS, and it’s one of the best investments I’ve ever made. Daniel isn’t just knowledgeable, he’s a master of detail who never leaves anything half done; he digs deep, analyzes problems, and provides long-term, stable solutions instead of quick fixes, which gives me great confidence that his work will stand the test of time. What truly sets him apart is not only his expertise but also his way of communicating—he is attentive, clear, and pedagogical, always explaining each step, why it’s done, and how it fits into the bigger picture. From the start, it’s obvious that he’s passionate about his work and genuinely wants his clients to get the best possible result. I’ve worked with many different people over the years, but Daniel really stands out because he combines technical mastery with professionalism and a rare work ethic, showing just as much commitment to the client’s needs as to the technology itself. In short, if you need help with Nextcloud, Proxy Manager, TrueNAS, or related systems, hire Daniel immediately; he’s one of the most reliable and competent people I’ve met on Fiverr, and I wholeheartedly recommend him as someone who makes a real difference and whom you’ll want to return to again and again. ⭐⭐⭐⭐⭐",
+  //   reviewer: "Tomas (tomasochcarina)",
+  //   title: "Private User",
+  //   country: "Sweden",
+  //   platform: "Fiverr"
+  // },
   {
     stars: 5,
-    text: "[Translated from Swedish] Finding the right person on Fiverr can sometimes feel like a lottery, but with Daniel I really hit the jackpot. I hired him for help with Nextcloud, Proxy Manager, and TrueNAS, and it’s one of the best investments I’ve ever made. Daniel isn’t just knowledgeable, he’s a master of detail who never leaves anything half done; he digs deep, analyzes problems, and provides long-term, stable solutions instead of quick fixes, which gives me great confidence that his work will stand the test of time. What truly sets him apart is not only his expertise but also his way of communicating—he is attentive, clear, and pedagogical, always explaining each step, why it’s done, and how it fits into the bigger picture. From the start, it’s obvious that he’s passionate about his work and genuinely wants his clients to get the best possible result. I’ve worked with many different people over the years, but Daniel really stands out because he combines technical mastery with professionalism and a rare work ethic, showing just as much commitment to the client’s needs as to the technology itself. In short, if you need help with Nextcloud, Proxy Manager, TrueNAS, or related systems, hire Daniel immediately; he’s one of the most reliable and competent people I’ve met on Fiverr, and I wholeheartedly recommend him as someone who makes a real difference and whom you’ll want to return to again and again. ⭐⭐⭐⭐⭐",
+    text: "[Translated from Swedish] Finding the right person on Fiverr can feel like a lottery, but with Daniel I truly hit the jackpot. [...] It’s rare to find someone who combines technical mastery with professionalism and genuine care for the client’s needs. If you need help with these systems, hire Daniel immediately—he’s reliable, highly skilled, and one of the best I’ve worked with on Fiverr. ⭐⭐⭐⭐⭐",
     reviewer: "Tomas (tomasochcarina)",
     title: "Private User",
     country: "Sweden",
     platform: "Fiverr"
-  }
+  },
 ];
 
 function createReviewCard(review) {

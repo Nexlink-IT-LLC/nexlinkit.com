@@ -481,7 +481,7 @@ if (supportForm) {
       // Show user-friendly error message
       const errorMessage = error.message.includes('HTTP') 
         ? 'There was a network error. Please check your connection and try again.'
-        : 'There was an error sending your request. Please try again or email support@nexlink.website directly.';
+        : 'There was an error sending your request. Please try again or email contact@nexlink.website directly.';
       
       alert(errorMessage);
       
@@ -526,7 +526,7 @@ if (contactForm) {
       
       const errorMessage = error.message.includes('HTTP') 
         ? 'There was a network error. Please check your connection and try again.'
-        : 'There was an error sending your message. Please try again or email support@nexlink.website directly.';
+        : 'There was an error sending your message. Please try again or email contact@nexlink.website directly.';
       
       alert(errorMessage);
       

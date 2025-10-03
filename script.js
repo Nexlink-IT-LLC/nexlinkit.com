@@ -402,16 +402,8 @@ function getVisitorId() {
 }
 
 // API configuration
-function getApiEndpoint() {
-  const hostname = window.location.hostname;
-  
-  // Production API endpoints
-  if (hostname === 'www.nexlink.website' || hostname === 'nexlink.website') {
-    return 'https://api.nexlink.website/v1/contact';
-  }
-  
-  // Development/local fallback - use the current host with /v1/api/contact.php
-  return `${window.location.origin}/v1/api/contact.php`;
+function getApiEndpoint() {  
+  return 'https://api.nexlink.website/v1/contact';
 }
 
 // Form submission handlers

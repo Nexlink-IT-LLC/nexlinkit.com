@@ -426,35 +426,11 @@
 
     <script src="script.js"></script>
     <script>
-      // Contact form handling
+      // Success modal handling for contact page
       document.addEventListener('DOMContentLoaded', function() {
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          
-          // Get form data
-          const formData = new FormData(contactForm);
-          const data = Object.fromEntries(formData);
-          
-          // Basic validation
-          if (!data.firstName || !data.lastName || !data.email || !data.message) {
-            alert('Please fill in all required fields.');
-            return;
-          }
-          
-          // Show success modal
-          const successModal = document.getElementById('successModal');
-          successModal.classList.remove('invisible', 'opacity-0');
-          successModal.setAttribute('aria-hidden', 'false');
-          
-          // Reset form
-          contactForm.reset();
-        });
-        
         // Close success modal
         const successOk = document.getElementById('successOk');
-        successOk.addEventListener('click', function() {
+        successOk?.addEventListener('click', function() {
           const successModal = document.getElementById('successModal');
           successModal.classList.add('invisible', 'opacity-0');
           successModal.setAttribute('aria-hidden', 'true');

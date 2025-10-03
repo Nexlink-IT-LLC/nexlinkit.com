@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Professional Nextcloud Installation - Starting at $40 | Nexlink IT</title>
+    <meta name="description" content="Get your Nextcloud server professionally installed and configured. Expert setup starting at just $40. Secure, reliable, and ready to use in 24 hours or less." />
+    <meta property="og:title" content="Professional Nextcloud Installation - Starting at $40" />
+    <meta property="og:description" content="Get your Nextcloud server professionally installed and configured. Expert setup starting at just $40. Secure, reliable, and ready to use in 24 hours or less." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Theme bootstrap -->
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = stored || (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch (_) {}
+      })();
+    </script>
+
+    <!-- Tailwind via CDN for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eff9ff',
+                100: '#dff2ff',
+                200: '#b9e6ff',
+                300: '#7fd3ff',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+            },
+            boxShadow: {
+              glow: '0 10px 30px -10px rgba(14,165,233,.45)',
+            },
+            backgroundImage: {
+              grid: 'radial-gradient(rgba(14,165,233,0.15) 1px, transparent 1px)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body class="bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 border-b border-neutral-200/50 bg-white/80 backdrop-blur-md dark:border-neutral-800/50 dark:bg-neutral-900/80">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
+        <div>
+            <div class="flex items-center gap-2">
+                <span class="text-xl font-bold">Nexlink IT</span>
+            </div>
+            <div class="text-xs text-neutral-500 dark:text-neutral-400">Professional IT Services company</div>
+        </div>
+
+        <div class="hidden items-center gap-6 md:flex">
+          <a href="../index.html" class="nav-link">Home</a>
+          <a href="../about.html" class="nav-link">About</a>
+          <a href="../pricing.html" class="nav-link">Pricing</a>
+          <a href="../contact.html" class="btn-primary">Get Started</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-brand-50 to-white py-20 dark:from-neutral-900 dark:to-neutral-800">
+      <div class="absolute inset-0 bg-grid bg-[size:20px_20px] opacity-30"></div>
+      <div class="relative mx-auto max-w-7xl px-4 text-center lg:px-8">
+        <div class="mx-auto max-w-4xl">
+          <div class="mb-6 inline-flex items-center rounded-full bg-brand-100 px-4 py-2 text-sm font-medium text-brand-800 dark:bg-brand-900/30 dark:text-brand-300">
+            <svg class="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Professional Installation Service
+          </div>
+          
+          <h1 class="mb-6 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+            Get Your <span class="bg-gradient-to-r from-brand-600 to-brand-400 bg-clip-text text-transparent">Nextcloud Server</span> 
+            <br />Professionally Installed
+          </h1>
+          
+          <p class="mb-8 text-lg text-neutral-600 dark:text-neutral-300 md:text-xl">
+            Skip the complexity and get straight to using your private cloud. Expert Nextcloud installation 
+            with SSL, security hardening, and optimization — all starting at just <strong class="text-brand-600">$40</strong>.
+          </p>
+          
+          <div class="mb-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <a href="#pricing" class="btn-primary text-lg">
+              Start Installation - $40
+            </a>
+            <a href="#features" class="flex items-center gap-2 text-neutral-600 hover:text-brand-600 dark:text-neutral-400 dark:hover:text-brand-400">
+              <span>Learn more</span>
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="flex items-center justify-center gap-8 text-sm text-neutral-500 dark:text-neutral-400">
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>24hr delivery</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>SSL included</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Security hardened</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="mb-16 text-center">
+          <h2 class="mb-4 text-3xl font-bold md:text-4xl">What's Included in Your Installation</h2>
+          <p class="text-lg text-neutral-600 dark:text-neutral-300">
+            Professional setup with all the essentials for a secure, production-ready Nextcloud server
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Feature 1 -->
+          <div class="card group">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/30">
+              <svg class="h-6 w-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">SSL Certificate Setup</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Automatic SSL certificate installation with Let's Encrypt for secure HTTPS access to your Nextcloud instance.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="card group">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/30">
+              <svg class="h-6 w-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Security Hardening</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Complete security configuration including firewall setup, fail2ban, and secure file permissions for maximum protection.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="card group">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/30">
+              <svg class="h-6 w-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Database Optimization</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Optimized MySQL/PostgreSQL database setup with proper indexing and caching for fast performance.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="card group">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/30">
+              <svg class="h-6 w-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Admin Account Setup</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Complete admin user creation with secure credentials and initial configuration walkthrough.
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="card group">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/30">
+              <svg class="h-6 w-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Performance Tuning</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              PHP-FPM optimization, Redis caching setup, and server configuration tuning for optimal speed.
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="card group">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/30">
+              <svg class="h-6 w-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">24/7 Support Access</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Post-installation support and documentation for managing your Nextcloud server effectively.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="bg-neutral-50 py-20 dark:bg-neutral-800/50">
+      <div class="mx-auto max-w-4xl px-4 text-center lg:px-8">
+        <div class="mb-16">
+          <h2 class="mb-4 text-3xl font-bold md:text-4xl">Simple, Transparent Pricing</h2>
+          <p class="text-lg text-neutral-600 dark:text-neutral-300">
+            Professional Nextcloud installation with no hidden fees or surprises
+          </p>
+        </div>
+
+        <div class="card mx-auto max-w-md border-2 border-brand-200 bg-white dark:border-brand-800 dark:bg-neutral-900">
+          <div class="mb-6">
+            <div class="mb-2 text-center">
+              <span class="text-5xl font-bold text-brand-600">$40</span>
+              <span class="text-lg text-neutral-500">/installation</span>
+            </div>
+            <h3 class="text-xl font-semibold">Professional Installation</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">Complete setup in 24 hours or less</p>
+          </div>
+
+          <ul class="mb-8 space-y-3 text-left">
+            <li class="flex items-center gap-3">
+              <svg class="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Latest Nextcloud version</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>SSL certificate (Let's Encrypt)</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Security hardening & firewall</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Database optimization</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Performance tuning</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Documentation & support</span>
+            </li>
+          </ul>
+
+          <a href="../contact.html?service=nextcloud-installation" class="btn-primary w-full">
+            Get Started Now
+          </a>
+        </div>
+
+        <div class="mt-8 text-sm text-neutral-500 dark:text-neutral-400">
+          <p>Server hosting not included. We work with your existing server or VPS.</p>
+          <p class="mt-1">Need a server? We can recommend hosting providers starting at $5/month.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="mb-16 text-center">
+          <h2 class="mb-4 text-3xl font-bold md:text-4xl">How It Works</h2>
+          <p class="text-lg text-neutral-600 dark:text-neutral-300">
+            Simple 3-step process to get your Nextcloud server up and running
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Step 1 -->
+          <div class="text-center">
+            <div class="mb-4 flex justify-center">
+              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-brand-100 text-2xl font-bold text-brand-600 dark:bg-brand-900/30 dark:text-brand-400">
+                1
+              </div>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Provide Server Details</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Share your server SSH access and domain information. We support all major Linux distributions.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center">
+            <div class="mb-4 flex justify-center">
+              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-brand-100 text-2xl font-bold text-brand-600 dark:bg-brand-900/30 dark:text-brand-400">
+                2
+              </div>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">We Install & Configure</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Our experts handle the complete installation, security setup, and performance optimization within 24 hours.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center">
+            <div class="mb-4 flex justify-center">
+              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-brand-100 text-2xl font-bold text-brand-600 dark:bg-brand-900/30 dark:text-brand-400">
+                3
+              </div>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Start Using Nextcloud</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Receive your admin credentials and documentation. Your private cloud is ready to use immediately.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a href="../contact.html?service=nextcloud-installation" class="btn-primary">
+            Start Your Installation Today
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-neutral-50 py-20 dark:bg-neutral-800/50">
+      <div class="mx-auto max-w-4xl px-4 lg:px-8">
+        <div class="mb-16 text-center">
+          <h2 class="mb-4 text-3xl font-bold md:text-4xl">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-6">
+          <!-- FAQ 1 -->
+          <div class="card">
+            <h3 class="mb-2 text-lg font-semibold">What do I need to provide?</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              You need a Linux server (VPS or dedicated) with root access, and a domain name pointed to your server. 
+              We support Ubuntu, Debian, CentOS, and other major distributions.
+            </p>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="card">
+            <h3 class="mb-2 text-lg font-semibold">How long does the installation take?</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Most installations are completed within 24 hours. Complex setups or custom requirements may take longer, 
+              but we'll communicate the timeline upfront.
+            </p>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="card">
+            <h3 class="mb-2 text-lg font-semibold">Is hosting included in the $40 price?</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              No, the $40 covers the installation service only. You'll need your own server or VPS. 
+              We can recommend reliable hosting providers starting at $5/month if needed.
+            </p>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="card">
+            <h3 class="mb-2 text-lg font-semibold">What version of Nextcloud will be installed?</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              We install the latest stable version of Nextcloud with all security updates and optimizations. 
+              You'll also receive guidance on keeping it updated.
+            </p>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="card">
+            <h3 class="mb-2 text-lg font-semibold">Do you offer ongoing support?</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Yes! Installation includes basic post-setup support. For ongoing maintenance and advanced support, 
+              check our <a href="../pricing.html" class="text-brand-600 hover:text-brand-700">support packages</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20">
+      <div class="mx-auto max-w-4xl px-4 text-center lg:px-8">
+        <div class="rounded-2xl bg-gradient-to-br from-brand-500 to-brand-600 px-8 py-16 text-white">
+          <h2 class="mb-4 text-3xl font-bold md:text-4xl">Ready to Get Started?</h2>
+          <p class="mb-8 text-lg opacity-90">
+            Join hundreds of satisfied customers who trust us with their Nextcloud installations. 
+            Professional setup starting at just $40.
+          </p>
+          <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <a href="../contact.html?service=nextcloud-installation" class="btn-secondary bg-white text-brand-600 hover:bg-neutral-100">
+              Start Installation - $40
+            </a>
+            <a href="../contact.html" class="flex items-center gap-2 text-white/80 hover:text-white">
+              <span>Have questions? Contact us</span>
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 py-10 text-sm dark:border-neutral-800">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:flex-row sm:text-left lg:px-8">
+        <div>
+          <div class="text-neutral-500 dark:text-neutral-400">© 2025 Nexlink IT LLC. All rights reserved.</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <!-- Sitemap -->
+          <nav aria-label="Sitemap" class="flex flex-wrap gap-4 justify-center">
+            <a class="footer-link" href="../index.html">Home</a>
+            <a class="footer-link" href="../about.html">About</a>
+            <a class="footer-link" href="../pricing.html">Pricing</a>
+            <a class="footer-link" href="../contact.html">Contact</a>
+            <a class="footer-link" href="../legal/">Legal</a>
+            <a class="footer-link" href="../legal/terms-of-service.html">Customer Agreement</a>
+            <a class="footer-link" href="../legal/privacy-policy.html">Privacy</a>
+            <a class="footer-link" href="../legal/remote-access-agreement.html">Remote Access Agreement</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

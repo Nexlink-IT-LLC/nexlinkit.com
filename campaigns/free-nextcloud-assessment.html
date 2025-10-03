@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FREE Nextcloud Security & Performance Assessment | Nexlink IT</title>
+    <meta name="description" content="Get a comprehensive FREE assessment of your existing Nextcloud installation. Professional security audit, performance analysis, and optimization recommendations at absolutely no charge." />
+    <meta property="og:title" content="FREE Nextcloud Security & Performance Assessment" />
+    <meta property="og:description" content="Get a comprehensive FREE assessment of your existing Nextcloud installation. Professional security audit, performance analysis, and optimization recommendations at absolutely no charge." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Theme bootstrap -->
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = stored || (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch (_) {}
+      })();
+    </script>
+
+    <!-- Tailwind via CDN for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eff9ff',
+                100: '#dff2ff',
+                200: '#b9e6ff',
+                300: '#7fd3ff',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+            },
+            boxShadow: {
+              glow: '0 10px 30px -10px rgba(14,165,233,.45)',
+            },
+            backgroundImage: {
+              grid: 'radial-gradient(rgba(14,165,233,0.15) 1px, transparent 1px)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body class="bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 border-b border-neutral-200/50 bg-white/80 backdrop-blur-md dark:border-neutral-800/50 dark:bg-neutral-900/80">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
+        <div>
+            <div class="flex items-center gap-2">
+                <span class="text-xl font-bold">Nexlink IT</span>
+            </div>
+            <div class="text-xs text-neutral-500 dark:text-neutral-400">Professional IT Services company</div>
+        </div>
+
+        <div class="hidden items-center gap-6 md:flex">
+          <a href="../index.html" class="nav-link">Home</a>
+          <a href="../about.html" class="nav-link">About</a>
+          <a href="../pricing.html" class="nav-link">Pricing</a>
+          <a href="../contact.html" class="btn-primary">Get Started</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-emerald-50 to-white py-20 dark:from-neutral-900 dark:to-neutral-800">
+      <div class="absolute inset-0 bg-grid bg-[size:20px_20px] opacity-30"></div>
+      <div class="relative mx-auto max-w-7xl px-4 text-center lg:px-8">
+        <div class="mx-auto max-w-4xl">
+          <div class="mb-6 inline-flex items-center rounded-full bg-emerald-100 px-6 py-3 text-sm font-bold text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300 animate-pulse">
+            <svg class="mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            100% FREE - No Strings Attached
+          </div>
+          
+          <h1 class="mb-6 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+            FREE <span class="bg-gradient-to-r from-emerald-600 to-emerald-400 bg-clip-text text-transparent">Nextcloud Assessment</span> 
+            <br />For Your Existing Installation
+          </h1>
+          
+          <p class="mb-8 text-lg text-neutral-600 dark:text-neutral-300 md:text-xl">
+            Get a comprehensive professional assessment of your current Nextcloud setup — security audit, 
+            performance analysis, and optimization recommendations. <strong class="text-emerald-600">Completely FREE</strong> 
+            with absolutely no charge or obligation.
+          </p>
+
+          <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <button onclick="openAssessmentModal()" class="btn-primary bg-emerald-600 hover:bg-emerald-700 shadow-glow">
+              Get Your FREE Assessment
+            </button>
+            <div class="text-sm text-neutral-500 dark:text-neutral-400">
+              ✓ No credit card required ✓ No hidden fees ✓ No obligation
+            </div>
+          </div>
+
+          <!-- Trust indicators -->
+          <div class="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-neutral-500 dark:text-neutral-400">
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              200+ Assessments Completed
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Expert Nextcloud Consultants
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              24-Hour Turnaround
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What You Get Section -->
+    <section class="py-20">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="mb-16 text-center">
+          <h2 class="mb-4 text-3xl font-bold md:text-4xl">What's Included in Your FREE Assessment</h2>
+          <p class="mx-auto max-w-2xl text-lg text-neutral-600 dark:text-neutral-300">
+            Our comprehensive evaluation covers every aspect of your Nextcloud installation — 
+            <strong>all at absolutely no cost to you</strong>.
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Assessment 1 -->
+          <div class="card group border-2 border-emerald-100 dark:border-emerald-900/30">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
+              <svg class="h-6 w-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Security Audit</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Comprehensive security analysis including SSL configuration, user permissions, firewall settings, 
+              and vulnerability assessment. Identify and fix security gaps before they become problems.
+            </p>
+          </div>
+
+          <!-- Assessment 2 -->
+          <div class="card group border-2 border-emerald-100 dark:border-emerald-900/30">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
+              <svg class="h-6 w-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Performance Analysis</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Deep dive into server performance, database optimization, caching configuration, and resource usage. 
+              Get specific recommendations to speed up your Nextcloud significantly.
+            </p>
+          </div>
+
+          <!-- Assessment 3 -->
+          <div class="card group border-2 border-emerald-100 dark:border-emerald-900/30">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
+              <svg class="h-6 w-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Configuration Review</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Complete review of PHP settings, web server configuration, database setup, and Nextcloud-specific 
+              settings. Ensure everything is optimally configured for your use case.
+            </p>
+          </div>
+
+          <!-- Assessment 4 -->
+          <div class="card group border-2 border-emerald-100 dark:border-emerald-900/30">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
+              <svg class="h-6 w-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Backup Assessment</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Evaluate your current backup strategy, test backup integrity, and provide recommendations 
+              for bulletproof data protection and disaster recovery planning.
+            </p>
+          </div>
+
+          <!-- Assessment 5 -->
+          <div class="card group border-2 border-emerald-100 dark:border-emerald-900/30">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
+              <svg class="h-6 w-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-9 0V3a1 1 0 011-1h6a1 1 0 011 1v1M7 4h10v16H7V4z" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Detailed Report</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Comprehensive written report with findings, priority recommendations, step-by-step improvement 
+              guide, and estimated impact of each optimization.
+            </p>
+          </div>
+
+          <!-- Assessment 6 -->
+          <div class="card group border-2 border-emerald-100 dark:border-emerald-900/30">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
+              <svg class="h-6 w-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Follow-up Consultation</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              30-minute consultation call to discuss findings, answer questions, and provide guidance 
+              on implementing recommendations. No sales pitch — just helpful advice.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-neutral-50 dark:bg-neutral-800/50">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="mb-16 text-center">
+          <h2 class="mb-4 text-3xl font-bold md:text-4xl">How It Works</h2>
+          <p class="mx-auto max-w-2xl text-lg text-neutral-600 dark:text-neutral-300">
+            Simple, non-intrusive process that respects your privacy and security.
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Step 1 -->
+          <div class="text-center">
+            <div class="mb-4 flex justify-center">
+              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-600 text-2xl font-bold text-white">1</div>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Contact Us</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Fill out our simple form or give us a call. We'll schedule a convenient time for the assessment 
+              and discuss access requirements.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center">
+            <div class="mb-4 flex justify-center">
+              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-600 text-2xl font-bold text-white">2</div>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Secure Assessment</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Our experts perform a thorough analysis using secure, read-only access methods. 
+              Your data privacy and system security are our top priorities.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center">
+            <div class="mb-4 flex justify-center">
+              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-600 text-2xl font-bold text-white">3</div>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold">Get Results</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Receive your detailed report within 24 hours, plus a consultation call to discuss 
+              findings and recommendations. All completely free.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="py-20">
+      <div class="mx-auto max-w-4xl px-4 text-center lg:px-8">
+        <div class="rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 px-8 py-16 text-white">
+          <h2 class="mb-4 text-3xl font-bold md:text-4xl">Why We Offer This For FREE</h2>
+          <p class="mb-6 text-lg opacity-90">
+            We believe every Nextcloud installation should be secure, fast, and reliable. 
+            By offering free assessments, we help the community while demonstrating our expertise.
+          </p>
+          <p class="mb-8 text-lg opacity-90">
+            <strong>No catch. No hidden agenda.</strong> Just professional advice to help you get the most 
+            from your Nextcloud investment.
+          </p>
+          <button onclick="openAssessmentModal()" class="btn-secondary bg-white text-emerald-600 hover:bg-neutral-100">
+            Claim Your FREE Assessment Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-neutral-50 dark:bg-neutral-800/50">
+      <div class="mx-auto max-w-4xl px-4 lg:px-8">
+        <div class="mb-16 text-center">
+          <h2 class="mb-4 text-3xl font-bold md:text-4xl">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-6">
+          <!-- FAQ 1 -->
+          <div class="card">
+            <h3 class="mb-2 text-lg font-semibold">Is this assessment really completely free?</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Yes, absolutely! There are no hidden costs, no required purchases, and no obligation to use our services afterward. 
+              We provide this as a genuine service to the Nextcloud community.
+            </p>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="card">
+            <h3 class="mb-2 text-lg font-semibold">What access do you need to my server?</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              We use secure, read-only access methods and can work through SSH, temporary admin accounts, or 
+              server logs you provide. We never require root access and respect your security protocols.
+            </p>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="card">
+            <h3 class="mb-2 text-lg font-semibold">How long does the assessment take?</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              The actual assessment typically takes 2-4 hours of analysis time. You'll receive your comprehensive 
+              report within 24 hours, followed by a consultation call at your convenience.
+            </p>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="card">
+            <h3 class="mb-2 text-lg font-semibold">Will you try to sell me services afterward?</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              While we do offer implementation services if you need help with improvements, there's no pressure 
+              or sales pitch. Many clients implement our recommendations themselves using our detailed guides.
+            </p>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="card">
+            <h3 class="mb-2 text-lg font-semibold">What if my Nextcloud is already running well?</h3>
+            <p class="text-neutral-600 dark:text-neutral-300">
+              Even well-running installations often have optimization opportunities or security improvements. 
+              At minimum, you'll get peace of mind knowing your setup follows best practices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20">
+      <div class="mx-auto max-w-4xl px-4 text-center lg:px-8">
+        <div class="rounded-2xl border-2 border-emerald-200 bg-emerald-50 px-8 py-16 dark:border-emerald-800 dark:bg-emerald-900/20">
+          <h2 class="mb-4 text-3xl font-bold text-emerald-900 dark:text-emerald-100 md:text-4xl">
+            Ready For Your FREE Assessment?
+          </h2>
+          <p class="mb-8 text-lg text-emerald-800 dark:text-emerald-200">
+            Join hundreds of Nextcloud administrators who have improved their installations with our expert analysis. 
+            <strong>Completely free, no strings attached.</strong>
+          </p>
+          <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <button onclick="openAssessmentModal()" class="btn-primary bg-emerald-600 hover:bg-emerald-700 shadow-glow">
+              Get Your FREE Assessment Today
+            </button>
+            <a href="../contact.html" class="flex items-center gap-2 text-emerald-700 hover:text-emerald-800 dark:text-emerald-300 dark:hover:text-emerald-200">
+              <span>Questions? Contact us</span>
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+          
+          <div class="mt-8 text-sm text-emerald-700 dark:text-emerald-300">
+            ✓ No credit card ✓ No commitment ✓ Professional analysis in 24 hours
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assessment Request Modal -->
+    <div id="assessmentModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50 p-4">
+      <div class="w-full max-w-md rounded-2xl bg-white p-8 shadow-2xl dark:bg-neutral-800">
+        <div class="mb-6 text-center">
+          <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30">
+            <svg class="h-8 w-8 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-neutral-900 dark:text-white">Request Your FREE Assessment</h3>
+          <p class="text-neutral-600 dark:text-neutral-300">Get started with your complimentary Nextcloud evaluation</p>
+        </div>
+
+        <form id="assessmentForm" class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Full Name *</label>
+            <input type="text" id="name" name="name" required
+              class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 dark:border-neutral-600 dark:bg-neutral-700 dark:text-white">
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Email Address *</label>
+            <input type="email" id="email" name="email" required
+              class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 dark:border-neutral-600 dark:bg-neutral-700 dark:text-white">
+          </div>
+
+          <div>
+            <label for="phone" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Phone Number</label>
+            <input type="tel" id="phone" name="phone"
+              class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 dark:border-neutral-600 dark:bg-neutral-700 dark:text-white">
+          </div>
+
+          <div>
+            <label for="domain" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Nextcloud Domain/URL *</label>
+            <input type="url" id="domain" name="domain" placeholder="https://cloud.yourdomain.com" required
+              class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 dark:border-neutral-600 dark:bg-neutral-700 dark:text-white">
+          </div>
+
+          <div>
+            <label for="users" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Number of Users</label>
+            <select id="users" name="users"
+              class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 dark:border-neutral-600 dark:bg-neutral-700 dark:text-white">
+              <option value="">Select range</option>
+              <option value="1-5">1-5 users</option>
+              <option value="6-20">6-20 users</option>
+              <option value="21-50">21-50 users</option>
+              <option value="51-100">51-100 users</option>
+              <option value="100+">100+ users</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="concerns" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Primary Concerns (Optional)</label>
+            <textarea id="concerns" name="concerns" rows="3" 
+              placeholder="e.g., slow performance, security concerns, backup issues..."
+              class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 dark:border-neutral-600 dark:bg-neutral-700 dark:text-white"></textarea>
+          </div>
+
+          <div class="text-xs text-neutral-500 dark:text-neutral-400">
+            * Required fields. We'll contact you within 24 hours to schedule your free assessment.
+          </div>
+
+          <div class="flex gap-3 pt-4">
+            <button type="button" onclick="closeAssessmentModal()"
+              class="flex-1 rounded-lg border border-neutral-300 px-4 py-2 text-neutral-700 hover:bg-neutral-50 dark:border-neutral-600 dark:text-neutral-300 dark:hover:bg-neutral-700">
+              Cancel
+            </button>
+            <button type="submit"
+              class="flex-1 rounded-lg bg-emerald-600 px-4 py-2 text-white hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              Request Assessment
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 py-10 text-sm dark:border-neutral-800">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:flex-row sm:text-left lg:px-8">
+        <div>
+          <div class="text-neutral-500 dark:text-neutral-400">© 2025 Nexlink IT LLC. All rights reserved.</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <!-- Sitemap -->
+          <nav aria-label="Sitemap" class="flex flex-wrap gap-4 justify-center">
+            <a class="footer-link" href="../index.html">Home</a>
+            <a class="footer-link" href="../about.html">About</a>
+            <a class="footer-link" href="../pricing.html">Pricing</a>
+            <a class="footer-link" href="../contact.html">Contact</a>
+            <a class="footer-link" href="../legal/">Legal</a>
+            <a class="footer-link" href="../legal/terms-of-service.html">Customer Agreement</a>
+            <a class="footer-link" href="../legal/privacy-policy.html">Privacy</a>
+            <a class="footer-link" href="../legal/remote-access-agreement.html">Remote Access Agreement</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    
+    <!-- Assessment Modal JavaScript -->
+    <script>
+      function openAssessmentModal() {
+        const modal = document.getElementById('assessmentModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        
+        // Focus on first input
+        setTimeout(() => {
+          document.getElementById('name').focus();
+        }, 100);
+      }
+
+      function closeAssessmentModal() {
+        const modal = document.getElementById('assessmentModal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+        
+        // Reset form
+        document.getElementById('assessmentForm').reset();
+      }
+
+      // Close modal when clicking outside
+      document.getElementById('assessmentModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closeAssessmentModal();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeAssessmentModal();
+        }
+      });
+
+      // Handle form submission
+      document.getElementById('assessmentForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Submitting...';
+        submitButton.disabled = true;
+
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData.entries());
+        data.service = 'free-nextcloud-assessment';
+        data.source = 'assessment-modal';
+        
+        try {
+          const response = await fetch('../samples/contact.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          });
+
+          const result = await response.json();
+
+          if (result.success) {
+            // Show success message
+            this.innerHTML = `
+              <div class="text-center py-8">
+                <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30">
+                  <svg class="h-8 w-8 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-2">Assessment Requested!</h3>
+                <p class="text-neutral-600 dark:text-neutral-300 mb-4">
+                  Thank you! We'll contact you within 24 hours to schedule your FREE Nextcloud assessment.
+                </p>
+                <button onclick="closeAssessmentModal()" class="btn-primary bg-emerald-600 hover:bg-emerald-700">
+                  Close
+                </button>
+              </div>
+            `;
+            
+            // Auto-close after 3 seconds
+            setTimeout(() => {
+              closeAssessmentModal();
+            }, 3000);
+            
+          } else {
+            throw new Error(result.message || 'Failed to submit request');
+          }
+        } catch (error) {
+          console.error('Form submission error:', error);
+          
+          // Show error message
+          const errorDiv = document.createElement('div');
+          errorDiv.className = 'rounded-lg bg-red-50 p-3 text-red-700 text-sm dark:bg-red-900/20 dark:text-red-300';
+          errorDiv.textContent = 'Sorry, there was an error submitting your request. Please try again or contact us directly.';
+          
+          this.insertBefore(errorDiv, this.firstChild);
+          
+          // Remove error after 5 seconds
+          setTimeout(() => {
+            if (errorDiv.parentNode) {
+              errorDiv.remove();
+            }
+          }, 5000);
+        } finally {
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>

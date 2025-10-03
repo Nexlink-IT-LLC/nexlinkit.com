@@ -197,7 +197,7 @@ const reviews = [
   {
     stars: 5,
     text: "I am very happy with Daniel's work, he is supper professional. He immediately understood my needs with installing Nextcloud & Peertube in my hardware and suggested and installed Unraid server and the and software diligently. He responds super fast to my messages. I will definitely use his services in the future.",
-    reviewer: "Renanto (reneleda)",
+    reviewer: "Renato (reneleda)",
     title: "Small Business Owner",
     country: "California, USA",
     platform: "Fiverr"

@@ -1,0 +1,23 @@
+# Dependencies
+/backend/vendor/
+/backend/composer.lock
+/backend/composer.json
+
+# PHPMailer specific
+/backend/phpmailer/
+
+# Logs and debugging
+/backend/debug.log
+/backend/*.log
+
+# Environment and configuration
+/backend/config.php
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

@@ -373,68 +373,29 @@ document.addEventListener('keydown', (e) => {
    Form Submission Handler
    ======================================== */
 
-// Utility functions for visitor tracking
-function generateVisitorId() {
-  try {
-    const array = new Uint8Array(16);
-    crypto.getRandomValues(array);
-    return Array.from(array)
-      .map(byte => byte.toString(16).padStart(2, '0'))
-      .join('');
-  } catch (error) {
-    // Fallback for older browsers
-    return Math.random().toString(36).substring(2) + Date.now().toString(36);
-  }
-}
-
-function getVisitorId() {
-  try {
-    let visitorId = localStorage.getItem('visitorId');
-    if (!visitorId) {
-      visitorId = generateVisitorId();
-      localStorage.setItem('visitorId', visitorId);
-    }
-    return visitorId;
-  } catch (error) {
-    console.warn('Could not access localStorage for visitor ID:', error);
-    return generateVisitorId();
-  }
-}
-
-// API configuration
-function getApiEndpoint() {  
-  return 'https://api.nexlink.website/v1/contact';
-}
-
 // Form submission handlers
-async function submitForm(formData, formType = 'support') {
-  const apiEndpoint = getApiEndpoint();
-  
-  // Add visitor tracking
-  formData.visitorId = getVisitorId();
-  formData.timestamp = new Date().toISOString();
-  formData.userAgent = navigator.userAgent;
-  formData.referrer = document.referrer;
-  formData.formType = formType;
-  
-  const response = await fetch(apiEndpoint, {
+async function submitForm(formData) {
+  // Submit to our backend endpoint
+  const response = await fetch('https://nexlinkit.com/backend/contact.php', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
+      'Content-Type': 'application/json'
     },
-    body: JSON.stringify(formData),
-    cache: 'no-store'
+    body: JSON.stringify({
+      ...formData,
+      timestamp: new Date().toISOString()
+    })
   });
   
   if (!response.ok) {
-    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    const result = await response.json();
+    throw new Error(result.error || `HTTP ${response.status}: ${response.statusText}`);
   }
   
   const result = await response.json();
   
-  if (!result.success && !result.ok) {
-    throw new Error(result.message || result.error || 'Form submission failed');
+  if (!result.success) {
+    throw new Error(result.error || 'Form submission failed');
   }
   
   return result;
@@ -460,7 +421,7 @@ if (supportForm) {
       const formData = Object.fromEntries(new FormData(supportForm).entries());
       
       // Submit to API
-      await submitForm(formData, 'support');
+      await submitForm(formData);
       
       // Success handling
       supportForm.reset();
@@ -507,7 +468,7 @@ if (contactForm) {
       const formData = Object.fromEntries(new FormData(contactForm).entries());
       
       // Submit to API
-      await submitForm(formData, 'contact');
+      await submitForm(formData);
       
       // Success handling
       contactForm.reset();

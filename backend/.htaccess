@@ -1,0 +1,31 @@
+# Disable directory listing
+Options -Indexes
+
+# Prevent access to config files
+<FilesMatch "^config\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Prevent access to utility files
+<FilesMatch "^utils\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Only allow access to contact.php
+<FilesMatch "^contact\.php$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Enable CORS - Origin is handled dynamically in PHP
+
+# Security headers
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-XSS-Protection "1; mode=block"
+Header always set X-Frame-Options "DENY"
+
+# PHP settings
+php_flag display_errors off
+php_value error_reporting E_ALL & ~E_NOTICE

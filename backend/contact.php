@@ -9,18 +9,18 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Enable error logging for debugging
-error_log('Request Origin: ' . ($_SERVER['HTTP_ORIGIN'] ?? 'none'));
+// error_log('Request Origin: ' . ($_SERVER['HTTP_ORIGIN'] ?? 'none'));
 
 // Set JSON response type
 header('Content-Type: application/json');
 
 // Handle CORS
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-error_log('Checking origin: ' . $origin);
-error_log('Allowed origins: ' . implode(', ', ALLOWED_ORIGINS));
+// error_log('Checking origin: ' . $origin);
+// error_log('Allowed origins: ' . implode(', ', ALLOWED_ORIGINS));
 
 if (in_array($origin, ALLOWED_ORIGINS, true)) {
-    error_log('Origin is allowed: ' . $origin);
+    // error_log('Origin is allowed: ' . $origin);
     header('Access-Control-Allow-Origin: ' . $origin);
     header('Access-Control-Allow-Methods: POST, OPTIONS');
     header('Access-Control-Allow-Headers: Content-Type');
@@ -58,7 +58,7 @@ try {
     $test = new PHPMailer(true);
     $test->SMTPDebug = 3; // Even more verbose debugging
     $test->Debugoutput = function($str, $level) {
-        error_log("SMTP Test [$level]: $str");
+        // error_log("SMTP Test [$level]: $str");
     };
     $test->isSMTP();
     $test->Host = SMTP_HOST;
@@ -71,7 +71,7 @@ try {
         'ssl' => array(
             'verify_peer' => false,
             'verify_peer_name' => false,
-            'allow_self_signed' => true
+            'allow_self_signed' => false
         )
     );
     
@@ -79,7 +79,7 @@ try {
     if (!$test->smtpConnect()) {
         throw new Exception("SMTP connection failed");
     }
-    error_log("SMTP connection test successful");
+    // error_log("SMTP connection test successful");
     $test->smtpClose();
 } catch (Exception $e) {
     error_log("SMTP connection test failed: " . $e->getMessage());
@@ -92,26 +92,40 @@ try {
     exit();
 }
 
-// Get POST data
-$input = json_decode(file_get_contents('php://input'), true);
-if (!$input) {
-    $input = $_POST;
-}
+// Determine form type from request
+$formType = isset($_POST['formType']) ? $_POST['formType'] : 'contact';
 
-// Validate input
-$validation = validateFormData($input);
-if (!$validation['valid']) {
+// Get and validate the form data
+list($isValid, $message) = validateFormData($_POST, $formType);
+if (!$isValid) {
     http_response_code(400);
-    echo json_encode(['error' => 'Validation failed', 'errors' => $validation['errors']]);
-    exit();
+    echo json_encode(['error' => $message]);
+    exit;
 }
 
 // Sanitize data
-$data = sanitizeData($input);
+$data = sanitizeData($_POST);
 
-// Prepare email
-$subject = "New Support Request: {$data['serviceType']} ({$data['urgency']})";
-$message = formatEmailBody($data);
+// Prepare email subject and message based on form type
+if ($formType === 'support') {
+    $subject = "New Support Request: {$data['serviceType']} ({$data['urgency']})";
+    $message = "Support Request Details:\n\n";
+    $message .= "Name: {$data['name']}\n";
+    $message .= "Email: {$data['email']}\n";
+    $message .= "Service Type: {$data['serviceType']}\n";
+    $message .= "Platform: {$data['platform']}\n";
+    $message .= "Region: {$data['region']}\n";
+    $message .= "Urgency: {$data['urgency']}\n\n";
+    $message .= "Message:\n{$data['message']}";
+} else {
+    $subject = "New Contact Form Submission: {$data['serviceType']}";
+    $message = "Contact Form Details:\n\n";
+    $message .= "Name: {$data['firstName']} {$data['lastName']}\n";
+    $message .= "Email: {$data['email']}\n";
+    $message .= "Service Type: {$data['serviceType']}\n";
+    $message .= "Urgency: {$data['urgency']}\n\n";
+    $message .= "Message:\n{$data['message']}";
+}
 
 // Set up email headers
 $headers = [
@@ -127,10 +141,10 @@ try {
     $mail = new PHPMailer(true);
     
     // Enable debug output
-    $mail->SMTPDebug = 2; // 2 = client and server messages
-    $mail->Debugoutput = function($str, $level) {
-        error_log("PHPMailer Debug [$level]: $str");
-    };
+    // $mail->SMTPDebug = 2; // 2 = client and server messages
+    // $mail->Debugoutput = function($str, $level) {
+    //     error_log("PHPMailer Debug [$level]: $str");
+    // };
     
     // Server settings
     $mail->isSMTP();

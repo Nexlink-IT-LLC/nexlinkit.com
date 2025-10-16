@@ -34,11 +34,11 @@ if (json_last_error() !== JSON_ERROR_NONE) {
 }
 
 // Required fields validation
-$requiredFields = ['firstName', 'lastName', 'email', 'message'];
+$requiredFields = ['name', 'email', 'message', 'region', 'platform'];
 $missingFields = [];
 
 foreach ($requiredFields as $field) {
-    if (empty($data[$field])) {
+    if (!isset($data[$field]) || trim($data[$field]) === '') {
         $missingFields[] = $field;
     }
 }

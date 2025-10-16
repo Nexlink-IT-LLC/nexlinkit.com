@@ -379,12 +379,12 @@ async function submitForm(formData) {
   const response = await fetch('https://nexlinkit.com/backend/contact.php', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/x-www-form-urlencoded'
     },
-    body: JSON.stringify({
+    body: new URLSearchParams({
       ...formData,
       timestamp: new Date().toISOString()
-    })
+    }).toString()
   });
   
   if (!response.ok) {
@@ -418,7 +418,10 @@ if (supportForm) {
       }
       
       // Collect form data
-      const formData = Object.fromEntries(new FormData(supportForm).entries());
+      const formData = {
+        ...Object.fromEntries(new FormData(supportForm).entries()),
+        formType: 'support'
+      };
       
       // Submit to API
       await submitForm(formData);
@@ -465,7 +468,10 @@ if (contactForm) {
       }
       
       // Collect form data
-      const formData = Object.fromEntries(new FormData(contactForm).entries());
+      const formData = {
+        ...Object.fromEntries(new FormData(contactForm).entries()),
+        formType: 'contact'
+      };
       
       // Submit to API
       await submitForm(formData);

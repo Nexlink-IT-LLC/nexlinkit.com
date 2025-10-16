@@ -10,30 +10,38 @@ if (!defined('NEXLINK_BACKEND')) {
  * @param array $data The form data to validate
  * @return array Array with 'valid' boolean and 'errors' array
  */
-function validateFormData($data) {
-    $errors = [];
-    
-    // Check required fields
-    foreach (REQUIRED_FIELDS as $field) {
-        if (!isset($data[$field]) || empty(trim($data[$field]))) {
-            $errors[] = "Field '$field' is required.";
+function validateFormData($data, $formType = 'contact') {
+    // Determine which fields are required based on form type
+    $requiredFields = $formType === 'support' ? SUPPORT_FORM_FIELDS : CONTACT_FORM_FIELDS;
+
+    // Check for required fields
+    foreach ($requiredFields as $field) {
+        if (!isset($data[$field]) || empty($data[$field])) {
+            return [false, "Missing required field: {$field}"];
         }
     }
-    
-    // Validate email
-    if (isset($data['email']) && !filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-        $errors[] = "Invalid email address.";
+
+    // Validate email format
+    if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+        return [false, 'Invalid email format'];
     }
-    
+
     // Check message length
-    if (isset($data['message']) && strlen($data['message']) > MAX_MESSAGE_LENGTH) {
-        $errors[] = "Message exceeds maximum length of " . MAX_MESSAGE_LENGTH . " characters.";
+    if (strlen($data['message']) > MAX_MESSAGE_LENGTH) {
+        return [false, 'Message exceeds maximum length'];
     }
-    
-    return [
-        'valid' => empty($errors),
-        'errors' => $errors
-    ];
+
+    // Additional validation for support form
+    if ($formType === 'support') {
+        if (!in_array($data['urgency'], ['low', 'medium', 'high', 'critical'])) {
+            return [false, 'Invalid urgency level'];
+        }
+        if (!in_array($data['platform'], ['nextcloud', 'nginx', 'other'])) {
+            return [false, 'Invalid platform selection'];
+        }
+    }
+
+    return [true, 'Validation successful'];
 }
 
 /**
@@ -77,7 +85,7 @@ function isOriginAllowed() {
  * @return string Formatted email body
  */
 function formatEmailBody($data) {
-    $body = "New Support Request\n\n";
+    // $body = "Support Request:\n\n";
     $body .= "Service Type: " . ($data['serviceType'] ?? 'N/A') . "\n";
     $body .= "Name: " . ($data['name'] ?? 'N/A') . "\n";
     $body .= "Email: " . ($data['email'] ?? 'N/A') . "\n";
@@ -86,7 +94,7 @@ function formatEmailBody($data) {
     $body .= "Platform: " . ($data['platform'] ?? 'N/A') . "\n";
     $body .= "Version Details: " . ($data['versions'] ?? 'N/A') . "\n";
     $body .= "Urgency: " . ($data['urgency'] ?? 'N/A') . "\n\n";
-    $body .= "Message:\n" . ($data['message'] ?? 'N/A') . "\n";
+    $body .= ($data['message'] ?? 'N/A') . "\n";
     
     return $body;
 }

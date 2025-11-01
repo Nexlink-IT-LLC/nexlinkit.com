@@ -32,14 +32,14 @@ function validateFormData($data, $formType = 'contact') {
     }
 
     // Additional validation for support form
-    if ($formType === 'support') {
-        if (!in_array($data['urgency'], ['low', 'medium', 'high', 'critical'])) {
-            return [false, 'Invalid urgency level'];
-        }
-        if (!in_array($data['platform'], ['nextcloud', 'nginx', 'other'])) {
-            return [false, 'Invalid platform selection'];
-        }
-    }
+    // if ($formType === 'support') {
+    //     if (!in_array($data['urgency'], ['low', 'medium', 'high', 'critical'])) {
+    //         return [false, 'Invalid urgency level'];
+    //     }
+    //     if (!in_array($data['platform'], ['nextcloud', 'nginx', 'other'])) {
+    //         return [false, 'Invalid platform selection'];
+    //     }
+    // }
 
     return [true, 'Validation successful'];
 }

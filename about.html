@@ -1,16 +1,15 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About Us - Nexlink IT LLC</title>
-    <meta name="description" content="Learn about Nexlink IT LLC - Professional IT services company specializing in Linux, servers, hosting, Nextcloud and more. Europe-based, serving clients worldwide." />
-    <meta property="og:title" content="About Nexlink IT — Professional IT Services" />
-    <meta property="og:description" content="Learn about Nexlink IT LLC - Professional IT services company specializing in Linux, servers, hosting, Nextcloud and more." />
+    <title>About - Nexlink IT LLC</title>
+    <meta name="description" content="About Nexlink IT LLC. This page is currently under construction." />
+    <meta property="og:title" content="About - Nexlink IT LLC" />
+    <meta property="og:description" content="About Nexlink IT LLC. This page is currently under construction." />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#0ea5e9" />
+    <meta name="theme-color" content="#1f73d1" />
 
-    <!-- Theme bootstrap -->
     <script>
       (function () {
         try {
@@ -22,7 +21,6 @@
       })();
     </script>
 
-    <!-- Tailwind via CDN for rapid styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -31,23 +29,20 @@
           extend: {
             colors: {
               brand: {
-                50: '#eff9ff',
-                100: '#dff2ff',
-                200: '#b9e6ff',
-                300: '#7fd3ff',
-                400: '#38bdf8',
-                500: '#0ea5e9',
-                600: '#0284c7',
-                700: '#0369a1',
-                800: '#075985',
-                900: '#0c4a6e',
+                50: '#e8f1ff',
+                100: '#d0e4ff',
+                200: '#a8caff',
+                300: '#7eaef5',
+                400: '#4f94e2',
+                500: '#1f73d1',
+                600: '#1559b3',
+                700: '#124999',
+                800: '#0f3c80',
+                900: '#0c326b',
               },
             },
             boxShadow: {
               glow: '0 10px 30px -10px rgba(14,165,233,.45)',
-            },
-            backgroundImage: {
-              grid: 'radial-gradient(rgba(14,165,233,0.15) 1px, transparent 1px)',
             },
           },
         },
@@ -57,304 +52,77 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="min-h-screen bg-white text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100">
-    <!-- Decorative background -->
-    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
-      <div class="absolute left-1/2 top-[10%] h-72 w-72 -translate-x-1/2 rounded-full bg-brand-500/20 blur-3xl filter"></div>
-    </div>
 
-    <!-- Navbar -->
+  <body class="min-h-screen bg-white text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10"></div>
+
     <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-neutral-900/60">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="index.html" class="group inline-flex items-center gap-2">
-          <div>
-            <div class="font-semibold leading-tight">Nexlink IT</div>
-            <!-- <div class="text-xs text-neutral-500 dark:text-neutral-400">Professional IT Services</div> -->
-          </div>
+      <div class="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="index.html#home" class="group inline-flex items-center gap-2">
+          <img src="/assets/Image.png" alt="Nexlink IT logo" class="h-8 w-auto dark:brightness-0 dark:invert transition-transform duration-300 group-hover:scale-105" loading="lazy" />
         </a>
         <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
           <a href="about.html" class="nav-link text-brand-600 dark:text-brand-400">About</a>
-          <!-- <a href="services.html" class="nav-link">Services</a> -->
-          <!-- <a href="portfolio.html" class="nav-link">Portfolio</a> -->
           <a href="pricing.html" class="nav-link">Pricing</a>
           <a href="contact.html" class="nav-link">Contact</a>
         </nav>
-        <p>☎️ +1 (307) 289-5340</p>
         <div class="flex items-center gap-2">
-          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">🌙</button>
-          <button onclick="window.location.href = 'https://api.nexlink.website/portal/'" id="loginBtn" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900">Customer login</button>
-          <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 sm:inline-flex">Request Support</button>
+          <button id="mobileMenuToggle" class="inline-flex items-center justify-center rounded-full border border-neutral-200 p-2 text-neutral-700 shadow-sm transition hover:bg-neutral-50 sm:hidden dark:border-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-900" aria-label="Toggle navigation" aria-expanded="false">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">&#9790;</button>
+          <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 sm:inline-flex">Request Support</button>
+        </div>
+        <div id="mobileMenu" class="absolute left-0 right-0 top-full mt-2 hidden rounded-2xl border border-neutral-200 bg-white px-4 py-4 shadow-lg sm:hidden dark:border-neutral-800 dark:bg-neutral-950">
+          <nav class="flex flex-col gap-3 text-sm font-medium">
+            <a href="index.html#home" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link text-brand-600 dark:text-brand-400">About</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+          <div class="mt-4 flex flex-col gap-2">
+            <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">Request Support</a>
+            </div>
         </div>
       </div>
     </header>
 
-    <!-- Hero -->
-    <section class="relative overflow-hidden">
-      <div class="mx-auto max-w-7xl px-4 py-16 sm:py-20 lg:px-8">
-        <div class="mx-auto max-w-3xl text-center">
-          <div data-animate>
-            <span class="inline-flex items-center gap-2 rounded-full border border-brand-200/60 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 ring-1 ring-brand-100/60 dark:border-brand-900/40 dark:bg-brand-900/30 dark:text-brand-200">Founded 2024</span>
-            <h1 class="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">About Nexlink IT</h1>
-            <!-- <p class="mt-4 max-w-prose text-neutral-600 dark:text-neutral-300">Professional IT services company specializing in Linux, servers, hosting, Nextcloud, and enterprise solutions. Europe-based, serving clients worldwide.</p> -->
+    <main>
+      <section class="relative overflow-hidden bg-gradient-to-b from-neutral-50 via-white to-white py-24 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950">
+        <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <!-- <p class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-neutral-600 shadow-sm ring-1 ring-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-300">About Nexlink IT</p> -->
+          <h1 class="mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl">This page is under construction</h1>
+          <!-- <p class="mt-4 text-lg text-neutral-700 dark:text-neutral-300">We are updating this section with our latest story, team notes, and roadmap. Please check back soon or reach out if you need anything in the meantime.</p> -->
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <a href="contact.html" class="btn-primary">Contact us</a>
+            <a href="index.html#services" class="btn-secondary">View services</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Mission & Vision -->
-    <section class="relative">
-      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="grid gap-12 md:grid-cols-2">
-          <div data-animate>
-            <div class="card-icon text-4xl">🎯</div>
-            <h2 class="mt-4 text-2xl font-bold">Company Mission</h2>
-            <p class="mt-3 text-neutral-600 dark:text-neutral-300">To provide reliable, high-quality, and affordable IT services including Nextcloud support, Linux server management, and enterprise solutions to individuals and businesses alike worldwide.</p>
-          </div>
-          <div data-animate>
-            <div class="card-icon text-4xl">🔮</div>
-            <h2 class="mt-4 text-2xl font-bold">Our Vision</h2>
-            <p class="mt-3 text-neutral-600 dark:text-neutral-300">To become a go-to service provider for businesses and individuals around the world for server management and support, by delivering exceptional service at affordable prices</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Company Story -->
-    <section class="relative bg-neutral-50 dark:bg-neutral-900/50">
-      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="mx-auto max-w-3xl text-center" data-animate>
-          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Our Story</h2>
-          <p class="mt-4 text-neutral-600 dark:text-neutral-300">Founded in 2024, Nexlink IT now serves customers in 8+ countries on a daily basis.</p>
-        </div>
-        <div class="mt-10 grid gap-8 md:grid-cols-3">
-          <div class="card" data-animate>
-            <div class="card-icon">🚀</div>
-            <h3 class="card-title">The Beginning</h3>
-            <p class="card-body">Started as a specialized Nextcloud consulting service on freelance platform Fiverr, helping businesses and individuals migrate to self-hosted solutions, and helping them with existing setups.</p>
-          </div>
-          <div class="card" data-animate>
-            <div class="card-icon">📈</div>
-            <h3 class="card-title">Expansion</h3>
-            <p class="card-body">Expanded services to fit increasing client needs, including comprehensive Linux server management, and IT support across multiple platforms.</p>
-          </div>
-          <div class="card" data-animate>
-            <div class="card-icon">🌍</div>
-            <h3 class="card-title">Global Reach</h3>
-            <p class="card-body">Now serving clients across 4 continents and 8 countries on a daily basis, with an average response time of 1 hour.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Values -->
-    <section class="relative">
-      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center" data-animate>
-          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Our Values</h2>
-          <p class="mt-3 text-neutral-600 dark:text-neutral-300">The principles that guide everything we do.</p>
-        </div>
-        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="card" data-animate>
-            <div class="card-icon">🔒</div>
-            <h3 class="card-title">Security First</h3>
-            <p class="card-body">Every solution we implement prioritizes security and data protection.</p>
-          </div>
-          <div class="card" data-animate>
-            <div class="card-icon">⚡</div>
-            <h3 class="card-title">Rapid Response</h3>
-            <p class="card-body">Average response time of 1 hour ensures your issues are addressed quickly.</p>
-          </div>
-          <div class="card" data-animate>
-            <div class="card-icon">💰</div>
-            <h3 class="card-title">Affordable Excellence</h3>
-            <p class="card-body">Professional-grade services at prices that make sense for your business.</p>
-          </div>
-          <div class="card" data-animate>
-            <div class="card-icon">🤝</div>
-            <h3 class="card-title">Partnership</h3>
-            <p class="card-body">We work with you as a trusted technology partner, not just a vendor.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team -->
-    <!-- <section class="relative bg-neutral-50 dark:bg-neutral-900/50">
-      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center" data-animate>
-          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Meet the Team</h2>
-          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Experienced professionals dedicated to your success.</p>
-        </div>
-        <div class="mt-10 grid gap-8 md:grid-cols-2">
-          <div class="card" data-animate>
-            <div class="flex items-center gap-4">
-              <div class="h-16 w-16 rounded-full bg-brand-100 flex items-center justify-center text-2xl dark:bg-brand-900/30">👨‍💻</div>
-              <div>
-                <h3 class="text-lg font-semibold">Daniel Hammer</h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400">Director</p>
-                <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Linux systems administrator, Nextcloud expert, and open-source advocate. Specializes in server architecture and security.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card" data-animate>
-            <div class="flex items-center gap-4">
-              <div class="h-16 w-16 rounded-full bg-brand-100 flex items-center justify-center text-2xl dark:bg-brand-900/30">🌐</div>
-              <div>
-                <h3 class="text-lg font-semibold">Global Network</h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400">Specialized Partners</p>
-                <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">We work with trusted partners worldwide to provide 24/7 coverage and specialized expertise in various technologies and regions.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- CTA -->
-    <section class="relative">
-      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="mx-auto max-w-3xl text-center" data-animate>
-          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Ready to work together?</h2>
-          <p class="mt-4 text-neutral-600 dark:text-neutral-300">Let's discuss how we can help your business thrive with the right technology solutions.</p>
-          <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <button id="requestSupportBtnHero" class="btn-primary">Request Support</button>
-            <a href="contact.html" class="btn-secondary">Contact Us</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="border-t border-neutral-200 py-10 text-sm dark:border-neutral-800">
       <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:flex-row sm:text-left lg:px-8">
-        <div>
-          <div class="text-neutral-500 dark:text-neutral-400">© 2025 Nexlink IT LLC. All rights reserved.</div>
-        </div>
-        <div class="flex items-center gap-4">
-          <!-- Sitemap -->
-          <nav aria-label="Sitemap" class="flex flex-wrap gap-4 justify-center">
-            <a class="footer-link" href="index.html">Home</a>
-            <a class="footer-link" href="about.html">About</a>
-            <!-- <a class="footer-link" href="services.html">Services</a> -->
-            <!-- <a class="footer-link" href="portfolio.html">Portfolio</a> -->
-            <a class="footer-link" href="pricing.html">Pricing</a>
-            <a class="footer-link" href="contact.html">Contact</a>
-            
-            <a class="footer-link" href="legal/terms-of-service.html">Customer Agreement</a>
-            <a class="footer-link" href="legal/privacy-policy.html">Privacy</a>
-          </nav>
-        </div>
+        <div class="text-neutral-500 dark:text-neutral-400">(c) 2025 Nexlink IT LLC. All rights reserved.</div>
+        <nav aria-label="Sitemap" class="flex flex-wrap justify-center gap-4">
+          <a class="footer-link" href="index.html">Home</a>
+          <a class="footer-link" href="pricing.html">Pricing</a>
+          <a class="footer-link" href="contact.html">Contact</a>
+          <a class="footer-link" href="legal/terms-of-service.html">Customer Agreement</a>
+          <a class="footer-link" href="legal/privacy-policy.html">Privacy</a>
+        </nav>
       </div>
     </footer>
-
-    <!-- Request Support Modal -->
-    <div id="supportModal" class="invisible fixed inset-0 z-[100] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
-      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-      <div class="relative mx-4 w-full max-w-4xl scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
-        <div class="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-brand-500/10 blur-3xl"></div>
-        <div class="relative flex items-center justify-between border-b border-neutral-200 p-4 dark:border-neutral-800">
-          <h3 class="text-lg font-semibold">Request Support</h3>
-          <button id="supportModalClose" class="rounded-full p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">✕</button>
-        </div>
-        <form id="supportForm" class="relative space-y-4 p-6">
-          <div>
-            <label for="serviceType" class="label">Service Type</label>
-            <select id="serviceType" name="serviceType" class="input">
-              <option>General IT</option>
-              <option>Nextcloud</option>
-              <option>Linux/Servers</option>
-              <option>Hosting/DNS</option>
-              <option>Security</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div>
-              <label for="name" class="label">Name</label>
-              <input id="name" name="name" type="text" required class="input" placeholder="Jane Doe" />
-            </div>
-            <div>
-              <label for="email" class="label">Email</label>
-              <input id="email" name="email" type="email" required class="input" placeholder="you@example.com" />
-            </div>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div>
-              <label for="company" class="label">Organization</label>
-              <input id="company" name="company" type="text" class="input" placeholder="Optional" />
-            </div>
-            <div>
-              <label for="region" class="label">Region</label>
-              <select id="region" name="region" class="input">
-                <option>Europe</option>
-                <option>North America</option>
-                <option>South America</option>
-                <option>Asia</option>
-                <option>Oceania</option>
-                <option>Africa</option>
-              </select>
-            </div>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div>
-              <label for="platform" class="label">Platform / Environment</label>
-              <select id="platform" name="platform" class="input">
-                <option>Linux</option>
-                <option>Windows Server</option>
-                <option>Docker</option>
-                <option>TrueNAS SCALE</option>
-                <option>Proxmox</option>
-                <option>Hosting/Cloud</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div>
-              <label for="versions" class="label">Version details (optional)</label>
-              <input id="versions" name="versions" type="text" class="input" placeholder="e.g., Ubuntu 22.04, Docker 27, Nextcloud 28.x" />
-            </div>
-          </div>
-          <div>
-            <label for="urgency" class="label">Urgency</label>
-            <select id="urgency" name="urgency" class="input">
-              <option>Normal</option>
-              <option>High</option>
-              <option>Low</option>
-            </select>
-          </div>
-          <div>
-            <label for="message" class="label">How can we help?</label>
-            <textarea id="message" name="message" rows="4" class="input" placeholder="Short description (systems affected, errors, goals)"></textarea>
-          </div>
-          <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
-            <div class="text-xs text-neutral-500">You can also contact me via the Contact section or by US phone at (307) 289-5340.</div>
-            <div class="flex gap-3">
-              <button type="button" class="btn-secondary" data-close>Cancel</button>
-              <button type="submit" class="btn-primary">Send Request</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <!-- Success Modal -->
-    <div id="successModal" class="invisible fixed inset-0 z-[110] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
-      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-      <div class="relative mx-4 w-full max-w-md scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
-        <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-emerald-500/10 blur-3xl"></div>
-        <div class="relative p-6 text-center">
-          <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">✓</div>
-          <h3 class="text-lg font-semibold">Request sent successfully</h3>
-          <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Thanks! I'll get back to you shortly.</p>
-          <div class="mt-6 flex justify-center">
-            <button id="successOk" class="btn-primary inline-flex items-center justify-center rounded-full bg-brand-600 px-5 py-2 font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">OK</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script src="script.js"></script>
   </body>
 </html>
+
+
+

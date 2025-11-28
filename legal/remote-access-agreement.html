@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
@@ -8,7 +8,7 @@
     <meta property="og:title" content="Remote Access Agreement - Nexlink IT LLC" />
     <meta property="og:description" content="Remote Access Agreement for Nexlink IT LLC IT services." />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#0ea5e9" />
+    <meta name="theme-color" content="#1f73d1" />
 
     <!-- Theme bootstrap -->
     <script>
@@ -31,16 +31,16 @@
           extend: {
             colors: {
               brand: {
-                50: '#eff9ff',
-                100: '#dff2ff',
-                200: '#b9e6ff',
-                300: '#7fd3ff',
-                400: '#38bdf8',
-                500: '#0ea5e9',
-                600: '#0284c7',
-                700: '#0369a1',
-                800: '#075985',
-                900: '#0c4a6e',
+                50: '#e8f1ff',
+                100: '#d0e4ff',
+                200: '#a8caff',
+                300: '#7eaef5',
+                400: '#4f94e2',
+                500: '#1f73d1',
+                600: '#1559b3',
+                700: '#124999',
+                800: '#0f3c80',
+                900: '#0c326b',
               },
             },
             boxShadow: {
@@ -63,29 +63,40 @@
   <body class="min-h-screen bg-white text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100">
     <!-- Decorative background -->
     <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
-      <div class="absolute left-1/2 top-[10%] h-72 w-72 -translate-x-1/2 rounded-full bg-brand-500/20 blur-3xl filter"></div>
     </div>
 
     <!-- Navbar -->
     <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-neutral-900/60">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="../index.html" class="group inline-flex items-center gap-2">
-          <div>
-            <div class="font-semibold leading-tight">Nexlink IT</div>
-            <!-- <div class="text-xs text-neutral-500 dark:text-neutral-400">Professional IT Services</div> -->
-          </div>
+      <div class="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="../index.html#home" class="group inline-flex items-center gap-2">
+          <img src="/assets/Image.png" alt="Nexlink IT logo" class="h-8 w-auto dark:brightness-0 dark:invert transition-transform duration-300 group-hover:scale-105" loading="lazy" />
         </a>
         <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
           <a href="../about.html" class="nav-link">About</a>
-          <!-- <a href="../services.html" class="nav-link">Services</a> -->
-          <!-- <a href="../portfolio.html" class="nav-link">Portfolio</a> -->
           <a href="../pricing.html" class="nav-link">Pricing</a>
           <a href="../contact.html" class="nav-link">Contact</a>
         </nav>
-        <p>☎️ +1 (307) 289-5340</p>
         <div class="flex items-center gap-2">
-          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">🌙</button>
-          <button onclick="window.location.href = 'https://api.nexlink.website/portal/'" id="loginBtn" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900">Customer login</button>
+          <button id="mobileMenuToggle" class="inline-flex items-center justify-center rounded-full border border-neutral-200 p-2 text-neutral-700 shadow-sm transition hover:bg-neutral-50 sm:hidden dark:border-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-900" aria-label="Toggle navigation" aria-expanded="false">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">&#9790;</button>
+          <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 sm:inline-flex">Request Support</button>
+        </div>
+        <div id="mobileMenu" class="absolute left-0 right-0 top-full mt-2 hidden rounded-2xl border border-neutral-200 bg-white px-4 py-4 shadow-lg sm:hidden dark:border-neutral-800 dark:bg-neutral-950">
+          <nav class="flex flex-col gap-3 text-sm font-medium">
+            <a href="../index.html#home" class="nav-link">Home</a>
+            <a href="../about.html" class="nav-link">About</a>
+            <a href="../pricing.html" class="nav-link">Pricing</a>
+            <a href="../contact.html" class="nav-link">Contact</a>
+          </nav>
+          <div class="mt-4 flex flex-col gap-2">
+            <a href="../contact.html" class="inline-flex items-center justify-center rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">Request Support</a>
+            </div>
         </div>
       </div>
     </header>
@@ -286,3 +297,12 @@
     <script src="../script.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+

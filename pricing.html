@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
@@ -8,7 +8,7 @@
     <meta property="og:title" content="Pricing - Nexlink IT LLC" />
     <meta property="og:description" content="Transparent pricing for professional IT services. Choose from hourly rates, project packages, or managed services." />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#0ea5e9" />
+    <meta name="theme-color" content="#1f73d1" />
 
     <!-- Theme bootstrap -->
     <script>
@@ -31,16 +31,16 @@
           extend: {
             colors: {
               brand: {
-                50: '#eff9ff',
-                100: '#dff2ff',
-                200: '#b9e6ff',
-                300: '#7fd3ff',
-                400: '#38bdf8',
-                500: '#0ea5e9',
-                600: '#0284c7',
-                700: '#0369a1',
-                800: '#075985',
-                900: '#0c4a6e',
+                50: '#e8f1ff',
+                100: '#d0e4ff',
+                200: '#a8caff',
+                300: '#7eaef5',
+                400: '#4f94e2',
+                500: '#1f73d1',
+                600: '#1559b3',
+                700: '#124999',
+                800: '#0f3c80',
+                900: '#0c326b',
               },
             },
             boxShadow: {
@@ -63,30 +63,40 @@
   <body class="min-h-screen bg-white text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100">
     <!-- Decorative background -->
     <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
-      <div class="absolute left-1/2 top-[10%] h-72 w-72 -translate-x-1/2 rounded-full bg-brand-500/20 blur-3xl filter"></div>
     </div>
 
     <!-- Navbar -->
     <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-neutral-900/60">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="index.html" class="group inline-flex items-center gap-2">
-          <div>
-            <div class="font-semibold leading-tight">Nexlink IT</div>
-            <!-- <div class="text-xs text-neutral-500 dark:text-neutral-400">Professional IT Services</div> -->
-          </div>
+      <div class="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="index.html#home" class="group inline-flex items-center gap-2">
+          <img src="/assets/Image.png" alt="Nexlink IT logo" class="h-8 w-auto dark:brightness-0 dark:invert transition-transform duration-300 group-hover:scale-105" loading="lazy" />
         </a>
         <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
           <a href="about.html" class="nav-link">About</a>
-          <!-- <a href="services.html" class="nav-link">Services</a> -->
-          <!-- <a href="portfolio.html" class="nav-link">Portfolio</a> -->
           <a href="pricing.html" class="nav-link text-brand-600 dark:text-brand-400">Pricing</a>
           <a href="contact.html" class="nav-link">Contact</a>
         </nav>
-        <p>☎️ +1 (307) 289-5340</p>
         <div class="flex items-center gap-2">
-          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">🌙</button>
-          <button onclick="window.location.href = 'https://api.nexlink.website/portal/'" id="loginBtn" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900">Customer login</button>
-          <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 sm:inline-flex">Request Support</button>
+          <button id="mobileMenuToggle" class="inline-flex items-center justify-center rounded-full border border-neutral-200 p-2 text-neutral-700 shadow-sm transition hover:bg-neutral-50 sm:hidden dark:border-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-900" aria-label="Toggle navigation" aria-expanded="false">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">&#9790;</button>
+          <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 sm:inline-flex">Request Support</button>
+        </div>
+        <div id="mobileMenu" class="absolute left-0 right-0 top-full mt-2 hidden rounded-2xl border border-neutral-200 bg-white px-4 py-4 shadow-lg sm:hidden dark:border-neutral-800 dark:bg-neutral-950">
+          <nav class="flex flex-col gap-3 text-sm font-medium">
+            <a href="index.html#home" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="pricing.html" class="nav-link text-brand-600 dark:text-brand-400">Pricing</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+          <div class="mt-4 flex flex-col gap-2">
+            <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">Request Support</a>
+            </div>
         </div>
       </div>
     </header>
@@ -126,7 +136,7 @@
         <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div class="card" data-animate>
             <div class="text-center">
-              <div class="card-icon">🔧</div>
+              <div class="card-icon">ðŸ”§</div>
               <h3 class="card-title">General IT Support</h3>
               <div class="mt-4">
                 <span class="text-3xl font-bold text-brand-600">$30</span>
@@ -134,17 +144,17 @@
               </div>
               <p class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">Troubleshooting, maintenance, and general IT tasks.</p>
               <ul class="mt-4 space-y-2 text-sm text-neutral-600 dark:text-neutral-300 text-left">
-                <li>• System troubleshooting</li>
-                <li>• Software installation</li>
-                <li>• Basic server maintenance</li>
-                <li>• User support</li>
+                <li>â€¢ System troubleshooting</li>
+                <li>â€¢ Software installation</li>
+                <li>â€¢ Basic server maintenance</li>
+                <li>â€¢ User support</li>
               </ul>
             </div>
           </div>
 
           <div class="card border-brand-200 dark:border-brand-800" data-animate>
             <div class="text-center">
-              <div class="card-icon">🧩</div>
+              <div class="card-icon">ðŸ§©</div>
               <h3 class="card-title">Nextcloud Specialist</h3>
               <div class="mt-4">
                 <span class="text-3xl font-bold text-brand-600">$30</span>
@@ -152,17 +162,17 @@
               </div>
               <p class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">Expert Nextcloud installation, configuration, and optimization.</p>
               <ul class="mt-4 space-y-2 text-sm text-neutral-600 dark:text-neutral-300 text-left">
-                <li>• Nextcloud installation & setup</li>
-                <li>• App integration (Collabora/ONLYOFFICE)</li>
-                <li>• Performance optimization</li>
-                <li>• Migration from other platforms</li>
+                <li>â€¢ Nextcloud installation & setup</li>
+                <li>â€¢ App integration (Collabora/ONLYOFFICE)</li>
+                <li>â€¢ Performance optimization</li>
+                <li>â€¢ Migration from other platforms</li>
               </ul>
             </div>
           </div>
 
           <div class="card" data-animate>
             <div class="text-center">
-              <div class="card-icon">🐧</div>
+              <div class="card-icon">ðŸ§</div>
               <h3 class="card-title">Linux & Servers</h3>
               <div class="mt-4">
                 <span class="text-3xl font-bold text-brand-600">$35</span>
@@ -170,10 +180,10 @@
               </div>
               <p class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">Advanced Linux server administration and management.</p>
               <ul class="mt-4 space-y-2 text-sm text-neutral-600 dark:text-neutral-300 text-left">
-                <li>• Server setup & configuration</li>
-                <li>• Security hardening</li>
-                <li>• Performance tuning</li>
-                <li>• Service management</li>
+                <li>â€¢ Server setup & configuration</li>
+                <li>â€¢ Security hardening</li>
+                <li>â€¢ Performance tuning</li>
+                <li>â€¢ Service management</li>
               </ul>
             </div>
           </div>
@@ -191,7 +201,7 @@
         <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div class="card" data-animate>
             <div class="text-center">
-              <div class="card-icon">🧩</div>
+              <div class="card-icon">ðŸ§©</div>
               <h3 class="card-title">Nextcloud Setup</h3>
               <div class="mt-4">
                 <span class="text-3xl font-bold text-brand-600">$70</span>
@@ -199,37 +209,37 @@
               </div>
               <p class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">Complete Nextcloud installation with basic configuration.</p>
               <ul class="mt-4 space-y-2 text-sm text-neutral-600 dark:text-neutral-300 text-left">
-                <li>• Nextcloud installation</li>
-                <li>• Basic security setup</li>
-                <li>• SSL certificate</li>
-                <li>• User account setup</li>
-                <li>• Basic app installation</li>
-                <li>• Documentation</li>
+                <li>â€¢ Nextcloud installation</li>
+                <li>â€¢ Basic security setup</li>
+                <li>â€¢ SSL certificate</li>
+                <li>â€¢ User account setup</li>
+                <li>â€¢ Basic app installation</li>
+                <li>â€¢ Documentation</li>
               </ul>
             </div>
           </div>
 
           <div class="card border-brand-200 dark:border-brand-800" data-animate>
             <div class="text-center">
-              <div class="card-icon">🚀</div>
+              <div class="card-icon">ðŸš€</div>
               <h3 class="card-title">Deploy other applications</h3>
               <div class="mt-4">
                 <span class="text-2xl font-bold text-brand-600">Contact us for a quote!</span>
               </div>
               <p class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">Deploy and configure various applications on your server infrastructure.</p>
               <ul class="mt-4 space-y-2 text-sm text-neutral-600 dark:text-neutral-300 text-left">
-                <li>• Application installation</li>
-                <li>• Configuration & setup</li>
-                <li>• Database integration</li>
-                <li>• SSL/TLS setup</li>
-                <li>• Performance optimization</li>
-                <li>• Documentation & training</li>
+                <li>â€¢ Application installation</li>
+                <li>â€¢ Configuration & setup</li>
+                <li>â€¢ Database integration</li>
+                <li>â€¢ SSL/TLS setup</li>
+                <li>â€¢ Performance optimization</li>
+                <li>â€¢ Documentation & training</li>
               </ul>
             </div>
           </div>
           <div class="card" data-animate>
             <div class="text-center">
-              <div class="card-icon">🐧</div>
+              <div class="card-icon">ðŸ§</div>
               <h3 class="card-title">General Linux Support</h3>
               <div class="mt-4">
                 <span class="text-3xl font-bold text-brand-600">$80</span>
@@ -237,12 +247,12 @@
               </div>
               <p class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">Comprehensive Linux system support and troubleshooting.</p>
               <ul class="mt-4 space-y-2 text-sm text-neutral-600 dark:text-neutral-300 text-left">
-                <li>• System troubleshooting</li>
-                <li>• Package management</li>
-                <li>• Service configuration</li>
-                <li>• Performance optimization</li>
-                <li>• Security updates</li>
-                <li>• Documentation & guidance</li>
+                <li>â€¢ System troubleshooting</li>
+                <li>â€¢ Package management</li>
+                <li>â€¢ Service configuration</li>
+                <li>â€¢ Performance optimization</li>
+                <li>â€¢ Security updates</li>
+                <li>â€¢ Documentation & guidance</li>
               </ul>
             </div>
           </div>
@@ -260,7 +270,7 @@
         </div>
         <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <div class="card text-center" data-animate>
-            <div class="card-icon">📞</div>
+            <div class="card-icon">ðŸ“ž</div>
             <h3 class="card-title">Emergency Support</h3>
             <div class="mt-2">
               <span class="text-xl font-bold text-brand-600">$150</span>
@@ -269,7 +279,7 @@
             <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">24/7 emergency support for critical issues.</p>
           </div>
           <div class="card text-center" data-animate>
-            <div class="card-icon">📚</div>
+            <div class="card-icon">ðŸ“š</div>
             <h3 class="card-title">Training</h3>
             <div class="mt-2">
               <span class="text-xl font-bold text-brand-600">$125</span>
@@ -278,7 +288,7 @@
             <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Staff training on systems and best practices.</p>
           </div>
           <div class="card text-center" data-animate>
-            <div class="card-icon">📋</div>
+            <div class="card-icon">ðŸ“‹</div>
             <h3 class="card-title">Consultation</h3>
             <div class="mt-2">
               <span class="text-xl font-bold text-brand-600">$100</span>
@@ -287,7 +297,7 @@
             <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Strategic IT planning and architecture review.</p>
           </div>
           <div class="card text-center" data-animate>
-            <div class="card-icon">🔄</div>
+            <div class="card-icon">ðŸ”„</div>
             <h3 class="card-title">Migration</h3>
             <div class="mt-2">
               <span class="text-xl font-bold text-brand-600">$85</span>
@@ -372,10 +382,9 @@
     <div id="supportModal" class="invisible fixed inset-0 z-[100] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
       <div class="relative mx-4 w-full max-w-4xl scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
-        <div class="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-brand-500/10 blur-3xl"></div>
         <div class="relative flex items-center justify-between border-b border-neutral-200 p-4 dark:border-neutral-800">
           <h3 class="text-lg font-semibold">Request Support</h3>
-          <button id="supportModalClose" class="rounded-full p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">✕</button>
+          <button id="supportModalClose" class="rounded-full p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">âœ•</button>
         </div>
         <form id="supportForm" class="relative space-y-4 p-6">
           <div>
@@ -461,9 +470,8 @@
     <div id="successModal" class="invisible fixed inset-0 z-[110] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
       <div class="relative mx-4 w-full max-w-md scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
-        <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-emerald-500/10 blur-3xl"></div>
         <div class="relative p-6 text-center">
-          <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">✓</div>
+          <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">âœ“</div>
           <h3 class="text-lg font-semibold">Request sent successfully</h3>
           <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Thanks! I'll get back to you shortly.</p>
           <div class="mt-6 flex justify-center">
@@ -517,3 +525,13 @@
     </script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+

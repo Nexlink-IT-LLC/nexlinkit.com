@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact - Nexlink IT LLC</title>
-    <meta name="description" content="Get in touch with Nexlink IT LLC. Contact us for IT support, consultations, or project inquiries. Phone: (307) 289-5340, Email: contact@nexlink.website" />
-    <meta property="og:title" content="Contact - Nexlink IT LLC" />
-    <meta property="og:description" content="Get in touch with Nexlink IT LLC for professional IT services and support." />
+    <title>About Us - Nexlink IT LLC</title>
+    <meta name="description" content="Learn about Nexlink IT LLC - Professional IT services company specializing in Linux, servers, hosting, Nextcloud and more. Europe-based, serving clients worldwide." />
+    <meta property="og:title" content="About Nexlink IT â€” Professional IT Services" />
+    <meta property="og:description" content="Learn about Nexlink IT LLC - Professional IT services company specializing in Linux, servers, hosting, Nextcloud and more." />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#1f73d1" />
+    <meta name="theme-color" content="#0ea5e9" />
 
     <!-- Theme bootstrap -->
     <script>
@@ -31,16 +31,16 @@
           extend: {
             colors: {
               brand: {
-                50: '#e8f1ff',
-                100: '#d0e4ff',
-                200: '#a8caff',
-                300: '#7eaef5',
-                400: '#4f94e2',
-                500: '#1f73d1',
-                600: '#1559b3',
-                700: '#124999',
-                800: '#0f3c80',
-                900: '#0c326b',
+                50: '#eff9ff',
+                100: '#dff2ff',
+                200: '#b9e6ff',
+                300: '#7fd3ff',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
               },
             },
             boxShadow: {
@@ -68,13 +68,13 @@
     <!-- Navbar -->
     <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-neutral-900/60">
       <div class="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="index.html" class="group inline-flex items-center gap-2">
+        <a href="index.html#home" class="group inline-flex items-center gap-2">
           <img src="/assets/Image.png" alt="Nexlink IT logo" class="h-8 w-auto dark:brightness-0 dark:invert transition-transform duration-300 group-hover:scale-105" loading="lazy" />
         </a>
         <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
-          <a href="about.html" class="nav-link">About</a>
+          <a href="about.html" class="nav-link text-brand-600 dark:text-brand-400">About</a>
           <a href="pricing.html" class="nav-link">Pricing</a>
-          <a href="contact.html" class="nav-link text-brand-600 dark:text-brand-400">Contact</a>
+          <a href="contact.html" class="nav-link">Contact</a>
         </nav>
         <div class="flex items-center gap-2">
           <button id="mobileMenuToggle" class="inline-flex items-center justify-center rounded-full border border-neutral-200 p-2 text-neutral-700 shadow-sm transition hover:bg-neutral-50 sm:hidden dark:border-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-900" aria-label="Toggle navigation" aria-expanded="false">
@@ -84,19 +84,23 @@
               <line x1="3" y1="18" x2="21" y2="18"></line>
             </svg>
           </button>
+          <p class="hidden text-sm font-semibold text-brand-600 sm:block">+1 (307) 289-5340</p>
           <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">&#9790;</button>
+          <button onclick="window.location.href = 'https://api.nexlink.website/portal/'" id="loginBtn" class="hidden rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900 sm:inline-flex">Customer login</button>
           <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 sm:inline-flex">Request Support</button>
         </div>
         <div id="mobileMenu" class="absolute left-0 right-0 top-full mt-2 hidden rounded-2xl border border-neutral-200 bg-white px-4 py-4 shadow-lg sm:hidden dark:border-neutral-800 dark:bg-neutral-950">
           <nav class="flex flex-col gap-3 text-sm font-medium">
             <a href="index.html#home" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About</a>
+            <a href="about.html" class="nav-link text-brand-600 dark:text-brand-400">About</a>
             <a href="pricing.html" class="nav-link">Pricing</a>
-            <a href="contact.html" class="nav-link text-brand-600 dark:text-brand-400">Contact</a>
+            <a href="contact.html" class="nav-link">Contact</a>
           </nav>
           <div class="mt-4 flex flex-col gap-2">
             <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">Request Support</a>
-            </div>
+            <a href="https://api.nexlink.website/portal/" class="inline-flex items-center justify-center rounded-full border border-neutral-200 px-3 py-2 text-sm font-semibold text-neutral-700 shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-900">Customer login</a>
+            <p class="text-center text-sm font-semibold text-brand-600">+1 (307) 289-5340</p>
+          </div>
         </div>
       </div>
     </header>
@@ -106,187 +110,118 @@
       <div class="mx-auto max-w-7xl px-4 py-16 sm:py-20 lg:px-8">
         <div class="mx-auto max-w-3xl text-center">
           <div data-animate>
-            <span class="inline-flex items-center gap-2 rounded-full border border-brand-200/60 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 ring-1 ring-brand-100/60 dark:border-brand-900/40 dark:bg-brand-900/30 dark:text-brand-200">Get in Touch</span>
-            <h1 class="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Contact Us</h1>
-            <p class="mt-4 max-w-prose text-neutral-600 dark:text-neutral-300">Ready to discuss your IT needs? We're here to help. Choose your preferred way to get in touch.</p>
+            <span class="inline-flex items-center gap-2 rounded-full border border-brand-200/60 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 ring-1 ring-brand-100/60 dark:border-brand-900/40 dark:bg-brand-900/30 dark:text-brand-200">Founded 2024</span>
+            <h1 class="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">About Nexlink IT</h1>
+            <!-- <p class="mt-4 max-w-prose text-neutral-600 dark:text-neutral-300">Professional IT services company specializing in Linux, servers, hosting, Nextcloud, and enterprise solutions. Europe-based, serving clients worldwide.</p> -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Methods -->
+    <!-- Mission & Vision -->
     <section class="relative">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="grid gap-8 lg:grid-cols-2">
-          <!-- Contact Form -->
+        <div class="grid gap-12 md:grid-cols-2">
           <div data-animate>
-            <h2 class="text-2xl font-bold tracking-tight">Send us a message</h2>
-            <p class="mt-3 text-neutral-600 dark:text-neutral-300">Fill out the form below and we'll get back to you as soon as possible.</p>
-            <form class="mt-6 space-y-6" id="contactForm">
-              <div class="grid gap-4 sm:grid-cols-2">
-                <div>
-                  <label for="firstName" class="label">First Name</label>
-                  <input id="firstName" name="firstName" type="text" required class="input" placeholder="John" />
-                </div>
-                <div>
-                  <label for="lastName" class="label">Last Name</label>
-                  <input id="lastName" name="lastName" type="text" required class="input" placeholder="Doe" />
-                </div>
-              </div>
-              <div>
-                <label for="email" class="label">Email</label>
-                <input id="email" name="email" type="email" required class="input" placeholder="john@example.com" />
-              </div>
-              <div>
-                <label for="company" class="label">Company (Optional)</label>
-                <input id="company" name="company" type="text" class="input" placeholder="Your Company" />
-              </div>
-              <div>
-                <label for="phone" class="label">Phone (Optional)</label>
-                <input id="phone" name="phone" type="tel" class="input" placeholder="+1 (555) 123-4567" />
-              </div>
-              <div>
-                <label for="serviceType" class="label">Service Type</label>
-                <select id="serviceType" name="serviceType" class="input">
-                  <option>General Inquiry</option>
-                  <option>Nextcloud Services</option>
-                  <option>Linux/Server Support</option>
-                  <option>Hosting/DNS</option>
-                  <option>Security Services</option>
-                  <option>Managed Services</option>
-                  <option>Consultation</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div>
-                <label for="urgency" class="label">Urgency</label>
-                <select id="urgency" name="urgency" class="input">
-                  <option>Normal (1-2 business days)</option>
-                  <option>High (Same day)</option>
-                  <!-- <option>Emergency (Immediate)</option> -->
-                  <!-- <option>Low (This week)</option> -->
-                </select>
-              </div>
-              <div>
-                <label for="message" class="label">Message</label>
-                <textarea id="message" name="message" rows="5" required class="input" placeholder="Tell us about your project or question..."></textarea>
-              </div>
-              <div class="flex items-start gap-3">
-                <input id="consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 text-brand-600 border-neutral-300 rounded focus:ring-brand-500" />
-                <label for="consent" class="text-sm text-neutral-600 dark:text-neutral-300">
-                  I agree to the <a href="/legal/privacy-policy.html" class="text-brand-600 hover:text-brand-500">privacy policy</a> and consent to being contacted about my inquiry.
-                </label>
-              </div>
-              <button type="submit" class="btn-primary w-full">Send Message</button>
-            </form>
+            <div class="card-icon text-4xl">ðŸŽ¯</div>
+            <h2 class="mt-4 text-2xl font-bold">Company Mission</h2>
+            <p class="mt-3 text-neutral-600 dark:text-neutral-300">To provide reliable, high-quality, and affordable IT services including Nextcloud support, Linux server management, and enterprise solutions to individuals and businesses alike worldwide.</p>
           </div>
-
-          <!-- Contact Information -->
           <div data-animate>
-            <h2 class="text-2xl font-bold tracking-tight">Other ways to reach us</h2>
-            <p class="mt-3 text-neutral-600 dark:text-neutral-300">Prefer to call directly? Here are all the ways you can contact us.</p>
-            
-            <div class="mt-8 space-y-6">
-              <div class="card">
-                <div class="flex items-center gap-4">
-                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-600 dark:bg-brand-900/30 dark:text-brand-300">
-                    ☎
-                  </div>
-                  <div>
-                    <h3 class="text-lg font-semibold">US Phone</h3>
-                    <p class="text-neutral-600 dark:text-neutral-300">(307) 289-5340</p>
-                    <p class="text-sm text-neutral-500 dark:text-neutral-400">9AM-4PM EST</p>
-                  </div>
-                </div>
-              </div>
-<!-- 
-              <div class="card">
-                <div class="flex items-center gap-4">
-                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-600 dark:bg-brand-900/30 dark:text-brand-300">
-                    ðŸ“«
-                  </div>
-                  <div>
-                    <h3 class="text-lg font-semibold">Email</h3>
-                    <p class="text-neutral-600 dark:text-neutral-300">support@nexlink.website</p>
-                    <p class="text-sm text-neutral-500 dark:text-neutral-400">Average response: 1 hour</p>
-                  </div>
-                </div>
-              </div> -->
-
-              <!-- <div class="card">
-                <div class="flex items-center gap-4">
-                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-600 dark:bg-brand-900/30 dark:text-brand-300">
-                    ðŸ’¬
-                  </div>
-                  <div>
-                    <h3 class="text-lg font-semibold">Fiverr</h3>
-                    <p class="text-neutral-600 dark:text-neutral-300">Professional Services</p>
-                    <a href="https://www.fiverr.com/nexlink_norway?public_mode=true" class="text-sm text-brand-600 hover:text-brand-500">View Profile â†’</a>
-                  </div>
-                </div>
-              </div> -->
-
-              <!-- <div class="card">
-                <div class="flex items-center gap-4">
-                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-600 dark:bg-brand-900/30 dark:text-brand-300">
-                    ðŸ”’
-                  </div>
-                  <div>
-                    <h3 class="text-lg font-semibold">Customer Portal</h3>
-                    <p class="text-neutral-600 dark:text-neutral-300">Existing customers</p>
-                    <a href="https://api.nexlink.website/portal/" class="text-sm text-brand-600 hover:text-brand-500">Login â†’</a>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- Response Times -->
-            <div class="mt-8 p-6 bg-brand-50 dark:bg-brand-900/20 rounded-lg">
-              <h3 class="text-lg font-semibold text-brand-800 dark:text-brand-200">Response Times</h3>
-
-              <div class="mt-4 space-y-2 text-sm">
-                <!-- <div class="flex justify-between">
-                  <span class="text-neutral-600 dark:text-neutral-300">Emergency</span>
-                  <span class="font-medium text-brand-600">Immediate</span>
-                </div> -->
-                <div class="flex justify-between">
-                  <span class="text-neutral-600 dark:text-neutral-300">High Priority</span>
-                  <span class="font-medium text-brand-600">Same day</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-neutral-600 dark:text-neutral-300">Normal</span>
-                  <span class="font-medium text-brand-600">1-2 business days</span>
-                </div>
-              </div>
-            </div>
+            <div class="card-icon text-4xl">ðŸ”®</div>
+            <h2 class="mt-4 text-2xl font-bold">Our Vision</h2>
+            <p class="mt-3 text-neutral-600 dark:text-neutral-300">To become a go-to service provider for businesses and individuals around the world for server management and support, by delivering exceptional service at affordable prices</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- Company Story -->
+    <section class="relative bg-neutral-50 dark:bg-neutral-900/50">
+      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center" data-animate>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Our Story</h2>
+          <p class="mt-4 text-neutral-600 dark:text-neutral-300">Founded in 2024, Nexlink IT now serves customers in 8+ countries on a daily basis.</p>
+        </div>
+        <div class="mt-10 grid gap-8 md:grid-cols-3">
+          <div class="card" data-animate>
+            <div class="card-icon">ðŸš€</div>
+            <h3 class="card-title">The Beginning</h3>
+            <p class="card-body">Started as a specialized Nextcloud consulting service on freelance platform Fiverr, helping businesses and individuals migrate to self-hosted solutions, and helping them with existing setups.</p>
+          </div>
+          <div class="card" data-animate>
+            <div class="card-icon">ðŸ“ˆ</div>
+            <h3 class="card-title">Expansion</h3>
+            <p class="card-body">Expanded services to fit increasing client needs, including comprehensive Linux server management, and IT support across multiple platforms.</p>
+          </div>
+          <div class="card" data-animate>
+            <div class="card-icon">ðŸŒ</div>
+            <h3 class="card-title">Global Reach</h3>
+            <p class="card-body">Now serving clients across 4 continents and 8 countries on a daily basis, with an average response time of 1 hour.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="relative">
+      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-animate>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Our Values</h2>
+          <p class="mt-3 text-neutral-600 dark:text-neutral-300">The principles that guide everything we do.</p>
+        </div>
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="card" data-animate>
+            <div class="card-icon">ðŸ”’</div>
+            <h3 class="card-title">Security First</h3>
+            <p class="card-body">Every solution we implement prioritizes security and data protection.</p>
+          </div>
+          <div class="card" data-animate>
+            <div class="card-icon">âš¡</div>
+            <h3 class="card-title">Rapid Response</h3>
+            <p class="card-body">Average response time of 1 hour ensures your issues are addressed quickly.</p>
+          </div>
+          <div class="card" data-animate>
+            <div class="card-icon">ðŸ’°</div>
+            <h3 class="card-title">Affordable Excellence</h3>
+            <p class="card-body">Professional-grade services at prices that make sense for your business.</p>
+          </div>
+          <div class="card" data-animate>
+            <div class="card-icon">ðŸ¤</div>
+            <h3 class="card-title">Partnership</h3>
+            <p class="card-body">We work with you as a trusted technology partner, not just a vendor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
     <!-- <section class="relative bg-neutral-50 dark:bg-neutral-900/50">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
         <div class="mx-auto max-w-2xl text-center" data-animate>
-          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Frequently Asked Questions</h2>
-          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Quick answers to common questions about our services and process.</p>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Meet the Team</h2>
+          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Experienced professionals dedicated to your success.</p>
         </div>
-        <div class="mt-10 max-w-3xl mx-auto space-y-6">
+        <div class="mt-10 grid gap-8 md:grid-cols-2">
           <div class="card" data-animate>
-            <h3 class="text-lg font-semibold">How quickly do you respond to inquiries?</h3>
-            <p class="mt-2 text-neutral-600 dark:text-neutral-300">We typically respond to all inquiries within 1 hour during business hours (9AM-6PM MST). Emergency requests are handled immediately.</p>
+            <div class="flex items-center gap-4">
+              <div class="h-16 w-16 rounded-full bg-brand-100 flex items-center justify-center text-2xl dark:bg-brand-900/30">ðŸ‘¨â€ðŸ’»</div>
+              <div>
+                <h3 class="text-lg font-semibold">Daniel Hammer</h3>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400">Director</p>
+                <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Linux systems administrator, Nextcloud expert, and open-source advocate. Specializes in server architecture and security.</p>
+              </div>
+            </div>
           </div>
           <div class="card" data-animate>
-            <h3 class="text-lg font-semibold">Do you offer free consultations?</h3>
-            <p class="mt-2 text-neutral-600 dark:text-neutral-300">Yes! We offer a free 30-minute consultation to discuss your needs and provide initial recommendations. This helps us understand your requirements and provide accurate quotes.</p>
-          </div>
-          <div class="card" data-animate>
-            <h3 class="text-lg font-semibold">What information should I include in my inquiry?</h3>
-            <p class="mt-2 text-neutral-600 dark:text-neutral-300">Please include details about your current setup, specific issues or goals, timeline, and any relevant technical specifications. The more information you provide, the better we can assist you.</p>
-          </div>
-          <div class="card" data-animate>
-            <h3 class="text-lg font-semibold">Do you work with clients outside the US?</h3>
-            <p class="mt-2 text-neutral-600 dark:text-neutral-300">Absolutely! We serve clients worldwide. Our remote-first approach allows us to work with businesses across different time zones and regions.</p>
+            <div class="flex items-center gap-4">
+              <div class="h-16 w-16 rounded-full bg-brand-100 flex items-center justify-center text-2xl dark:bg-brand-900/30">ðŸŒ</div>
+              <div>
+                <h3 class="text-lg font-semibold">Global Network</h3>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400">Specialized Partners</p>
+                <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">We work with trusted partners worldwide to provide 24/7 coverage and specialized expertise in various technologies and regions.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -296,11 +231,11 @@
     <section class="relative">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
         <div class="mx-auto max-w-3xl text-center" data-animate>
-          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Ready to get started?</h2>
-          <!-- <p class="mt-4 text-neutral-600 dark:text-neutral-300">Don't wait - let's discuss your IT needs today and find the perfect solution for your business.</p> -->
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Ready to work together?</h2>
+          <p class="mt-4 text-neutral-600 dark:text-neutral-300">Let's discuss how we can help your business thrive with the right technology solutions.</p>
           <div class="mt-8 flex flex-wrap justify-center gap-4">
             <button id="requestSupportBtnHero" class="btn-primary">Request Support</button>
-            <a href="tel:+13072895340" class="btn-secondary">Call Now</a>
+            <a href="contact.html" class="btn-secondary">Contact Us</a>
           </div>
         </div>
       </div>
@@ -423,8 +358,8 @@
       <div class="relative mx-4 w-full max-w-md scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
         <div class="relative p-6 text-center">
           <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">âœ“</div>
-          <h3 class="text-lg font-semibold">Message sent successfully</h3>
-          <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Thanks! We'll get back to you shortly.</p>
+          <h3 class="text-lg font-semibold">Request sent successfully</h3>
+          <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Thanks! I'll get back to you shortly.</p>
           <div class="mt-6 flex justify-center">
             <button id="successOk" class="btn-primary inline-flex items-center justify-center rounded-full bg-brand-600 px-5 py-2 font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">OK</button>
           </div>
@@ -433,22 +368,8 @@
     </div>
 
     <script src="script.js"></script>
-    <script>
-      // Success modal handling for contact page
-      document.addEventListener('DOMContentLoaded', function() {
-        // Close success modal
-        const successOk = document.getElementById('successOk');
-        successOk?.addEventListener('click', function() {
-          const successModal = document.getElementById('successModal');
-          successModal.classList.add('invisible', 'opacity-0');
-          successModal.setAttribute('aria-hidden', 'true');
-        });
-      });
-    </script>
   </body>
 </html>
-
-
 
 
 

@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
@@ -8,7 +8,7 @@
     <meta property="og:title" content="Portfolio - Nexlink IT LLC" />
     <meta property="og:description" content="View our recent projects and case studies showcasing our IT expertise." />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#0ea5e9" />
+    <meta name="theme-color" content="#1f73d1" />
 
     <!-- Theme bootstrap -->
     <script>
@@ -31,16 +31,16 @@
           extend: {
             colors: {
               brand: {
-                50: '#eff9ff',
-                100: '#dff2ff',
-                200: '#b9e6ff',
-                300: '#7fd3ff',
-                400: '#38bdf8',
-                500: '#0ea5e9',
-                600: '#0284c7',
-                700: '#0369a1',
-                800: '#075985',
-                900: '#0c4a6e',
+                50: '#e8f1ff',
+                100: '#d0e4ff',
+                200: '#a8caff',
+                300: '#7eaef5',
+                400: '#4f94e2',
+                500: '#1f73d1',
+                600: '#1559b3',
+                700: '#124999',
+                800: '#0f3c80',
+                900: '#0c326b',
               },
             },
             boxShadow: {
@@ -63,30 +63,40 @@
   <body class="min-h-screen bg-white text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100">
     <!-- Decorative background -->
     <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
-      <div class="absolute left-1/2 top-[10%] h-72 w-72 -translate-x-1/2 rounded-full bg-brand-500/20 blur-3xl filter"></div>
     </div>
 
     <!-- Navbar -->
     <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-neutral-900/60">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="index.html" class="group inline-flex items-center gap-2">
-          <div>
-            <div class="font-semibold leading-tight">Nexlink IT</div>
-            <!-- <div class="text-xs text-neutral-500 dark:text-neutral-400">Professional IT Services</div> -->
-          </div>
+      <div class="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="index.html#home" class="group inline-flex items-center gap-2">
+          <img src="/assets/Image.png" alt="Nexlink IT logo" class="h-8 w-auto dark:brightness-0 dark:invert transition-transform duration-300 group-hover:scale-105" loading="lazy" />
         </a>
         <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
           <a href="about.html" class="nav-link">About</a>
-          <!-- <a href="services.html" class="nav-link">Services</a> -->
-          <!-- <a href="portfolio.html" class="nav-link text-brand-600 dark:text-brand-400">Portfolio</a> -->
           <a href="pricing.html" class="nav-link">Pricing</a>
           <a href="contact.html" class="nav-link">Contact</a>
         </nav>
-        <p>☎️ +1 (307) 289-5340</p>
         <div class="flex items-center gap-2">
-          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">🌙</button>
-          <button onclick="window.location.href = 'https://api.nexlink.website/portal/'" id="loginBtn" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900">Customer login</button>
-          <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 sm:inline-flex">Request Support</button>
+          <button id="mobileMenuToggle" class="inline-flex items-center justify-center rounded-full border border-neutral-200 p-2 text-neutral-700 shadow-sm transition hover:bg-neutral-50 sm:hidden dark:border-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-900" aria-label="Toggle navigation" aria-expanded="false">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">&#9790;</button>
+          <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 sm:inline-flex">Request Support</button>
+        </div>
+        <div id="mobileMenu" class="absolute left-0 right-0 top-full mt-2 hidden rounded-2xl border border-neutral-200 bg-white px-4 py-4 shadow-lg sm:hidden dark:border-neutral-800 dark:bg-neutral-950">
+          <nav class="flex flex-col gap-3 text-sm font-medium">
+            <a href="index.html#home" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+          <div class="mt-4 flex flex-col gap-2">
+            <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">Request Support</a>
+            </div>
         </div>
       </div>
     </header>
@@ -114,10 +124,10 @@
         <div class="mt-10 grid gap-8 lg:grid-cols-2">
           <article class="card" data-animate>
             <div class="flex items-center gap-3 mb-4">
-              <div class="card-icon">🧩</div>
+              <div class="card-icon">ðŸ§©</div>
               <div>
                 <h3 class="text-lg font-semibold">Enterprise Nextcloud Migration</h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400">Large Corporation • 2024</p>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400">Large Corporation â€¢ 2024</p>
               </div>
             </div>
             <p class="card-body">Migrated a 500+ user organization from Google Workspace to self-hosted Nextcloud with Collabora integration, achieving 60% cost savings while improving data sovereignty.</p>
@@ -134,10 +144,10 @@
 
           <article class="card" data-animate>
             <div class="flex items-center gap-3 mb-4">
-              <div class="card-icon">🐧</div>
+              <div class="card-icon">ðŸ§</div>
               <div>
                 <h3 class="text-lg font-semibold">High-Availability Server Cluster</h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400">Tech Startup • 2024</p>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400">Tech Startup â€¢ 2024</p>
               </div>
             </div>
             <p class="card-body">Designed and implemented a fault-tolerant Linux server cluster with automated failover, load balancing, and monitoring for a growing SaaS application.</p>
@@ -154,10 +164,10 @@
 
           <article class="card" data-animate>
             <div class="flex items-center gap-3 mb-4">
-              <div class="card-icon">🔐</div>
+              <div class="card-icon">ðŸ”</div>
               <div>
                 <h3 class="text-lg font-semibold">Security Hardening Project</h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400">Financial Services • 2024</p>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400">Financial Services â€¢ 2024</p>
               </div>
             </div>
             <p class="card-body">Comprehensive security audit and hardening of critical financial systems, implementing zero-trust architecture and advanced threat detection.</p>
@@ -174,10 +184,10 @@
 
           <article class="card" data-animate>
             <div class="flex items-center gap-3 mb-4">
-              <div class="card-icon">📦</div>
+              <div class="card-icon">ðŸ“¦</div>
               <div>
                 <h3 class="text-lg font-semibold">Containerized Application Stack</h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400">E-commerce Platform • 2024</p>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400">E-commerce Platform â€¢ 2024</p>
               </div>
             </div>
             <p class="card-body">Modernized legacy application architecture using Docker containers and Kubernetes, enabling rapid scaling and simplified deployment processes.</p>
@@ -207,36 +217,36 @@
             <div class="grid gap-6 md:grid-cols-2">
               <div>
                 <h3 class="text-xl font-semibold">Nextcloud Migration for Healthcare Provider</h3>
-                <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">Healthcare • 200+ Users • 3 months</p>
+                <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">Healthcare â€¢ 200+ Users â€¢ 3 months</p>
                 <p class="mt-4 text-neutral-600 dark:text-neutral-300">
                   A regional healthcare provider needed to migrate from Microsoft 365 to a self-hosted solution for better HIPAA compliance and data control. We designed a comprehensive migration strategy that included data migration, user training, and ongoing support.
                 </p>
                 <div class="mt-4">
                   <h4 class="font-semibold text-sm">Challenges:</h4>
                   <ul class="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
-                    <li>• HIPAA compliance requirements</li>
-                    <li>• Complex file sharing workflows</li>
-                    <li>• Integration with existing EMR systems</li>
-                    <li>• User adoption concerns</li>
+                    <li>â€¢ HIPAA compliance requirements</li>
+                    <li>â€¢ Complex file sharing workflows</li>
+                    <li>â€¢ Integration with existing EMR systems</li>
+                    <li>â€¢ User adoption concerns</li>
                   </ul>
                 </div>
               </div>
               <div>
                 <h4 class="font-semibold text-sm">Solution:</h4>
                 <ul class="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
-                  <li>• Custom Nextcloud installation with security hardening</li>
-                  <li>• Collabora Office integration for document editing</li>
-                  <li>• Automated data migration with integrity verification</li>
-                  <li>• Comprehensive user training program</li>
-                  <li>• 24/7 monitoring and support</li>
+                  <li>â€¢ Custom Nextcloud installation with security hardening</li>
+                  <li>â€¢ Collabora Office integration for document editing</li>
+                  <li>â€¢ Automated data migration with integrity verification</li>
+                  <li>â€¢ Comprehensive user training program</li>
+                  <li>â€¢ 24/7 monitoring and support</li>
                 </ul>
                 <div class="mt-4 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
                   <h4 class="font-semibold text-sm text-green-800 dark:text-green-200">Results:</h4>
                   <ul class="mt-2 space-y-1 text-sm text-green-700 dark:text-green-300">
-                    <li>• 100% HIPAA compliance achieved</li>
-                    <li>• 40% cost reduction vs Microsoft 365</li>
-                    <li>• 95% user satisfaction rate</li>
-                    <li>• Zero data loss during migration</li>
+                    <li>â€¢ 100% HIPAA compliance achieved</li>
+                    <li>â€¢ 40% cost reduction vs Microsoft 365</li>
+                    <li>â€¢ 95% user satisfaction rate</li>
+                    <li>â€¢ Zero data loss during migration</li>
                   </ul>
                 </div>
               </div>
@@ -247,36 +257,36 @@
             <div class="grid gap-6 md:grid-cols-2">
               <div>
                 <h3 class="text-xl font-semibold">Infrastructure Modernization for Manufacturing</h3>
-                <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">Manufacturing • 50+ Servers • 6 months</p>
+                <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">Manufacturing â€¢ 50+ Servers â€¢ 6 months</p>
                 <p class="mt-4 text-neutral-600 dark:text-neutral-300">
                   A manufacturing company with aging Windows Server infrastructure needed a complete modernization to support their digital transformation initiatives. We migrated their entire infrastructure to Linux-based solutions with containerization.
                 </p>
                 <div class="mt-4">
                   <h4 class="font-semibold text-sm">Challenges:</h4>
                   <ul class="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
-                    <li>• Legacy Windows Server 2008/2012 systems</li>
-                    <li>• High maintenance costs</li>
-                    <li>• Security vulnerabilities</li>
-                    <li>• Limited scalability</li>
+                    <li>â€¢ Legacy Windows Server 2008/2012 systems</li>
+                    <li>â€¢ High maintenance costs</li>
+                    <li>â€¢ Security vulnerabilities</li>
+                    <li>â€¢ Limited scalability</li>
                   </ul>
                 </div>
               </div>
               <div>
                 <h4 class="font-semibold text-sm">Solution:</h4>
                 <ul class="mt-2 space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
-                  <li>• Ubuntu Server 22.04 LTS deployment</li>
-                  <li>• Docker containerization of applications</li>
-                  <li>• Automated backup and monitoring systems</li>
-                  <li>• Security hardening and compliance</li>
-                  <li>• Staff training and documentation</li>
+                  <li>â€¢ Ubuntu Server 22.04 LTS deployment</li>
+                  <li>â€¢ Docker containerization of applications</li>
+                  <li>â€¢ Automated backup and monitoring systems</li>
+                  <li>â€¢ Security hardening and compliance</li>
+                  <li>â€¢ Staff training and documentation</li>
                 </ul>
                 <div class="mt-4 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
                   <h4 class="font-semibold text-sm text-green-800 dark:text-green-200">Results:</h4>
                   <ul class="mt-2 space-y-1 text-sm text-green-700 dark:text-green-300">
-                    <li>• 70% reduction in maintenance costs</li>
-                    <li>• 3x improvement in system performance</li>
-                    <li>• 99.9% uptime achieved</li>
-                    <li>• Future-proof scalable architecture</li>
+                    <li>â€¢ 70% reduction in maintenance costs</li>
+                    <li>â€¢ 3x improvement in system performance</li>
+                    <li>â€¢ 99.9% uptime achieved</li>
+                    <li>â€¢ Future-proof scalable architecture</li>
                   </ul>
                 </div>
               </div>
@@ -295,42 +305,42 @@
         </div>
         <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <div class="card text-center" data-animate>
-            <div class="card-icon text-2xl">🐧</div>
+            <div class="card-icon text-2xl">ðŸ§</div>
             <h3 class="card-title">Linux Systems</h3>
             <p class="card-body text-sm">Ubuntu, CentOS, Debian, RHEL, Alpine</p>
           </div>
           <div class="card text-center" data-animate>
-            <div class="card-icon text-2xl">📦</div>
+            <div class="card-icon text-2xl">ðŸ“¦</div>
             <h3 class="card-title">Containers</h3>
             <p class="card-body text-sm">Docker, Kubernetes, Podman, LXC</p>
           </div>
           <div class="card text-center" data-animate>
-            <div class="card-icon text-2xl">☁️</div>
+            <div class="card-icon text-2xl">â˜ï¸</div>
             <h3 class="card-title">Cloud Platforms</h3>
             <p class="card-body text-sm">AWS, DigitalOcean, Linode, Vultr</p>
           </div>
           <div class="card text-center" data-animate>
-            <div class="card-icon text-2xl">🔧</div>
+            <div class="card-icon text-2xl">ðŸ”§</div>
             <h3 class="card-title">Monitoring</h3>
             <p class="card-body text-sm">Prometheus, Grafana, Zabbix, Nagios</p>
           </div>
           <div class="card text-center" data-animate>
-            <div class="card-icon text-2xl">🌐</div>
+            <div class="card-icon text-2xl">ðŸŒ</div>
             <h3 class="card-title">Web Servers</h3>
             <p class="card-body text-sm">Nginx, Apache, Caddy, Traefik</p>
           </div>
           <div class="card text-center" data-animate>
-            <div class="card-icon text-2xl">🗄️</div>
+            <div class="card-icon text-2xl">ðŸ—„ï¸</div>
             <h3 class="card-title">Databases</h3>
             <p class="card-body text-sm">PostgreSQL, MySQL, Redis, MongoDB</p>
           </div>
           <div class="card text-center" data-animate>
-            <div class="card-icon text-2xl">🔐</div>
+            <div class="card-icon text-2xl">ðŸ”</div>
             <h3 class="card-title">Security</h3>
             <p class="card-body text-sm">SSL/TLS, Firewalls, VPN, 2FA</p>
           </div>
           <div class="card text-center" data-animate>
-            <div class="card-icon text-2xl">⚡</div>
+            <div class="card-icon text-2xl">âš¡</div>
             <h3 class="card-title">Automation</h3>
             <p class="card-body text-sm">Ansible, Terraform, CI/CD, Scripts</p>
           </div>
@@ -379,10 +389,9 @@
     <div id="supportModal" class="invisible fixed inset-0 z-[100] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
       <div class="relative mx-4 w-full max-w-4xl scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
-        <div class="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-brand-500/10 blur-3xl"></div>
         <div class="relative flex items-center justify-between border-b border-neutral-200 p-4 dark:border-neutral-800">
           <h3 class="text-lg font-semibold">Request Support</h3>
-          <button id="supportModalClose" class="rounded-full p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">✕</button>
+          <button id="supportModalClose" class="rounded-full p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">âœ•</button>
         </div>
         <form id="supportForm" class="relative space-y-4 p-6">
           <div>
@@ -468,9 +477,8 @@
     <div id="successModal" class="invisible fixed inset-0 z-[110] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
       <div class="relative mx-4 w-full max-w-md scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
-        <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-emerald-500/10 blur-3xl"></div>
         <div class="relative p-6 text-center">
-          <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">✓</div>
+          <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">âœ“</div>
           <h3 class="text-lg font-semibold">Request sent successfully</h3>
           <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Thanks! I'll get back to you shortly.</p>
           <div class="mt-6 flex justify-center">
@@ -483,3 +491,13 @@
     <script src="script.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,633 @@
+﻿<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Free Zoom Consultation - Expert IT Services | Nexlink IT</title>
+    <meta name="description" content="Get a free 30-minute Zoom consultation with our IT experts. Discuss Nextcloud, Linux servers, app deployment, Unraid, and more. No obligation, expert advice." />
+    <meta property="og:title" content="Free Zoom Consultation - Expert IT Services" />
+    <meta property="og:description" content="Get a free 30-minute Zoom consultation with our IT experts. Discuss Nextcloud, Linux servers, app deployment, Unraid, and more. No obligation, expert advice." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#02203a" />
+
+    <!-- Theme bootstrap -->
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = stored || (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch (_) {}
+      })();
+    </script>
+
+    <!-- Tailwind via CDN for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#e6ecf2',
+                100: '#cdd8e5',
+                200: '#9bb1cb',
+                300: '#688ab1',
+                400: '#3a658f',
+                500: '#02203a',
+                600: '#011a30',
+                700: '#011426',
+                800: '#000e1b',
+                900: '#000a14',
+              },
+            },
+            boxShadow: {
+              glow: '0 10px 30px -10px rgba(2,32,58,.35)',
+            },
+            backgroundImage: {
+              grid: 'radial-gradient(rgba(2,32,58,0.12) 1px, transparent 1px)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+
+  <body class="bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 border-b border-neutral-200/50 bg-white/80 backdrop-blur-md dark:border-neutral-800/50 dark:bg-neutral-900/80">
+      <div class="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
+        <a href="../index.html#home" class="flex items-center gap-2">
+          <img src="/assets/Image.png" alt="Nexlink IT logo" class="h-8 w-auto dark:brightness-0 dark:invert" loading="lazy" />
+        </a>
+
+        <div class="flex items-center gap-3">
+          <div class="hidden items-center gap-6 md:flex">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="../about.html" class="nav-link">About</a>
+            <a href="../pricing.html" class="nav-link">Pricing</a>
+            <a href="../contact.html" class="btn-primary">Get Started</a>
+          </div>
+          <button id="mobileMenuToggle" class="inline-flex items-center justify-center rounded-full border border-neutral-200 p-2 text-neutral-700 shadow-sm transition hover:bg-neutral-50 md:hidden dark:border-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-900" aria-label="Toggle navigation" aria-expanded="false">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div id="mobileMenu" class="absolute left-0 right-0 top-full mt-2 hidden rounded-2xl border border-neutral-200 bg-white px-4 py-4 shadow-lg md:hidden dark:border-neutral-800 dark:bg-neutral-900">
+          <nav class="flex flex-col gap-3 text-sm font-medium">
+            <a href="../index.html#home" class="nav-link">Home</a>
+            <a href="../about.html" class="nav-link">About</a>
+            <a href="../pricing.html" class="nav-link">Pricing</a>
+            <a href="../contact.html" class="nav-link">Contact</a>
+          </nav>
+          <div class="mt-4 flex flex-col gap-2">
+            <a href="../contact.html" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-brand-50 to-white py-12 dark:from-neutral-900 dark:to-neutral-800">
+      <div class="absolute inset-0 bg-grid bg-[size:20px_20px] opacity-30"></div>
+      <div class="relative mx-auto max-w-7xl px-4 text-center lg:px-8">
+        <div class="mx-auto max-w-4xl">
+          <div class="mb-4 inline-flex items-center rounded-full bg-brand-100 px-3 py-1.5 text-xs font-medium text-brand-800 dark:bg-brand-900/30 dark:text-brand-300">
+            <svg class="mr-2 h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
+            </svg>
+            Free 30-Minute Consultation
+          </div>
+          
+          <h1 class="mb-4 text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
+            Get Expert IT Advice with a <span class="bg-gradient-to-r from-brand-600 to-brand-400 bg-clip-text text-transparent">Free Zoom Consultation</span>
+          </h1>
+          
+          <p class="mb-6 text-base text-neutral-600 dark:text-neutral-300 md:text-lg">
+            Discuss your Nextcloud setup, Linux server configuration, app deployment, Unraid systems, and more. 
+            Get personalized expert adviceâ€”<strong class="text-brand-600">completely free</strong>, no obligation required.
+          </p>
+          
+          <div class="mb-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <button id="bookConsultationBtn" class="btn-primary">
+              Book Your Free Consultation
+            </button>
+            <a href="#services" class="flex items-center gap-2 text-sm text-neutral-600 hover:text-brand-600 dark:text-neutral-400 dark:hover:text-brand-400">
+              <span>Learn more</span>
+              <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="flex items-center justify-center gap-8 text-sm text-neutral-500 dark:text-neutral-400">
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>100% Free</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>No obligation</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Expert advice</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="mb-10 text-center">
+          <h2 class="mb-3 text-2xl font-bold md:text-3xl">What We Can Discuss</h2>
+          <p class="text-base text-neutral-600 dark:text-neutral-300">
+            Get expert guidance on a wide range of IT services and technologies
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Service 1: Nextcloud -->
+          <div class="card group">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/30">
+              <svg class="h-5 w-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-lg font-semibold">Nextcloud Setup & Optimization</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              Installation, configuration, security hardening, performance tuning, and migration strategies for your private cloud.
+            </p>
+          </div>
+
+          <!-- Service 2: Linux Servers -->
+          <div class="card group">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/30">
+              <svg class="h-5 w-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-lg font-semibold">Linux Server Management</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              Server setup, maintenance, security configuration, automation, and troubleshooting for Ubuntu, Debian, and more.
+            </p>
+          </div>
+
+          <!-- Service 3: App Deployment -->
+          <div class="card group">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/30">
+              <svg class="h-5 w-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-lg font-semibold">Application Deployment</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              Docker, Kubernetes, CI/CD pipelines, web application deployment, and container orchestration strategies.
+            </p>
+          </div>
+
+          <!-- Service 4: Unraid -->
+          <div class="card group">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100 dark:bg-orange-900/30">
+              <svg class="h-5 w-5 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-lg font-semibold">Unraid Configuration</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              Unraid server setup, Docker containers, VM configuration, storage management, and plugin optimization.
+            </p>
+          </div>
+
+          <!-- Service 5: Security -->
+          <div class="card group">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/30">
+              <svg class="h-5 w-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-lg font-semibold">Security & Hardening</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              Firewall configuration, SSL/TLS setup, security audits, vulnerability assessments, and best practices.
+            </p>
+          </div>
+
+          <!-- Service 6: Infrastructure -->
+          <div class="card group">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/30">
+              <svg class="h-5 w-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-lg font-semibold">Infrastructure Planning</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              Architecture design, scalability planning, backup strategies, disaster recovery, and infrastructure optimization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="bg-neutral-50 py-12 dark:bg-neutral-800/50">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="mb-10 text-center">
+          <h2 class="mb-3 text-2xl font-bold md:text-3xl">Why Book a Free Consultation?</h2>
+          <p class="text-base text-neutral-600 dark:text-neutral-300">
+            Get personalized expert advice tailored to your specific needs
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Benefit 1 -->
+          <div class="text-center">
+            <div class="mb-3 flex justify-center">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-600 dark:bg-brand-900/30 dark:text-brand-400">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="mb-2 text-base font-semibold">Expert Guidance</h3>
+            <p class="text-xs text-neutral-600 dark:text-neutral-300">
+              Get advice from experienced IT professionals who understand your challenges.
+            </p>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="text-center">
+            <div class="mb-3 flex justify-center">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-600 dark:bg-brand-900/30 dark:text-brand-400">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="mb-2 text-base font-semibold">Save Time</h3>
+            <p class="text-xs text-neutral-600 dark:text-neutral-300">
+              Avoid costly mistakes and get solutions faster with professional insights.
+            </p>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="text-center">
+            <div class="mb-3 flex justify-center">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-600 dark:bg-brand-900/30 dark:text-brand-400">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="mb-2 text-base font-semibold">No Cost</h3>
+            <p class="text-xs text-neutral-600 dark:text-neutral-300">
+              Completely free consultation with no hidden fees or obligations.
+            </p>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="text-center">
+            <div class="mb-3 flex justify-center">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-600 dark:bg-brand-900/30 dark:text-brand-400">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="mb-2 text-base font-semibold">Quick Answers</h3>
+            <p class="text-xs text-neutral-600 dark:text-neutral-300">
+              Get immediate answers to your technical questions and concerns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-12">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="mb-10 text-center">
+          <h2 class="mb-3 text-2xl font-bold md:text-3xl">How It Works</h2>
+          <p class="text-base text-neutral-600 dark:text-neutral-300">
+            Simple 3-step process to get your free consultation
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <!-- Step 1 -->
+          <div class="text-center">
+            <div class="mb-3 flex justify-center">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-xl font-bold text-brand-600 dark:bg-brand-900/30 dark:text-brand-400">
+                1
+              </div>
+            </div>
+            <h3 class="mb-2 text-lg font-semibold">Book Your Consultation</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              Fill out the form with your details and what you'd like to discuss. We'll schedule a convenient time for you.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center">
+            <div class="mb-3 flex justify-center">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-xl font-bold text-brand-600 dark:bg-brand-900/30 dark:text-brand-400">
+                2
+              </div>
+            </div>
+            <h3 class="mb-2 text-lg font-semibold">Join the Zoom Call</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              We'll send you a Zoom link. Join at your scheduled time for a 30-minute consultation with our expert.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center">
+            <div class="mb-3 flex justify-center">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-xl font-bold text-brand-600 dark:bg-brand-900/30 dark:text-brand-400">
+                3
+              </div>
+            </div>
+            <h3 class="mb-2 text-lg font-semibold">Get Expert Advice</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              Discuss your challenges, get personalized recommendations, and learn about solutions tailored to your needs.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <button id="bookConsultationBtn2" class="btn-primary">
+            Book Your Free Consultation Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-neutral-50 py-12 dark:bg-neutral-800/50">
+      <div class="mx-auto max-w-4xl px-4 lg:px-8">
+        <div class="mb-10 text-center">
+          <h2 class="mb-3 text-2xl font-bold md:text-3xl">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="card">
+            <h3 class="mb-2 text-base font-semibold">Is the consultation really free?</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              Yes! The 30-minute Zoom consultation is completely free with no hidden costs or obligations. We're here to help and provide expert advice.
+            </p>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="card">
+            <h3 class="mb-2 text-base font-semibold">What can I discuss during the consultation?</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              You can discuss any IT-related topics including Nextcloud setup, Linux server management, app deployment, Unraid configuration, security, infrastructure planning, and more. We'll tailor the discussion to your specific needs.
+            </p>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="card">
+            <h3 class="mb-2 text-base font-semibold">How long does the consultation last?</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              Each consultation is 30 minutes long, giving us enough time to understand your situation and provide valuable insights and recommendations.
+            </p>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="card">
+            <h3 class="mb-2 text-base font-semibold">Do I need to prepare anything?</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              It's helpful to have a general idea of what you'd like to discuss, but no formal preparation is required. Just come ready to share your challenges and questions.
+            </p>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="card">
+            <h3 class="mb-2 text-base font-semibold">Am I obligated to purchase services after the consultation?</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              Absolutely not. The consultation is completely free with no obligation. We're here to provide value and help you make informed decisions, whether or not you choose to work with us.
+            </p>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="card">
+            <h3 class="mb-2 text-base font-semibold">What time zones do you support?</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">
+              We work with clients worldwide and can schedule consultations at times convenient for you. Just let us know your preferred time zone when booking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12">
+      <div class="mx-auto max-w-4xl px-4 text-center lg:px-8">
+        <div class="rounded-2xl bg-gradient-to-br from-brand-500 to-brand-600 px-6 py-10 text-white">
+          <h2 class="mb-3 text-2xl font-bold md:text-3xl">Ready to Get Expert IT Advice?</h2>
+          <p class="mb-6 text-base opacity-90">
+            Book your free 30-minute Zoom consultation today. No obligation, just expert guidance to help you succeed.
+          </p>
+          <div class="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <button id="bookConsultationBtn3" class="btn-secondary bg-white text-brand-600 hover:bg-neutral-100">
+              Book Free Consultation
+            </button>
+            <a href="../contact.html" class="flex items-center gap-2 text-sm text-white/80 hover:text-white">
+              <span>Have questions? Contact us</span>
+              <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 py-8 text-sm dark:border-neutral-800">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:flex-row sm:text-left lg:px-8">
+        <div>
+          <div class="text-neutral-500 dark:text-neutral-400">© 2025 Nexlink IT LLC. All rights reserved.</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <!-- Sitemap -->
+          <nav aria-label="Sitemap" class="flex flex-wrap gap-4 justify-center">
+            <a class="footer-link" href="../index.html">Home</a>
+            <a class="footer-link" href="../about.html">About</a>
+            <a class="footer-link" href="../pricing.html">Pricing</a>
+            <a class="footer-link" href="../contact.html">Contact</a>
+            <a class="footer-link" href="../legal/terms-of-service.html">Customer Agreement</a>
+            <a class="footer-link" href="../legal/privacy-policy.html">Privacy</a>
+            <!-- <a class="footer-link" href="../legal/remote-access-agreement.html">Remote Access Agreement</a> -->
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Request Consultation Modal -->
+    <div id="supportModal" class="invisible fixed inset-0 z-[100] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative mx-4 w-full max-w-4xl scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
+        <div class="relative flex items-center justify-between border-b border-neutral-200 p-4 dark:border-neutral-800">
+          <h3 class="text-lg font-semibold">Book Your Free Zoom Consultation</h3>
+          <button id="supportModalClose" class="rounded-full p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">âœ•</button>
+        </div>
+        <form id="supportForm" class="relative space-y-4 p-6">
+          <div>
+            <label for="serviceType" class="label">Service Type</label>
+            <select id="serviceType" name="serviceType" class="input">
+              <option>Free Zoom Consultation</option>
+              <option>Nextcloud</option>
+              <option>Linux/Servers</option>
+              <option>App Deployment</option>
+              <option>Unraid</option>
+              <option>Security</option>
+              <option>General IT</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="name" class="label">Name</label>
+              <input id="name" name="name" type="text" required class="input" placeholder="Jane Doe" />
+            </div>
+            <div>
+              <label for="email" class="label">Email</label>
+              <input id="email" name="email" type="email" required class="input" placeholder="you@example.com" />
+            </div>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="company" class="label">Organization</label>
+              <input id="company" name="company" type="text" class="input" placeholder="Optional" />
+            </div>
+            <div>
+              <label for="region" class="label">Region</label>
+              <select id="region" name="region" class="input">
+                <option>Europe</option>
+                <option>North America</option>
+                <option>South America</option>
+                <option>Asia</option>
+                <option>Oceania</option>
+                <option>Africa</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="platform" class="label">Platform / Environment</label>
+              <select id="platform" name="platform" class="input">
+                <option>Linux</option>
+                <option>Unraid</option>
+                <option>Docker</option>
+                <option>TrueNAS SCALE</option>
+                <option>Proxmox</option>
+                <option>Windows Server</option>
+                <option>Hosting/Cloud</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="versions" class="label">Version details (optional)</label>
+              <input id="versions" name="versions" type="text" class="input" placeholder="e.g., Ubuntu 22.04, Unraid 6.12" />
+            </div>
+          </div>
+          <div>
+            <label for="urgency" class="label">Preferred Consultation Time</label>
+            <select id="urgency" name="urgency" class="input">
+              <option>Within 1 week</option>
+              <option>Within 2 weeks</option>
+              <option>Within 1 month</option>
+              <option>Flexible</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="label">What would you like to discuss?</label>
+            <textarea id="message" name="message" rows="4" class="input" placeholder="Brief description of what you'd like to discuss during the consultation (e.g., Nextcloud setup, Linux server optimization, app deployment strategy, etc.)"></textarea>
+          </div>
+          <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+            <div class="text-xs text-neutral-500">We'll contact you via email to schedule your Zoom consultation. You can also contact us directly at (307) 289-5340.</div>
+            <div class="flex gap-3">
+              <button type="button" class="btn-secondary" data-close>Cancel</button>
+              <button type="submit" class="btn-primary">Request Consultation</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="invisible fixed inset-0 z-[110] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative mx-4 w-full max-w-md scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
+        <div class="relative p-6 text-center">
+          <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">âœ“</div>
+          <h3 class="text-lg font-semibold">Consultation request sent successfully</h3>
+          <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Thanks! We'll contact you shortly to schedule your free Zoom consultation.</p>
+          <div class="mt-6 flex justify-center">
+            <button id="successOk" class="btn-primary inline-flex items-center justify-center rounded-full bg-brand-600 px-5 py-2 font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script>
+      // Custom script for consultation page modal triggers
+      document.addEventListener('DOMContentLoaded', () => {
+        const consultationButtons = [
+          document.getElementById('bookConsultationBtn'),
+          document.getElementById('bookConsultationBtn2'),
+          document.getElementById('bookConsultationBtn3')
+        ].filter(Boolean);
+
+        consultationButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            // Use the openSupportModal function from script.js
+            if (typeof openSupportModal === 'function') {
+              openSupportModal();
+            } else {
+              // Fallback if script.js hasn't loaded yet
+              const supportModal = document.getElementById('supportModal');
+              if (supportModal) {
+                supportModal.classList.remove('hidden', 'invisible');
+                supportModal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                const firstInput = supportModal.querySelector('input, textarea, select');
+                if (firstInput) {
+                  setTimeout(() => firstInput.focus(), 100);
+                }
+              }
+            }
+          });
+        });
+      });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

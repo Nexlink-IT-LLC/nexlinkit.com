@@ -1,12 +1,12 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Nexlink IT LLC</title>
-    <meta name="description" content="Professional IT services. Get expert help with Linux, servers, hosting, Nextcloud and much more — at affordable prices. Fast, reliable, and secure." />
-    <meta property="og:title" content="Nexlink IT — Professional IT Services" />
-    <meta property="og:description" content="Get expert help with Linux, servers, hosting, Nextcloud and much more — at affordable prices. Average response: 1 hour. Europe-based, serving clients worldwide." />
+    <meta name="description" content="Professional IT services. Get expert help with Linux, servers, hosting, Nextcloud and much more â€” at affordable prices. Fast, reliable, and secure." />
+    <meta property="og:title" content="Nexlink IT â€” Professional IT Services" />
+    <meta property="og:description" content="Get expert help with Linux, servers, hosting, Nextcloud and much more â€” at affordable prices. Average response: 1 hour. Europe-based, serving clients worldwide." />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#0ea5e9" />
 
@@ -65,178 +65,225 @@
     <!-- Decorative background -->
     <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
       <!-- <div class="absolute inset-0 bg-grid [background-size:20px_20px] opacity-40 dark:opacity-20"></div> -->
-      <div class="absolute left-1/2 top-[10%] h-72 w-72 -translate-x-1/2 rounded-full bg-brand-500/20 blur-3xl filter"></div>
-      <!-- <div class="absolute right-[10%] top-[60%] h-72 w-72 rounded-full bg-brand-400/20 blur-3xl filter"></div> -->
     </div>
 
     <!-- Navbar -->
     <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-neutral-900/60">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <div class="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a href="#home" class="group inline-flex items-center gap-2">
-          <div>
-            <div class="font-semibold leading-tight">Nexlink IT</div>
-            <!-- <div class="text-xs text-neutral-500 dark:text-neutral-400">Professional IT Services</div> -->
-          </div>
+          <img src="/assets/Image.png" alt="Nexlink IT logo" class="h-8 w-auto dark:brightness-0 dark:invert transition-transform duration-300 group-hover:scale-105" loading="lazy" />
         </a>
         <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
           <a href="about.html" class="nav-link">About</a>
-          <!-- <a href="services.html" class="nav-link">Services</a> -->
-          <!-- <a href="portfolio.html" class="nav-link">Portfolio</a> -->
           <a href="pricing.html" class="nav-link">Pricing</a>
           <a href="contact.html" class="nav-link">Contact</a>
         </nav>
-        <p>☎️ +1 (307) 289-5340</p>
         <div class="flex items-center gap-2">
-          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">🌙</button>
-          <button onclick="window.location.href = 'https://api.nexlink.website/portal/'" id="loginBtn" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900">Customer login</button>
-          <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 sm:inline-flex">Request Support</button>
+          <button id="mobileMenuToggle" class="inline-flex items-center justify-center rounded-full border border-neutral-200 p-2 text-neutral-700 shadow-sm transition hover:bg-neutral-50 sm:hidden dark:border-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-900" aria-label="Toggle navigation" aria-expanded="false">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">&#9790;</button>
+          <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 sm:inline-flex">Request Support</button>
+        </div>
+        <div id="mobileMenu" class="absolute left-0 right-0 top-full mt-2 hidden rounded-2xl border border-neutral-200 bg-white px-4 py-4 shadow-lg sm:hidden dark:border-neutral-800 dark:bg-neutral-950">
+          <nav class="flex flex-col gap-3 text-sm font-medium">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+          <div class="mt-4 flex flex-col gap-2">
+            <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">Request Support</a>
+            </div>
         </div>
       </div>
     </header>
 
     <!-- Hero -->
-    <section id="home" class="relative overflow-hidden">
-      <div class="mx-auto max-w-7xl px-4 py-16 sm:py-20 lg:px-8">
-        <div class="mx-auto max-w-3xl text-center">
-          <div data-animate>
-            <span class="inline-flex items-center gap-2 rounded-full border border-brand-200/60 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 ring-1 ring-brand-100/60 dark:border-brand-900/40 dark:bg-brand-900/30 dark:text-brand-200">Providing professional IT for 1 year!</span>
-            <h1 class="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Reliable, modern IT for everyone</h1>
-            <p class="mt-4 max-w-prose text-neutral-600 dark:text-neutral-300">We provide modern IT solutions through open-source excellence. We believe in the power of open-source technology to transform businesses and improve lives.</p>
-            <div class="mt-6 flex flex-wrap justify-center gap-3"> 
-              <button id="requestSupportBtnHero" class="inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">Request Support</button>
-              <a href="contact.html" class="inline-flex items-center justify-center rounded-full border border-neutral-200 px-6 py-3 font-semibold text-neutral-700 transition hover:bg-neutral-50 dark:border-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-900">Contact</a>
+    <section id="home" class="relative overflow-hidden bg-gradient-to-b from-brand-50 via-white to-white dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950">
+      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">
+        <div class="space-y-8 lg:max-w-5xl">
+          <div class="inline-flex items-center gap-2 rounded-full border border-brand-200/60 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-700 shadow-sm ring-1 ring-brand-100/60 dark:border-brand-900/40 dark:bg-neutral-900 dark:text-brand-200">Providing professional IT for 1 year</div>
+          <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Delivering reliable, professional IT services</h1>
+          <p class="max-w-3xl text-lg text-neutral-700 dark:text-neutral-300">Nexlink IT keeps your self-hosted apps, on-premises cloud, and servers secure, and fast. We troubleshoot outages and deploy new apps.</p>
+          <div class="flex flex-wrap items-center gap-3">
+            <button id="requestSupportBtnHero" class="inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">Get started</button>
+            <a href="#contact" class="inline-flex items-center justify-center rounded-full border border-neutral-200 px-5 py-3 text-sm font-semibold text-neutral-700 transition hover:bg-neutral-50 dark:border-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-900">Free consultation</a>
+            <a href="tel:+13072895340" class="text-sm font-semibold text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300">Call +1 (307) 289-5340</a>
+          </div>
+          <div class="grid gap-3 sm:grid-cols-3 lg:max-w-4xl">
+            <div class="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
+              <div class="text-3xl font-bold text-brand-600">1 hr</div>
+              <p class="text-sm text-neutral-600 dark:text-neutral-300">Avg first response for active engagements</p>
             </div>
-            <div class="mt-6 flex items-center justify-center gap-3 text-sm text-neutral-600 dark:text-neutral-300">
-              <div class="flex items-center gap-1 text-brand-600" aria-label="5.0 out of 5 stars">
-                <span>★★★★★</span>
-              </div>
-              <div>5.0 stars (<a href="#reviews"class="text-brand-600 hover:text-brand-500">view reviews</a>)</div>
+            <div class="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
+              <div class="text-3xl font-bold text-brand-600">4+</div>
+              <p class="text-sm text-neutral-600 dark:text-neutral-300">Continents served</p>
+            </div>
+            <div class="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
+              <div class="text-3xl font-bold text-brand-600">8+</div>
+              <p class="text-sm text-neutral-600 dark:text-neutral-300">Countries served</p>
             </div>
           </div>
         </div>
+      </div>
+    </section>    <!-- Trust Bar -->
+    <section class="border-b border-neutral-200 bg-white py-10 dark:border-neutral-800 dark:bg-neutral-950">
+      <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 text-sm font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400 lg:px-8">
+        <span>Self-hosted platforms</span>
+        <span>Nextcloud support</span>
+        <span>Home server support</span>
+        <span>Security-first service</span>
       </div>
     </section>
 
     <!-- Services -->
     <section id="services" class="relative">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center" data-animate>
-          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">What we can help you with</h2>
-          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Practical, production‑grade IT services.</p>
+        <div class="mx-auto max-w-3xl text-center" data-animate>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Where we make the biggest impact</h2>
+          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Focused on reliability, recoveries, and practical upgrades for teams who run critical systems without massive internal ops teams.</p>
         </div>
-        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <article class="card" data-animate>
-            <div class="card-icon">🧩</div>
-            <h3 class="card-title">Nextcloud</h3>
-            <p class="card-body">Installation, update, migration, apps, Collabora/ONLYOFFICE integration, troubleshooting.</p>
+            <div class="card-icon">🚨</div>
+            <h3 class="card-title">Recovery</h3>
+            <p class="card-body">Debug outages, SSL/DNS issues, Nextcloud issues, and application deployments.</p>
           </article>
           <article class="card" data-animate>
-            <div class="card-icon">🐧</div>
-            <h3 class="card-title">Linux & Servers</h3>
-            <p class="card-body">Installation, management, services, troubleshooting.</p>
+            <div class="card-icon">☁</div>
+            <h3 class="card-title">Nextcloud & Collaboration</h3>
+            <p class="card-body">Clean installs, upgrades, app tuning, Collabora/ONLYOFFICE integration - all set up reliably so you never have to worry about issues.</p>
           </article>
           <article class="card" data-animate>
-            <div class="card-icon">🌐</div>
-            <h3 class="card-title">Hosting & DNS</h3>
-            <p class="card-body">DNS, reverse proxies, web servers, HTTPS/TLS.</p>
-          </article>
-          <article class="card" data-animate>
-            <div class="card-icon">🔐</div>
+            <div class="card-icon">🔒</div>
             <h3 class="card-title">Security</h3>
-            <p class="card-body">Firewalls, updates, release migration.</p>
+            <p class="card-body">Security is always priority number one when we handle your systems.</p>
           </article>
           <article class="card" data-animate>
-            <div class="card-icon">📦</div>
-            <h3 class="card-title">Containers & VMs</h3>
-            <p class="card-body">Docker, TrueNAS SCALE, Unraid, app deployment & containerization.</p>
+            <div class="card-icon">🛡️</div>
+            <h3 class="card-title">Performance & Scaling</h3>
+            <p class="card-body">Optimize caching, storage, and compute footprints. Baseline metrics, right-size resources, and remove bottlenecks.</p>
           </article>
           <article class="card" data-animate>
-            <div class="card-icon">📈</div>
-            <h3 class="card-title">Monitoring & Backups</h3>
-            <p class="card-body">Observability, alerting, backup strategy, restore testing.</p>
+            <div class="card-icon">🚜</div>
+            <h3 class="card-title">Platform Migrations</h3>
+            <p class="card-body">We can help with seamless migrations to new platforms, ensuring minimal downtime and data integrity.</p>
           </article>
           <article class="card" data-animate>
-            <div class="card-icon">🔧</div>
-            <h3 class="card-title">Troubleshooting</h3>
-            <p class="card-body">Analysis and fixes for apps, performance, and networking.</p>
+            <div class="card-icon">📅</div>
+            <h3 class="card-title">Flexible Support</h3>
+            <p class="card-body">Simply contact us for a tailored support experience that fits your needs.</p>
           </article>
-          <article class="card" data-animate>
-            <div class="card-icon">⚙️</div>
-            <h3 class="card-title">Operating systems</h3>
-            <p class="card-body">Linux, Windows & Windows Server, Unraid, TrueNAS, and more.</p>
-          </article>
-        </div>
-        <div class="mt-10 flex flex-wrap items-center justify-center gap-3 text-sm text-neutral-600 dark:text-neutral-300" data-animate>
-          <span class="badge">Home</span>
-          <span class="badge">Business</span>
-          <span class="badge">Enterprise</span>
-          <span class="badge">Worldwide</span>
         </div>
       </div>
     </section>
 
-    <!-- Reviews -->
-    <section id="reviews" class="relative">
-      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center" data-animate>
-          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">What clients say</h2>
-          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Real feedback from recent projects.</p>
+    <!-- Playbook -->
+    <!-- <section id="process" class="bg-neutral-50 py-16 dark:bg-neutral-950">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-5" data-animate>
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">A predictable cadence you can rely on</h2>
+            <p class="mt-3 text-neutral-600 dark:text-neutral-300">We keep meetings short, updates frequent, and changes reviewable. You get visibility without micromanaging tickets.</p>
+            <div class="mt-6 space-y-3 text-sm text-neutral-700 dark:text-neutral-200">
+              <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-500"></span>Response within 1 business hour for active clients</div>
+              <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-500"></span>Weekly changelog + rollback notes</div>
+              <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-500"></span>Security-first defaults baked into every task</div>
+            </div>
+          </div>
+          <div class="lg:col-span-7">
+            <div class="grid gap-4 md:grid-cols-3" data-animate>
+              <div class="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
+                <div class="text-xs font-semibold uppercase text-neutral-500">Week 0</div>
+                <div class="mt-2 text-lg font-semibold">Snapshot & Risks</div>
+                <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Access review, backups check, monitoring sanity, attack surface quick pass.</p>
+              </div>
+              <div class="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
+                <div class="text-xs font-semibold uppercase text-neutral-500">Week 1-2</div>
+                <div class="mt-2 text-lg font-semibold">Stabilize & Automate</div>
+                <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Fix noisy alerts, standardize deploys, harden access, document runbooks.</p>
+              </div>
+              <div class="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
+                <div class="text-xs font-semibold uppercase text-neutral-500">Ongoing</div>
+                <div class="mt-2 text-lg font-semibold">Ship & Report</div>
+                <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">New features in small batches, monthly health checks, predictable budget.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section> -->
 
-        <div class="mt-10" data-animate>
+    <!-- Outcomes -->
+    <!-- TODO Add with real stories -->
+    <!-- <section id="outcomes" class="relative">
+      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between" data-animate>
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Recent wins for teams like yours</h2>
+            <p class="mt-3 text-neutral-600 dark:text-neutral-300">Examples of fast impact without long projects.</p>
+          </div>
+          <button id="requestSupportBtnCta" class="btn-primary">Schedule a working session</button>
+        </div>
+        <div class="mt-8 grid gap-6 lg:grid-cols-3">
+          <article class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-900" data-animate>
+            <div class="text-sm font-semibold text-brand-600 dark:text-brand-300">Nextcloud</div>
+            <h3 class="mt-2 text-xl font-semibold">Zero-downtime upgrade & tuning</h3>
+            <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Migrated 180 users to Nextcloud 28 with Collabora, tuned Redis + MariaDB, and cut page loads by 38%.</p>
+          </article>
+          <article class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-900" data-animate>
+            <div class="text-sm font-semibold text-brand-600 dark:text-brand-300">Incident</div>
+            <h3 class="mt-2 text-xl font-semibold">SSL/DNS meltdown contained</h3>
+            <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Recovered production after a DNS mis-publish, reissued certs, added HSTS/OCSP, and wrote a 2-step rollback plan.</p>
+          </article>
+          <article class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-900" data-animate>
+            <div class="text-sm font-semibold text-brand-600 dark:text-brand-300">Ops</div>
+            <h3 class="mt-2 text-xl font-semibold">Noise down, signal up</h3>
+            <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Consolidated alerts, added synthetics, and automated weekly backups with restores tested. Support queue volume down 27%.</p>
+          </article>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Reviews -->
+    <section id="reviews" class="relative bg-neutral-50 py-16 dark:bg-neutral-950">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center" data-animate>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">What clients say</h2>
+          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Pulled from recent projects.</p>
+        </div>
+                <div class="mt-10" data-animate>
           <div class="relative">
             <div id="reviewsTrack" class="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 [scrollbar-width:none] [-ms-overflow-style:none]"></div>
             <div class="mt-4 flex items-center justify-center gap-2">
-              <button id="reviewsPrev" class="nav-btn" aria-label="Previous">◀</button>
-              <button id="reviewsNext" class="nav-btn" aria-label="Next">▶</button>
+              <button id="reviewsPrev" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-200" aria-label="Previous"><</button>
+              <button id="reviewsNext" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-200" aria-label="Next">></button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact CTA -->
     <section id="contact" class="relative">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="grid items-center gap-8 md:grid-cols-2">
-          <div data-animate>
+        <div class="grid items-center gap-10 lg:grid-cols-12">
+          <div class="space-y-4 lg:col-span-7" data-animate>
             <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Contact & Support</h2>
-            <p class="mt-3 text-neutral-600 dark:text-neutral-300">Choose your preferred platform to get in touch.</p>
-            <div class="mt-6 flex flex-wrap gap-3">
-              <button id="requestSupportBtnContact" class="btn-primary">Request Support</button>
-              <!-- <button onclick="window.location.href='https://www.fiverr.com/nexlink_norway?public_mode=true'" class="btn-primary bg-green-600 hover:bg-green-500">View on Fiverr</button> -->
-              <a href="mailto:contact@nexlink.website" class="btn-secondary">Email</a>
-              <!-- <a href="https://m.me/" target="_blank" rel="noopener" class="btn-secondary">Messenger</a> -->
+            <p class="text-neutral-600 dark:text-neutral-300">Don't hesitate to reach out for any of your IT needs.</p>
+            <div class="flex flex-wrap gap-3">
+              <button id="requestSupportBtnContact" class="btn-primary">Open a support request</button>
+              <a href="tel:+13072895340" class="btn-secondary">Call +1 (307) 289-5340</a>
             </div>
           </div>
-          <!-- <div class="relative" data-animate> -->
-            <!-- <div class="relative overflow-hidden rounded-2xl border border-neutral-200 bg-white p-6 shadow-xl dark:border-neutral-800 dark:bg-neutral-950"> -->
-              <!-- <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-brand-500/10 blur-2xl"></div> -->
-              <!-- <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                <div>
-                  <dt class="text-sm text-neutral-500">Average response</dt>
-                  <dd class="text-lg font-semibold">1 hour</dd>
-                </div> -->
-                <!-- <div>
-                  <dt class="text-sm text-neutral-500">Location</dt>
-                  <dd class="text-lg font-semibold">Akershus, Norway</dd>
-                </div>
-                <div>
-                  <dt class="text-sm text-neutral-500">Coverage</dt>
-                  <dd class="text-lg font-semibold">Europe, US, and beyond</dd>
-                </div> -->
-                <!-- <div>
-                  <dt class="text-sm text-neutral-500">Focus</dt>
-                  <dd class="text-lg font-semibold">IT & Nextcloud</dd>
-                </div> -->
-              <!-- </dl> -->
-            <!-- </div> -->
-          <!-- </div> -->
-        <!-- </div> -->
+        </div>
       </div>
     </section>
-
-    <!-- Footer -->
     <footer class="border-t border-neutral-200 py-10 text-sm dark:border-neutral-800">
       <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:flex-row sm:text-left lg:px-8">
         <div>
@@ -263,10 +310,9 @@
     <div id="supportModal" class="invisible fixed inset-0 z-[100] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
       <div class="relative mx-4 w-full max-w-4xl scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
-        <div class="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-brand-500/10 blur-3xl"></div>
         <div class="relative flex items-center justify-between border-b border-neutral-200 p-4 dark:border-neutral-800">
           <h3 class="text-lg font-semibold">Request Support</h3>
-          <button id="supportModalClose" class="rounded-full p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">✕</button>
+          <button id="supportModalClose" class="rounded-full p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">âœ•</button>
         </div>
         <form id="supportForm" class="relative space-y-4 p-6">
           <div>
@@ -352,9 +398,8 @@
     <div id="successModal" class="invisible fixed inset-0 z-[110] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
       <div class="relative mx-4 w-full max-w-md scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
-        <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-emerald-500/10 blur-3xl"></div>
         <div class="relative p-6 text-center">
-          <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">✓</div>
+          <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">âœ“</div>
           <h3 class="text-lg font-semibold">Request sent successfully</h3>
           <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Thanks! I'll get back to you shortly.</p>
           <div class="mt-6 flex justify-center">
@@ -368,5 +413,21 @@
   </body>
   
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

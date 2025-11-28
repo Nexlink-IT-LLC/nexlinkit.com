@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Copyright (c) Nexlink IT LLC 2025
  * Homepage client-side JavaScript components
  * Revised 8 September 2025
@@ -10,6 +10,13 @@
 const themeToggle = document.getElementById('themeToggle');
 const themeToggleMobile = document.getElementById('themeToggleMobile');
 
+function updateThemeToggleLabel(theme) {
+  // Use escapes to avoid encoding issues for sun/moon icons
+  const label = theme === 'dark' ? '☀' : '🌙'; // ☀ / ☾
+  if (themeToggle) themeToggle.textContent = label;
+  if (themeToggleMobile) themeToggleMobile.textContent = label;
+}
+
 function setTheme(theme) {
   const root = document.documentElement;
   if (theme === 'dark') {
@@ -17,6 +24,7 @@ function setTheme(theme) {
   } else {
     root.classList.remove('dark');
   }
+  updateThemeToggleLabel(theme);
   
   try {
     localStorage.setItem('theme', theme);
@@ -45,6 +53,7 @@ function initializeTheme() {
 }
 
 // Event listeners
+updateThemeToggleLabel(document.documentElement.classList.contains('dark') ? 'dark' : 'light');
 themeToggle?.addEventListener('click', toggleTheme);
 themeToggleMobile?.addEventListener('click', toggleTheme);
 
@@ -156,7 +165,7 @@ const reviews = [
   },
   {
     stars: 5,
-    text: "Due to my own oversight during testing, I initially accepted the job as complete before realizing there was an issue. Daniel kindly offered to fix the problem free of charge, and he resolved it immediately. I insisted on paying a small amount to properly acknowledge his excellent work. Although Daniel appears to be new on Fiverr, don't underestimate his skills and professionalism—he delivers quality results promptly and reliably.",
+    text: "Due to my own oversight during testing, I initially accepted the job as complete before realizing there was an issue. Daniel kindly offered to fix the problem free of charge, and he resolved it immediately. I insisted on paying a small amount to properly acknowledge his excellent work. Although Daniel appears to be new on Fiverr, don't underestimate his skills and professionalismâ€”he delivers quality results promptly and reliably.",
     reviewer: "Dane Coulter",
     title: "Small Business Owner",
     country: "Australia",
@@ -188,7 +197,7 @@ const reviews = [
   },
   {
     stars: 5,
-    text: "I highly recommend Daniel! An exceptional IT subcontractor, he took charge of our stack with impressive efficiency and resolved all our bugs—from the most visible to the trickiest edge cases—with rigor, clarity, and outstanding responsiveness. Clear communication, precise diagnostics, durable fixes, all delivered on time. Thanks to him, our applications are stable, high-performing, and ready to scale. A trusted partner we’ll gladly work with again. Kudos and thank you!",
+    text: "I highly recommend Daniel! An exceptional IT subcontractor, he took charge of our stack with impressive efficiency and resolved all our bugsâ€”from the most visible to the trickiest edge casesâ€”with rigor, clarity, and outstanding responsiveness. Clear communication, precise diagnostics, durable fixes, all delivered on time. Thanks to him, our applications are stable, high-performing, and ready to scale. A trusted partner weâ€™ll gladly work with again. Kudos and thank you!",
     reviewer: "rustorm",
     title: "IT director",
     country: "Bulgaria",
@@ -204,7 +213,7 @@ const reviews = [
   },
   // {
   //   stars: 5,
-  //   text: "[Translated from Swedish] Finding the right person on Fiverr can sometimes feel like a lottery, but with Daniel I really hit the jackpot. I hired him for help with Nextcloud, Proxy Manager, and TrueNAS, and it’s one of the best investments I’ve ever made. Daniel isn’t just knowledgeable, he’s a master of detail who never leaves anything half done; he digs deep, analyzes problems, and provides long-term, stable solutions instead of quick fixes, which gives me great confidence that his work will stand the test of time. What truly sets him apart is not only his expertise but also his way of communicating—he is attentive, clear, and pedagogical, always explaining each step, why it’s done, and how it fits into the bigger picture. From the start, it’s obvious that he’s passionate about his work and genuinely wants his clients to get the best possible result. I’ve worked with many different people over the years, but Daniel really stands out because he combines technical mastery with professionalism and a rare work ethic, showing just as much commitment to the client’s needs as to the technology itself. In short, if you need help with Nextcloud, Proxy Manager, TrueNAS, or related systems, hire Daniel immediately; he’s one of the most reliable and competent people I’ve met on Fiverr, and I wholeheartedly recommend him as someone who makes a real difference and whom you’ll want to return to again and again. ⭐⭐⭐⭐⭐",
+  //   text: "[Translated from Swedish] Finding the right person on Fiverr can sometimes feel like a lottery, but with Daniel I really hit the jackpot. I hired him for help with Nextcloud, Proxy Manager, and TrueNAS, and itâ€™s one of the best investments Iâ€™ve ever made. Daniel isnâ€™t just knowledgeable, heâ€™s a master of detail who never leaves anything half done; he digs deep, analyzes problems, and provides long-term, stable solutions instead of quick fixes, which gives me great confidence that his work will stand the test of time. What truly sets him apart is not only his expertise but also his way of communicatingâ€”he is attentive, clear, and pedagogical, always explaining each step, why itâ€™s done, and how it fits into the bigger picture. From the start, itâ€™s obvious that heâ€™s passionate about his work and genuinely wants his clients to get the best possible result. Iâ€™ve worked with many different people over the years, but Daniel really stands out because he combines technical mastery with professionalism and a rare work ethic, showing just as much commitment to the clientâ€™s needs as to the technology itself. In short, if you need help with Nextcloud, Proxy Manager, TrueNAS, or related systems, hire Daniel immediately; heâ€™s one of the most reliable and competent people Iâ€™ve met on Fiverr, and I wholeheartedly recommend him as someone who makes a real difference and whom youâ€™ll want to return to again and again. â­â­â­â­â­",
   //   reviewer: "Tomas (tomasochcarina)",
   //   title: "Private User",
   //   country: "Sweden",
@@ -212,7 +221,7 @@ const reviews = [
   // },
   {
     stars: 5,
-    text: "[Translated from Swedish] Finding the right person on Fiverr can feel like a lottery, but with Daniel I truly hit the jackpot. [...] It’s rare to find someone who combines technical mastery with professionalism and genuine care for the client’s needs. If you need help with these systems, hire Daniel immediately—he’s reliable, highly skilled, and one of the best I’ve worked with on Fiverr. ⭐⭐⭐⭐⭐",
+    text: "[Translated from Swedish] Finding the right person on Fiverr can feel like a lottery, but with Daniel I truly hit the jackpot. [...] Itâ€™s rare to find someone who combines technical mastery with professionalism and genuine care for the clientâ€™s needs. If you need help with these systems, hire Daniel immediatelyâ€”heâ€™s reliable, highly skilled, and one of the best Iâ€™ve worked with on Fiverr. â­â­â­â­â­",
     reviewer: "Tomas (tomasochcarina)",
     title: "Private User",
     country: "Sweden",
@@ -221,32 +230,30 @@ const reviews = [
 ];
 
 function createReviewCard(review) {
-  const stars = '★'.repeat(review.stars);
   const card = document.createElement('article');
-  card.className = 'review-card snap-center min-w-[300px] md:min-w-[400px] lg:min-w-[32%]';
-  
+  card.className = 'review-card snap-center min-w-[320px] md:min-w-[420px] lg:min-w-[33%]';
+
+  const stars = '\u2605'.repeat(review.stars); // ★
+
   card.innerHTML = `
-    <div class="flex items-center gap-2 mb-4">
-      <div class="text-yellow-400 text-lg">${stars}</div>
-      <span class="text-sm font-semibold text-gray-900 dark:text-white">${review.stars}.0</span>
-    </div>
-    <blockquote class="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-      "${review.text}"
-    </blockquote>
-    <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
-      <div class="flex items-start justify-between">
+    <div class="flex items-center justify-between gap-3 mb-3">
+      <div class="flex items-center gap-3">
+        <div class="grid h-10 w-10 place-items-center rounded-full bg-brand-50 text-sm font-semibold text-brand-700 dark:bg-brand-900/40 dark:text-brand-200">
+          ${review.stars}.0
+        </div>
         <div>
           <div class="font-semibold text-gray-900 dark:text-white">${review.reviewer}</div>
-          <div class="text-sm text-gray-600 dark:text-gray-400">${review.title}</div>
-          <div class="text-sm text-gray-500 dark:text-gray-500">${review.country}</div>
-        </div>
-        <div class="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-full text-gray-600 dark:text-gray-400">
-          ${review.platform}
+          <div class="text-sm text-gray-600 dark:text-gray-400">${review.title} · ${review.country}</div>
         </div>
       </div>
+      <span class="rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300">${review.platform}</span>
     </div>
+    <blockquote class="relative rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
+      <div class="mb-2 text-sm font-semibold text-brand-600 dark:text-brand-300">${stars}</div>
+      <p class="text-neutral-700 dark:text-neutral-300 leading-relaxed">“${review.text}”</p>
+    </blockquote>
   `;
-  
+
   return card;
 }
 
@@ -556,3 +563,9 @@ document.addEventListener('visibilitychange', () => {
     console.log('Page visible');
   }
 });
+
+
+
+
+
+

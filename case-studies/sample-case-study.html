@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Case Study | Nexlink IT</title>
+    <meta name="description" content="Sample case study showcasing a Nexlink IT engagement with measurable outcomes." />
+    <meta property="og:title" content="Case Study | Nexlink IT" />
+    <meta property="og:description" content="See how Nexlink IT delivers secure, reliable self-hosted platforms with fast turnaround." />
+    <meta property="og:type" content="article" />
+    <meta name="theme-color" content="#1f73d1" />
+
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = stored || (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch (_) {}
+      })();
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#e8f1ff',
+                100: '#d0e4ff',
+                200: '#a8caff',
+                300: '#7eaef5',
+                400: '#4f94e2',
+                500: '#1f73d1',
+                600: '#1559b3',
+                700: '#124999',
+                800: '#0f3c80',
+                900: '#0c326b',
+              },
+            },
+            boxShadow: {
+              glow: '0 10px 30px -10px rgba(14,165,233,.45)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="min-h-screen bg-white text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+    <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-neutral-900/60">
+      <div class="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="../index.html#home" class="group inline-flex items-center gap-2">
+          <img src="/assets/Image.png" alt="Nexlink IT logo" class="h-8 w-auto transition-transform duration-300 group-hover:scale-105 dark:brightness-0 dark:invert" loading="lazy" />
+        </a>
+        <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
+          <a href="../about.html" class="nav-link">About</a>
+          <a href="../pricing.html" class="nav-link">Pricing</a>
+          <a href="../contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button id="mobileMenuToggle" class="inline-flex items-center justify-center rounded-full border border-neutral-200 p-2 text-neutral-700 shadow-sm transition hover:bg-neutral-50 sm:hidden dark:border-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-900" aria-label="Toggle navigation" aria-expanded="false">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">
+            <img src="/assets/icons/sunny.png" alt="" aria-hidden="true" class="theme-icon" loading="lazy" />
+          </button>
+          <a href="../contact.html" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 sm:inline-flex">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="relative overflow-hidden bg-gradient-to-b from-brand-50 via-white to-white py-10 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950">
+        <div class="mx-auto max-w-5xl px-4 lg:px-8">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700 dark:text-brand-200">Case Study</p>
+          <h1 class="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">Zero-downtime Nextcloud upgrade with performance tuning</h1>
+          <p class="mt-3 max-w-3xl text-lg text-neutral-700 dark:text-neutral-300">How a remote team went from sluggish file access to a faster, hardened Nextcloud stack with clear rollback notes and verified backups.</p>
+          <div class="mt-4 flex items-center gap-3 text-sm text-neutral-600 dark:text-neutral-300">
+            <div class="flex items-center gap-2 rounded-full bg-white px-3 py-1 shadow-sm ring-1 ring-neutral-200 dark:bg-neutral-900 dark:ring-neutral-800">
+              <span class="h-8 w-8 rounded-full bg-brand-50 ring-2 ring-brand-100 dark:bg-brand-900/30 dark:ring-brand-800/60"></span>
+              <div class="leading-tight">
+                <div class="font-semibold text-neutral-800 dark:text-neutral-100">Daniel Hammer</div>
+                <div class="text-xs text-neutral-500 dark:text-neutral-400">Owner, Nexlink IT LLC</div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-3 text-sm text-neutral-600 dark:text-neutral-300">
+            <span class="rounded-full bg-white px-3 py-1 shadow-sm ring-1 ring-neutral-200 dark:bg-neutral-900 dark:ring-neutral-800">Client: Distributed creative agency</span>
+            <span class="rounded-full bg-white px-3 py-1 shadow-sm ring-1 ring-neutral-200 dark:bg-neutral-900 dark:ring-neutral-800">Platform: TrueNAS SCALE + Nextcloud 28</span>
+            <span class="rounded-full bg-white px-3 py-1 shadow-sm ring-1 ring-neutral-200 dark:bg-neutral-900 dark:ring-neutral-800">Timeline: 48 hours</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative">
+        <div class="mx-auto max-w-5xl px-4 py-8 lg:px-8">
+          <article class="space-y-6 leading-relaxed text-neutral-800 dark:text-neutral-100">
+            <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">How the engagement unfolded</h2>
+            <p class="text-lg text-neutral-700 leading-relaxed dark:text-neutral-300">The client was a distributed creative agency that lived inside Nextcloud every day. Uploads were sluggish, cron jobs failed, and TLS renewals were hit-or-miss. We agreed on a no-downtime upgrade with a rollback at every phase.</p>
+
+            <p class="text-neutral-700 leading-relaxed dark:text-neutral-300">Before touching production, we verified ZFS snapshots and offsite backups, checked app compatibility, and wrote a two-step rollback. During a 48-hour window, we upgraded to Nextcloud 28, tuned Redis/MariaDB, renewed TLS with stricter HSTS/OCSP, and enabled OCSP stapling. Each change was logged with “what/why/rollback” notes the client could follow.</p>
+
+            <p class="text-neutral-700 leading-relaxed dark:text-neutral-300">Validation mattered as much as delivery: we load-tested the busiest paths, trimmed app bottlenecks, and tightened alerting to signal only actionable issues. A concise runbook with screenshots and a two-step rollback guide shipped with the handoff.</p>
+
+            <h3 class="text-xl font-semibold">What moved the needle</h3>
+            <ul class="space-y-2 text-neutral-700 leading-relaxed dark:text-neutral-300">
+              <li>Backups verified before and after the upgrade; rollback tested in staging.</li>
+              <li>Redis and MariaDB tuned for concurrency; OPCache revalidation enabled.</li>
+              <li>TLS renewed with tighter HSTS and OCSP; alerts trimmed to essentials.</li>
+              <li>Runbook and rollback notes shipped with concise, stepwise commands.</li>
+            </ul>
+
+            <p class="text-neutral-700 leading-relaxed dark:text-neutral-300">Results: 38% faster page loads, no unplanned downtime, and a 24-hour turnaround from kick-off to handoff.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="relative">
+        <div class="mx-auto max-w-5xl px-4 py-10 lg:px-8">
+          <div class="rounded-2xl bg-brand-600 p-6 shadow-sm text-white">
+            <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">Want the same outcome?</h2>
+            <p class="mt-3 text-white/90">Share your environment and goals; I’ll suggest a plan (or say so if it’s not a fit). No obligation, just clear next steps.</p>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a href="../contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-brand-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-brand-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">Request a consult</a>
+              <a href="tel:+13072895340" class="inline-flex items-center justify-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-brand-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-brand-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">Call +1 (307) 289-5340</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-neutral-200 py-10 text-sm dark:border-neutral-800">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:flex-row sm:text-left lg:px-8">
+        <div>
+          <div class="text-neutral-500 dark:text-neutral-400">© 2025 Nexlink IT LLC. All rights reserved.</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <nav aria-label="Sitemap" class="flex flex-wrap justify-center gap-4">
+            <a class="footer-link" href="../index.html">Home</a>
+            <a class="footer-link" href="../about.html">About</a>
+            <a class="footer-link" href="../pricing.html">Pricing</a>
+            <a class="footer-link" href="../contact.html">Contact</a>
+            <a class="footer-link" href="../legal/terms-of-service.html">Customer Agreement</a>
+            <a class="footer-link" href="../legal/privacy-policy.html">Privacy</a>
+            <a class="footer-link" href="../credits.html">Credits</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

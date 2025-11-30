@@ -95,6 +95,49 @@ html, body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe 
 #successModal[aria-hidden="false"] [data-modal-panel] { transform: none; opacity: 1; }
 #successModal [data-modal-panel] { transform: translateY(8px) scale(.98); opacity: .98; transition: transform var(--duration) var(--easing), opacity var(--duration) var(--easing); }
 
+/* Modal layout responsiveness */
+#supportModal,
+#successModal {
+  padding: 1rem;
+  align-items: start;
+}
+
+#supportModal [data-modal-panel],
+#successModal [data-modal-panel] {
+  width: min(100%, 960px);
+  max-height: calc(100vh - 2rem);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background-clip: padding-box;
+  overflow-y: auto;
+  margin: 1rem auto;
+}
+
+@media (min-width: 640px) {
+  #supportModal,
+  #successModal {
+    align-items: center;
+  }
+
+  #supportModal [data-modal-panel],
+  #successModal [data-modal-panel] {
+    max-height: calc(100vh - 4rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Soften modal UI corners on desktop */
+  #supportModal [data-modal-panel],
+  #successModal [data-modal-panel],
+  #supportModal .input,
+  #supportModal button,
+  #supportModal select,
+  #supportModal textarea,
+  #successModal button {
+    border-radius: 1.5rem;
+  }
+}
+
 /* Hide scrollbars in the reviews track on WebKit */
 #reviewsTrack::-webkit-scrollbar { display: none; }
 

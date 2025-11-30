@@ -13,6 +13,7 @@ html, body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe 
 .nav-btn .icon { width: 1rem; height: 1rem; }
 .card-icon .icon { width: 1.5rem; height: 1.5rem; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.theme-icon { width: 1.25rem; height: 1.25rem; display: block; }
 
 /* Shared UI tokens layered over Tailwind utility classes */
 .nav-link { color: rgb(82 82 91); transition: color var(--duration) var(--easing); }
@@ -47,11 +48,13 @@ html, body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe 
   border-color: rgb(38 38 38 / .9);
 }
 
-.card { background: white; border: 1px solid rgb(228 228 231); border-radius: 1rem; padding: 1rem; box-shadow: 0 10px 30px -12px rgba(2,132,199,.25); transition: transform var(--duration) var(--easing), box-shadow var(--duration) var(--easing), border-color var(--duration) var(--easing), background var(--duration) var(--easing); }
-.dark .card { background: rgb(10 10 10); border-color: rgb(38 38 38); }
-.card:hover { transform: translateY(-4px); box-shadow: 0 18px 50px -20px rgba(14,165,233,.45); border-color: rgba(14,165,233,.35); }
+.card { background: white; border: 1px solid rgb(228 228 231); border-radius: 1rem; padding: 1rem; box-shadow: 0 12px 32px -18px rgba(15,23,42,.25); transition: transform var(--duration) var(--easing), box-shadow var(--duration) var(--easing), border-color var(--duration) var(--easing), background var(--duration) var(--easing); }
+.dark .card { background: rgb(12 12 12); border-color: rgb(46 46 46); box-shadow: 0 12px 32px -18px rgba(0,0,0,.55); }
+.card:hover { transform: translateY(-4px); box-shadow: 0 18px 52px -22px rgba(15,23,42,.32); border-color: rgba(15,23,42,.18); }
+.dark .card:hover { border-color: rgba(148,163,184,.32); box-shadow: 0 20px 54px -22px rgba(0,0,0,.7); }
 
-.card-icon { font-size: 1.5rem; }
+.card-icon { font-size: 1.5rem; display: inline-grid; place-items: center; width: 2.5rem; height: 2.5rem; }
+.card-icon img { width: 1.75rem; height: 1.75rem; object-fit: contain; }
 .card-title { margin-top: .5rem; font-weight: 700; font-size: 1.125rem; }
 .card-body { margin-top: .25rem; color: rgb(82 82 91); }
 .dark .card-body { color: rgb(212 212 216); }
@@ -109,6 +112,7 @@ html, body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe 
   border-radius: 1.25rem;
   overflow: hidden;
   background-clip: padding-box;
+  clip-path: inset(0 round 1.25rem);
   overflow-y: auto;
   margin: 1rem auto;
 }
@@ -128,13 +132,9 @@ html, body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe 
 @media (min-width: 1024px) {
   /* Soften modal UI corners on desktop */
   #supportModal [data-modal-panel],
-  #successModal [data-modal-panel],
-  #supportModal .input,
-  #supportModal button,
-  #supportModal select,
-  #supportModal textarea,
-  #successModal button {
+  #successModal [data-modal-panel] {
     border-radius: 1.5rem;
+    clip-path: inset(0 round 1.5rem);
   }
 }
 

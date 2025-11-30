@@ -76,6 +76,7 @@
         <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
           <a href="about.html" class="nav-link">About</a>
           <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="case-studies/index.html" class="nav-link">Case Studies</a>
           <a href="contact.html" class="nav-link">Contact</a>
         </nav>
         <div class="flex items-center gap-2">
@@ -86,14 +87,17 @@
               <line x1="3" y1="18" x2="21" y2="18"></line>
             </svg>
           </button>
-          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">&#9790;</button>
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">
+            <img src="/assets/icons/sunny.png" alt="" aria-hidden="true" class="theme-icon" loading="lazy" />
+          </button>
           <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 sm:inline-flex">Request Support</button>
         </div>
-        <div id="mobileMenu" class="absolute left-0 right-0 top-full mt-2 hidden rounded-2xl border border-neutral-200 bg-white px-4 py-4 shadow-lg sm:hidden dark:border-neutral-800 dark:bg-neutral-950">
+          <div id="mobileMenu" class="absolute left-0 right-0 top-full mt-2 hidden rounded-2xl border border-neutral-200 bg-white px-4 py-4 shadow-lg sm:hidden dark:border-neutral-800 dark:bg-neutral-950">
           <nav class="flex flex-col gap-3 text-sm font-medium">
             <a href="#home" class="nav-link">Home</a>
             <a href="about.html" class="nav-link">About</a>
             <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="case-studies/index.html" class="nav-link">Case Studies</a>
             <a href="contact.html" class="nav-link">Contact</a>
           </nav>
           <div class="mt-4 flex flex-col gap-2">
@@ -107,9 +111,9 @@
     <section id="home" class="relative overflow-hidden bg-gradient-to-b from-brand-50 via-white to-white dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">
         <div class="space-y-8 lg:max-w-5xl">
-          <div class="inline-flex items-center gap-2 rounded-full border border-brand-200/60 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-700 shadow-sm ring-1 ring-brand-100/60 dark:border-brand-900/40 dark:bg-neutral-900 dark:text-brand-200">Providing professional IT for 1 year</div>
-          <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Delivering reliable, professional IT services</h1>
-          <p class="max-w-3xl text-lg text-neutral-700 dark:text-neutral-300">Nexlink IT keeps your self-hosted apps, on-premises cloud, and servers secure, and fast. We troubleshoot outages and deploy new apps.</p>
+          <div class="inline-flex items-center gap-2 rounded-full border border-brand-200/60 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-700 shadow-sm ring-1 ring-brand-100/60 dark:border-brand-900/40 dark:bg-neutral-900 dark:text-brand-200">Owner-led since 2024</div>
+          <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Independent IT help you can actually reach</h1>
+          <p class="max-w-3xl text-lg text-neutral-700 dark:text-neutral-300">A one-person company keeping home and small-business servers, Nextcloud, and Unraid setups secure and fast. You get direct access, quick responses, and changes explained in plain English.</p>
           <div class="flex flex-wrap items-center gap-3">
             <button id="requestSupportBtnHero" class="inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">Get started</button>
             <a href="#contact" class="inline-flex items-center justify-center rounded-full border border-neutral-200 px-5 py-3 text-sm font-semibold text-neutral-700 transition hover:bg-neutral-50 dark:border-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-900">Free consultation</a>
@@ -118,7 +122,7 @@
           <div class="grid gap-3 sm:grid-cols-3 lg:max-w-4xl">
             <div class="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
               <div class="text-3xl font-bold text-brand-600">1 hr</div>
-              <p class="text-sm text-neutral-600 dark:text-neutral-300">Avg first response for active engagements</p>
+              <p class="text-sm text-neutral-600 dark:text-neutral-300">Avg first response</p>
             </div>
             <div class="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
               <div class="text-3xl font-bold text-brand-600">4+</div>
@@ -150,34 +154,67 @@
         </div>
         <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <article class="card" data-animate>
-            <div class="card-icon">🚨</div>
+            <div class="card-icon"><img src="assets/icons/recovery.png" alt="Recovery icon" loading="lazy" /></div>
             <h3 class="card-title">Recovery</h3>
             <p class="card-body">Debug outages, SSL/DNS issues, Nextcloud issues, and application deployments.</p>
           </article>
           <article class="card" data-animate>
-            <div class="card-icon">☁</div>
+            <div class="card-icon"><img src="assets/icons/cloud-computing.png" alt="Cloud collaboration icon" loading="lazy" /></div>
             <h3 class="card-title">Nextcloud & Collaboration</h3>
             <p class="card-body">Clean installs, upgrades, app tuning, Collabora/ONLYOFFICE integration - all set up reliably so you never have to worry about issues.</p>
           </article>
           <article class="card" data-animate>
-            <div class="card-icon">🔒</div>
+            <div class="card-icon"><img src="assets/icons/shield.png" alt="Security icon" loading="lazy" /></div>
             <h3 class="card-title">Security</h3>
             <p class="card-body">Security is always priority number one when we handle your systems.</p>
           </article>
           <article class="card" data-animate>
-            <div class="card-icon">🛡️</div>
+            <div class="card-icon"><img src="assets/icons/lock.png" alt="Performance and scaling icon" loading="lazy" /></div>
             <h3 class="card-title">Performance & Scaling</h3>
             <p class="card-body">Optimize caching, storage, and compute footprints. Baseline metrics, right-size resources, and remove bottlenecks.</p>
           </article>
           <article class="card" data-animate>
-            <div class="card-icon">🚜</div>
+            <div class="card-icon"><img src="assets/icons/box-truck.png" alt="Platform migrations icon" loading="lazy" /></div>
             <h3 class="card-title">Platform Migrations</h3>
             <p class="card-body">We can help with seamless migrations to new platforms, ensuring minimal downtime and data integrity.</p>
           </article>
           <article class="card" data-animate>
-            <div class="card-icon">📅</div>
+            <div class="card-icon"><img src="assets/icons/calendar.png" alt="Flexible support icon" loading="lazy" /></div>
             <h3 class="card-title">Flexible Support</h3>
             <p class="card-body">Simply contact us for a tailored support experience that fits your needs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section id="case-studies" class="relative bg-neutral-50 dark:bg-neutral-950">
+      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between" data-animate>
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Case studies</h2>
+            <p class="mt-3 text-neutral-600 dark:text-neutral-300">See how Nexlink IT ships upgrades, recoveries, and hardening without surprises.</p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a href="case-studies/index.html" class="btn-primary">View all case studies</a>
+            <a href="contact.html" class="btn-secondary">Plan your project</a>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-6 lg:grid-cols-3">
+          <article class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900" data-animate>
+            <div class="text-sm font-semibold text-brand-600 dark:text-brand-300">Nextcloud</div>
+            <h3 class="mt-2 text-xl font-semibold">Nextcloud Recovery for a Large European Private School</h3>
+            <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Stabilized a 1,000-student school's Nextcloud after staff turnover broke permissions, sharing, and updates—then completed the upgrade.</p>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs text-neutral-600 dark:text-neutral-300">
+              <span class="rounded-full bg-brand-50 px-3 py-1 text-brand-700 dark:bg-brand-900/30 dark:text-brand-200">Recovery</span>
+              <span class="rounded-full bg-neutral-100 px-3 py-1 dark:bg-neutral-800">Sharing fixed</span>
+              <span class="rounded-full bg-neutral-100 px-3 py-1 dark:bg-neutral-800">Upgrade complete</span>
+            </div>
+            <div class="mt-4 flex items-center justify-between text-sm font-semibold">
+              <a href="case-studies/nextcloud-recovery-private-school.html" class="text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300">Read case study</a>
+              <span class="text-neutral-500 dark:text-neutral-400">48 hours</span>
+            </div>
           </article>
         </div>
       </div>
@@ -233,8 +270,8 @@
         <div class="mt-8 grid gap-6 lg:grid-cols-3">
           <article class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-900" data-animate>
             <div class="text-sm font-semibold text-brand-600 dark:text-brand-300">Nextcloud</div>
-            <h3 class="mt-2 text-xl font-semibold">Zero-downtime upgrade & tuning</h3>
-            <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Migrated 180 users to Nextcloud 28 with Collabora, tuned Redis + MariaDB, and cut page loads by 38%.</p>
+            <h3 class="mt-2 text-xl font-semibold">Nextcloud Recovery for a Large European Private School</h3>
+            <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Stabilized a 1,000-student school's Nextcloud after staff turnover broke permissions, sharing, and updates—then completed the upgrade.</p>
           </article>
           <article class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-900" data-animate>
             <div class="text-sm font-semibold text-brand-600 dark:text-brand-300">Incident</div>
@@ -297,10 +334,12 @@
             <!-- <a class="footer-link" href="services.html">Services</a> -->
             <!-- <a class="footer-link" href="portfolio.html">Portfolio</a> -->
             <a class="footer-link" href="pricing.html">Pricing</a>
+            <a class="footer-link" href="case-studies/index.html">Case Studies</a>
             <a class="footer-link" href="contact.html">Contact</a>
             
             <a class="footer-link" href="legal/terms-of-service.html">Customer Agreement</a>
             <a class="footer-link" href="legal/privacy-policy.html">Privacy</a>
+            <a class="footer-link" href="credits.html">Credits</a>
           </nav>
         </div>
       </div>
@@ -312,7 +351,7 @@
       <div class="relative mx-4 w-full max-w-4xl scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
         <div class="relative flex items-center justify-between border-b border-neutral-200 p-4 dark:border-neutral-800">
           <h3 class="text-lg font-semibold">Request Support</h3>
-          <button id="supportModalClose" class="rounded-full p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">âœ•</button>
+          <button id="supportModalClose" class="rounded-full p-2 text-xl text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">&times;</button>
         </div>
         <form id="supportForm" class="relative space-y-4 p-6">
           <div>
@@ -411,5 +450,4 @@
 
     <script src="script.js"></script>
   </body>
-  
 </html>

@@ -10,11 +10,15 @@
 const themeToggle = document.getElementById('themeToggle');
 const themeToggleMobile = document.getElementById('themeToggleMobile');
 
+function getThemeIconMarkup(theme) {
+  const iconSrc = theme === 'dark' ? '/assets/icons/moon.png' : '/assets/icons/sunny.png';
+  return `<img src="${iconSrc}" alt="" aria-hidden="true" class="theme-icon" loading="lazy">`;
+}
+
 function updateThemeToggleLabel(theme) {
-  // Use escapes to avoid encoding issues for sun/moon icons
-  const label = theme === 'dark' ? '☀' : '🌙'; // ☀ / ☾
-  if (themeToggle) themeToggle.textContent = label;
-  if (themeToggleMobile) themeToggleMobile.textContent = label;
+  const iconMarkup = getThemeIconMarkup(theme);
+  if (themeToggle) themeToggle.innerHTML = iconMarkup;
+  if (themeToggleMobile) themeToggleMobile.innerHTML = iconMarkup;
 }
 
 function setTheme(theme) {
@@ -165,7 +169,7 @@ const reviews = [
   },
   {
     stars: 5,
-    text: "Due to my own oversight during testing, I initially accepted the job as complete before realizing there was an issue. Daniel kindly offered to fix the problem free of charge, and he resolved it immediately. I insisted on paying a small amount to properly acknowledge his excellent work. Although Daniel appears to be new on Fiverr, don't underestimate his skills and professionalismâ€”he delivers quality results promptly and reliably.",
+    text: "Due to my own oversight during testing, I initially accepted the job as complete before realizing there was an issue. Daniel kindly offered to fix the problem free of charge, and he resolved it immediately. I insisted on paying a small amount to properly acknowledge his excellent work. Although Daniel appears to be new on Fiverr, don't underestimate his skills and professionalism. He delivers quality results promptly and reliably.",
     reviewer: "Dane Coulter",
     title: "Small Business Owner",
     country: "Australia",
@@ -197,7 +201,7 @@ const reviews = [
   },
   {
     stars: 5,
-    text: "I highly recommend Daniel! An exceptional IT subcontractor, he took charge of our stack with impressive efficiency and resolved all our bugsâ€”from the most visible to the trickiest edge casesâ€”with rigor, clarity, and outstanding responsiveness. Clear communication, precise diagnostics, durable fixes, all delivered on time. Thanks to him, our applications are stable, high-performing, and ready to scale. A trusted partner weâ€™ll gladly work with again. Kudos and thank you!",
+    text: "I highly recommend Daniel! An exceptional IT subcontractor, he took charge of our stack with impressive efficiency and resolved all our bugs from the most visible to the trickiest edge cases with rigor, clarity, and outstanding responsiveness. Clear communication, precise diagnostics, durable fixes, all delivered on time. Thanks to him, our applications are stable, high-performing, and ready to scale. A trusted partner we'll gladly work with again. Kudos and thank you!",
     reviewer: "rustorm",
     title: "IT director",
     country: "Bulgaria",
@@ -213,7 +217,7 @@ const reviews = [
   },
   // {
   //   stars: 5,
-  //   text: "[Translated from Swedish] Finding the right person on Fiverr can sometimes feel like a lottery, but with Daniel I really hit the jackpot. I hired him for help with Nextcloud, Proxy Manager, and TrueNAS, and itâ€™s one of the best investments Iâ€™ve ever made. Daniel isnâ€™t just knowledgeable, heâ€™s a master of detail who never leaves anything half done; he digs deep, analyzes problems, and provides long-term, stable solutions instead of quick fixes, which gives me great confidence that his work will stand the test of time. What truly sets him apart is not only his expertise but also his way of communicatingâ€”he is attentive, clear, and pedagogical, always explaining each step, why itâ€™s done, and how it fits into the bigger picture. From the start, itâ€™s obvious that heâ€™s passionate about his work and genuinely wants his clients to get the best possible result. Iâ€™ve worked with many different people over the years, but Daniel really stands out because he combines technical mastery with professionalism and a rare work ethic, showing just as much commitment to the clientâ€™s needs as to the technology itself. In short, if you need help with Nextcloud, Proxy Manager, TrueNAS, or related systems, hire Daniel immediately; heâ€™s one of the most reliable and competent people Iâ€™ve met on Fiverr, and I wholeheartedly recommend him as someone who makes a real difference and whom youâ€™ll want to return to again and again. â­â­â­â­â­",
+  //   text: "[Translated from Swedish] Finding the right person on Fiverr can sometimes feel like a lottery, but with Daniel I really hit the jackpot. I hired him for help with Nextcloud, Proxy Manager, and TrueNAS, and it's one of the best investments I've ever made. Daniel isn't just knowledgeable, he's a master of detail who never leaves anything half done; he digs deep, analyzes problems, and provides long-term, stable solutions instead of quick fixes, which gives me great confidence that his work will stand the test of time. What truly sets him apart is not only his expertise but also his way of communicating--he is attentive, clear, and pedagogical, always explaining each step, why it's done, and how it fits into the bigger picture. From the start, it's obvious that he's passionate about his work and genuinely wants his clients to get the best possible result. I've worked with many different people over the years, but Daniel really stands out because he combines technical mastery with professionalism and a rare work ethic, showing just as much commitment to the client's needs as to the technology itself. In short, if you need help with Nextcloud, Proxy Manager, TrueNAS, or related systems, hire Daniel immediately; he's one of the most reliable and competent people I've met on Fiverr, and I wholeheartedly recommend him as someone who makes a real difference and whom you'll want to return to again and again. *****",
   //   reviewer: "Tomas (tomasochcarina)",
   //   title: "Private User",
   //   country: "Sweden",
@@ -221,7 +225,7 @@ const reviews = [
   // },
   {
     stars: 5,
-    text: "[Translated from Swedish] Finding the right person on Fiverr can feel like a lottery, but with Daniel I truly hit the jackpot. [...] Itâ€™s rare to find someone who combines technical mastery with professionalism and genuine care for the clientâ€™s needs. If you need help with these systems, hire Daniel immediatelyâ€”heâ€™s reliable, highly skilled, and one of the best Iâ€™ve worked with on Fiverr. â­â­â­â­â­",
+    text: "[Translated from Swedish] Finding the right person on Fiverr can feel like a lottery, but with Daniel I truly hit the jackpot. [...] It's rare to find someone who combines technical mastery with professionalism and genuine care for the client's needs. If you need help with these systems, hire Daniel immediately--he's reliable, highly skilled, and one of the best I've worked with on Fiverr. *****",
     reviewer: "Tomas (tomasochcarina)",
     title: "Private User",
     country: "Sweden",

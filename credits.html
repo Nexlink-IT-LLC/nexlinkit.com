@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Icon Credits - Nexlink IT</title>
+    <meta name="description" content="Attribution for icon assets used across Nexlink IT." />
+    <meta name="theme-color" content="#1f73d1" />
+
+    <!-- Theme bootstrap -->
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = stored || (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch (_) {}
+      })();
+    </script>
+
+    <!-- Tailwind via CDN for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#e8f1ff',
+                100: '#d0e4ff',
+                200: '#a8caff',
+                300: '#7eaef5',
+                400: '#4f94e2',
+                500: '#1f73d1',
+                600: '#1559b3',
+                700: '#124999',
+                800: '#0f3c80',
+                900: '#0c326b',
+              },
+            },
+            boxShadow: {
+              glow: '0 10px 30px -10px rgba(14,165,233,.45)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="min-h-screen bg-white text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-neutral-900/60">
+      <div class="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="index.html" class="group inline-flex items-center gap-2">
+          <img src="/assets/Image.png" alt="Nexlink IT logo" class="h-8 w-auto dark:brightness-0 dark:invert transition-transform duration-300 group-hover:scale-105" loading="lazy" />
+        </a>
+        <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
+          <a href="about.html" class="nav-link">About</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button id="mobileMenuToggle" class="inline-flex items-center justify-center rounded-full border border-neutral-200 p-2 text-neutral-700 shadow-sm transition hover:bg-neutral-50 sm:hidden dark:border-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-900" aria-label="Toggle navigation" aria-expanded="false">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">
+            <img src="/assets/icons/sunny.png" alt="" aria-hidden="true" class="theme-icon" loading="lazy" />
+          </button>
+          <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 sm:inline-flex">Request Support</button>
+        </div>
+        <div id="mobileMenu" class="absolute left-0 right-0 top-full mt-2 hidden rounded-2xl border border-neutral-200 bg-white px-4 py-4 shadow-lg sm:hidden dark:border-neutral-800 dark:bg-neutral-950">
+          <nav class="flex flex-col gap-3 text-sm font-medium">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+          <div class="mt-4 flex flex-col gap-2">
+            <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">Request Support</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-5xl px-4 py-16 lg:px-8">
+      <div class="space-y-4">
+        <p class="text-sm uppercase tracking-wide text-brand-600 dark:text-brand-300 font-semibold">Credits</p>
+        <h1 class="text-4xl font-extrabold tracking-tight">Icon attribution</h1>
+        <p class="text-neutral-700 dark:text-neutral-300">Icons used with attribution sourced from various sources.</p>
+      </div>
+
+      <div class="mt-10 overflow-hidden rounded-2xl border border-neutral-200 shadow-sm dark:border-neutral-800">
+        <table class="min-w-full divide-y divide-neutral-200 dark:divide-neutral-800">
+          <thead class="bg-neutral-50 dark:bg-neutral-900/60">
+            <tr>
+              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">Icon</th>
+              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">Title</th>
+              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">Artist</th>
+              <th scope="col" class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400">Source</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-neutral-200 bg-white dark:divide-neutral-800 dark:bg-neutral-950">
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/invoice.png" alt="Invoice icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Invoice / consultation</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">Anggara</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/wave-hand.png" alt="Wave hand icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Wave hand</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">ekays.dsgn</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/box.png" alt="Box icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Box</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">Good Ware</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/interview.png" alt="Interview icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Interview</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">Parzival’ 1997</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/computer-wrench.png" alt="Computer wrench icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Computer</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">surang</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/emergency.png" alt="Emergency contacts icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Contacts</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">surang</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/box-truck.png" alt="Box truck icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Box truck</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">Freepik</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/phone.png" alt="Phone icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Phone</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">rukanicon</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/calendar.png" alt="Calendar icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Calendar</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">pojok d</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/cloud-computing.png" alt="Cloud icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Cloud</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">meaicon</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/encrypted.png" alt="Shield icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Shield</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">SBTS2018</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/lock.png" alt="Lock icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Lock</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">Pixel perfect</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/moon.png" alt="Moon icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Moon</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">arkinasi</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/recovery.png" alt="Recovery icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Recovery</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">Freepik</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/sunny.png" alt="Sunny icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Sunny</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">Freepik</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/business-server.png" alt="Business server icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Server</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">vectorsmarket15</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3"><img src="assets/icons/home-server.png" alt="Home server icon" class="h-8 w-8" loading="lazy" /></td>
+              <td class="px-4 py-3 text-sm font-medium text-neutral-800 dark:text-neutral-100">Server Storage</td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">juicy_fish</td>
+              <td class="px-4 py-3 text-sm text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300"><a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer class="border-t border-neutral-200 py-10 text-sm dark:border-neutral-800">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:flex-row sm:text-left lg:px-8">
+        <div>
+          <div class="text-neutral-500 dark:text-neutral-400">&copy; 2025 Nexlink IT LLC. All rights reserved.</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <nav aria-label="Sitemap" class="flex flex-wrap gap-4 justify-center">
+            <a class="footer-link" href="index.html">Home</a>
+            <a class="footer-link" href="about.html">About</a>
+            <a class="footer-link" href="pricing.html">Pricing</a>
+            <a class="footer-link" href="contact.html">Contact</a>
+            <a class="footer-link" href="legal/terms-of-service.html">Customer Agreement</a>
+            <a class="footer-link" href="legal/privacy-policy.html">Privacy</a>
+            <a class="footer-link" href="credits.html">Credits</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

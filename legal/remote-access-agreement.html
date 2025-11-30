@@ -103,169 +103,130 @@
 
     <!-- Content -->
     <section class="relative overflow-hidden">
-      <div class="mx-auto max-w-4xl px-4 py-16 sm:py-20 lg:px-8">
-        <div class="mx-auto max-w-3xl">
-          <div data-animate>
-            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Remote Access Agreement</h1>
-            <p class="mt-4 text-neutral-600 dark:text-neutral-300">Effective: October 2025</p>
+      <div class="mx-auto max-w-6xl px-4 py-16 sm:py-20 lg:px-8">
+        <div class="flex flex-col gap-8">
+          <div class="max-w-4xl" data-animate>
+            <p class="text-sm uppercase tracking-wide text-brand-600 dark:text-brand-300 font-semibold">Legal</p>
+            <h1 class="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">Remote Access Agreement</h1>
+            <p class="mt-3 text-neutral-600 dark:text-neutral-300">Effective: 28 November 2025</p>
           </div>
 
-          <div class="mt-12 prose prose-neutral max-w-none dark:prose-invert">
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">1. Purpose and Scope</h2>
-            <p>This Remote Access Agreement ("Agreement") governs the remote access to your systems by Nexlink IT ("Service Provider") for the purpose of providing contracted IT services. This agreement ensures secure, authorized, and monitored remote access while protecting your data and systems.</p>
+          <div class="grid gap-10 lg:grid-cols-[320px,1fr]">
+            <aside class="lg:sticky lg:top-24">
+              <div class="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-950/80">
+                <div class="flex items-center justify-between text-sm font-semibold text-neutral-600 dark:text-neutral-300">
+                  <span>Navigate</span>
+                  <span class="text-xs text-neutral-400">Jump to section</span>
+                </div>
+                <div class="mt-3 space-y-2 text-sm">
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#authorization">Authorization</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#scope">Access scope</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#controls">Security controls</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#sessions">Sessions & logging</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#client">Client duties</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#revocation">Revocation</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#liability">Limitations</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#contact">Contact</a>
+                </div>
+              </div>
+            </aside>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">2. Grant of Remote Access</h2>
-            <p><strong>2.1 Authorization:</strong> You hereby grant Nexlink IT permission to remotely access your systems, networks, and data for the sole purpose of providing contracted IT services. This access includes but is not limited to:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>Server administration and maintenance</li>
-              <li>Software installation and configuration</li>
-              <li>Security monitoring and updates</li>
-              <li>Backup and recovery operations</li>
-              <li>Troubleshooting and technical support</li>
-              <li>System optimization and performance tuning</li>
-            </ul>
+            <div class="space-y-8">
+              <section id="authorization" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">1) Authorization</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300">You authorize Nexlink IT LLC to access designated systems solely to deliver the agreed services. Authorization is limited to the accounts, windows, or keys you provide.</p>
+              </section>
 
-            <p><strong>2.2 Access Methods:</strong> Remote access may be established through:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>Secure Shell (SSH) connections</li>
-              <li>Remote Desktop connections</li>
-              <li>Virtual Private Network (VPN) connections or Tailscale(R) connections</li>
-              <li>Web-based administrative interfaces</li>
-              <li>Cloud management platforms or device management tools</li>
-              <li>Other secure remote access methods as agreed upon</li>
-            </ul>
+              <section id="scope" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">2) Access scope</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300">We request only the minimum privileges required. Preferred options are short-lived accounts, time-bound VPN links, or session-based access.</p>
+                <div class="mt-4 overflow-hidden rounded-xl border border-neutral-200 shadow-sm dark:border-neutral-800">
+                  <table class="min-w-full text-sm">
+                    <thead class="bg-neutral-50 text-neutral-700 dark:bg-neutral-900/60 dark:text-neutral-200">
+                      <tr>
+                        <th class="px-4 py-3 text-left font-semibold">Channel</th>
+                        <th class="px-4 py-3 text-left font-semibold">Use</th>
+                        <th class="px-4 py-3 text-left font-semibold">Notes</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-neutral-200 bg-white dark:divide-neutral-800 dark:bg-neutral-950">
+                      <tr>
+                        <td class="px-4 py-3">VPN / Bastion</td>
+                        <td class="px-4 py-3">Preferred for server access</td>
+                        <td class="px-4 py-3">Disable when work completes</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-3">SSH / RDP</td>
+                        <td class="px-4 py-3">Direct maintenance sessions</td>
+                        <td class="px-4 py-3">Key- or password-based; rotate after engagement</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-3">Control panels</td>
+                        <td class="px-4 py-3">DNS, hosting, SaaS portals</td>
+                        <td class="px-4 py-3">Use role-based accounts when possible</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">3. Security Requirements</h2>
-            <p><strong>3.1 Encryption:</strong> All remote access connections must use industry-standard encryption protocols, including:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>SSH with strong key authentication (minimum 2048-bit RSA or 256-bit ECDSA)</li>
-              <li>VPN connections with AES-256 encryption</li>
-              <li>HTTPS/TLS 1.2 or higher for web-based access</li>
-              <li>Two-factor authentication where technically feasible</li>
-            </ul>
+              <section id="controls" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">3) Security controls</h2>
+                <ul class="mt-3 space-y-2 text-neutral-700 dark:text-neutral-300 list-disc pl-5">
+                  <li>Use of secure channels for credentials and files.</li>
+                  <li>Work on defined maintenance windows when required.</li>
+                  <li>Separation of production and staging wherever available.</li>
+                  <li>Configuration changes documented with rollback notes when applicable.</li>
+                </ul>
+              </section>
 
-            <p><strong>3.2 Access Controls:</strong> Service Provider agrees to:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>Use unique, strong credentials for each access session</li>
-              <li>Implement principle of least privilege access</li>
-              <li>Maintain separate access accounts for different service types</li>
-              <li>Regularly rotate access credentials</li>
-              <li>Immediately revoke access upon service completion or termination</li>
-            </ul>
+              <section id="sessions" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">4) Sessions and logging</h2>
+                <ul class="mt-3 space-y-2 text-neutral-700 dark:text-neutral-300 list-disc pl-5">
+                  <li>Access is time-bound to the engagement and may be revoked after completion.</li>
+                  <li>We prefer session recording or audit logging when your platform supports it.</li>
+                  <li>We avoid retaining client data or logs locally beyond what is necessary to complete the work.</li>
+                </ul>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">4. Monitoring and Logging</h2>
-            <p><strong>4.1 Activity Logging:</strong> All remote access activities will be logged whenever possible, including:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>Connection timestamps and duration</li>
-              <li>User identification and authentication</li>
-              <li>Commands executed and actions performed</li>
-              <li>Files accessed or modified</li>
-              <li>System changes made</li>
-              <li>Disconnection events</li>
-            </ul>
+              <section id="client" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">5) Client duties</h2>
+                <ul class="mt-3 space-y-2 text-neutral-700 dark:text-neutral-300 list-disc pl-5">
+                  <li>Provide accurate system details, point of contact, and change windows.</li>
+                  <li>Maintain backups and recovery options before granting access.</li>
+                  <li>Rotate or disable credentials promptly after work concludes.</li>
+                  <li>Notify us immediately of any suspected compromise related to shared access.</li>
+                </ul>
+              </section>
 
-            <p><strong>4.2 Log Retention:</strong> Any access logs will be retained for a minimum of 90 days and may be retained longer for security and compliance purposes.</p>
+              <section id="revocation" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">6) Revocation</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300">You may revoke access at any time. We may also request revocation of unused or stale credentials to reduce risk.</p>
+              </section>
 
-            <p><strong>4.3 Log Access:</strong> You have the right to request access to logs related to your systems at any time.</p>
+              <section id="liability" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">7) Limitations and incident handling</h2>
+                <ul class="mt-3 space-y-2 text-neutral-700 dark:text-neutral-300 list-disc pl-5">
+                  <li>Work is performed on a best-effort basis with liability limited to fees paid for the specific engagement.</li>
+                  <li>In the event of a security incident tied to our access, we will promptly cooperate on containment and remediation steps.</li>
+                  <li>We are not responsible for pre-existing issues or unrelated third-party failures.</li>
+                </ul>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">5. Data Protection and Confidentiality</h2>
-            <p><strong>5.1 Confidentiality:</strong> Service Provider agrees to maintain strict confidentiality regarding:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>All data accessed during remote sessions</li>
-              <li>System configurations and architecture</li>
-              <li>Business processes and workflows</li>
-              <li>Security vulnerabilities and weaknesses</li>
-              <li>Any other sensitive information encountered</li>
-            </ul>
-
-            <p><strong>5.2 Data Handling:</strong> Service Provider will:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>Not copy, download, or transfer data without explicit authorization</li>
-              <li>Use data only for the purpose of providing contracted services</li>
-              <li>Implement appropriate data protection measures</li>
-              <li>Notify you immediately of any data breaches or security incidents</li>
-            </ul>
-
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">6. Service Provider Responsibilities</h2>
-            <p>Service Provider agrees to:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>Access systems only during agreed service windows, in order to perform optimization, updates, patching or maintenance, or in the event of a security incident.</li>
-              <li>Perform only authorized actions related to contracted services</li>
-              <li>Maintain detailed records of all remote access activities</li>
-              <li>Provide advance notice of planned maintenance or changes</li>
-              <li>Ensure all remote access tools are properly secured and updated</li>
-              <li>Comply with all applicable security policies and procedures</li>
-            </ul>
-
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">7. Client Responsibilities</h2>
-            <p>You agree to:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>Provide necessary access credentials, permissions, and system information to Service Provider.</li>
-              <li>Ensure systems are accessible during agreed service windows</li>
-              <li>Maintain current backup copies of critical data</li>
-              <li>Notify Service Provider of any security concerns or access issues</li>
-              <li>Review and approve access requests for sensitive systems</li>
-              <li>Maintain appropriate network security measures</li>
-              <li>Revoke access credentials upon service termination</li>
-
-            </ul><br>
-            <p><strong>8.2 Notification:</strong> Security incidents will be reported to you within 24 hours of discovery.</p>
-
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">9. Access Termination</h2>
-            <p><strong>9.1 Service Completion:</strong> Remote access will be terminated upon completion of contracted services, with all credentials revoked and access logs provided.</p>
-
-            <p><strong>9.2 Immediate Termination:</strong> You may terminate remote access immediately if:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>Security concerns arise</li>
-              <li>Unauthorized activities are detected</li>
-              <li>Contract terms are violated</li>
-              <li>Business requirements change</li>
-            </ul>
-
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">10. Compliance and Auditing</h2>
-            <!-- <p><strong>10.1 Compliance:</strong> This agreement complies with applicable regulations including:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>General Data Protection Regulation (GDPR)</li>
-              <li>Health Insurance Portability and Accountability Act (HIPAA)</li>
-              <li>Payment Card Industry Data Security Standard (PCI DSS)</li>
-              <li>Other applicable industry standards and regulations</li>
-            </ul> -->
-            <p><strong>10.1 Auditing:</strong> You have the right to audit Service Provider's remote access practices.</p>
-
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">11. Limitation of Liability</h2>
-            <p>Service Provider's liability for remote access activities is limited to the scope of contracted services. Service Provider is not liable for:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>Pre-existing system vulnerabilities</li>
-              <li>Third-party security breaches</li>
-              <li>System downtime due to maintenance</li>
-              <li>Data loss not directly caused by Service Provider's actions</li>
-            </ul>
-
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">12. Indemnification</h2>
-            <p>You agree to indemnify Service Provider against claims arising from:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>Your failure to maintain adequate system security</li>
-              <li>Unauthorized access due to compromised credentials</li>
-              <li>System vulnerabilities not disclosed to Service Provider</li>
-              <li>Violations of applicable laws or regulations</li>
-            </ul>
-
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">13. Agreement Duration</h2>
-            <p>This agreement remains in effect for the duration of contracted services and may be terminated by either party with 30 days written notice. Immediate termination is permitted for security reasons.</p>
-
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">14. Governing Law</h2>
-            <p>This agreement is governed by the laws of Wyoming, United States.</p>
-
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">15. Contact Information</h2>
-            <p>For questions about this Remote Access Agreement, contact:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>Email: contact@nexlink.website</li>
-              <li>Phone: (307) 289-5340</li>
-              <li>Website: <a href="../index.html" class="text-brand-600 hover:text-brand-500">nexlinkit.com</a></li>
-              <li>Mailing Address: Available upon request (just contact us by phone or email)</li>
-            </ul>
-            <br>
-            <p>We strive to respond to any requests or inquiries within 1 business day.</p>
+              <section id="contact" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">8) Contact</h2>
+                <div class="mt-3 grid gap-4 sm:grid-cols-2">
+                  <div class="rounded-xl border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-700 dark:border-neutral-800 dark:bg-neutral-900/60 dark:text-neutral-200">
+                    <div class="font-semibold text-neutral-900 dark:text-neutral-100">Email</div>
+                    <div>contact@nexlink.website</div>
+                  </div>
+                  <div class="rounded-xl border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-700 dark:border-neutral-800 dark:bg-neutral-900/60 dark:text-neutral-200">
+                    <div class="font-semibold text-neutral-900 dark:text-neutral-100">Phone</div>
+                    <div>+1 (307) 289-5340</div>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </div>
@@ -289,6 +250,7 @@
             
             <a class="footer-link" href="terms-of-service.html">Customer Agreement</a>
             <a class="footer-link" href="privacy-policy.html">Privacy</a>
+            <a class="footer-link" href="../credits.html">Credits</a>
           </nav>
         </div>
       </div>

@@ -1,12 +1,12 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Case Study | Nexlink IT</title>
-    <meta name="description" content="Sample case study showcasing a Nexlink IT engagement with measurable outcomes." />
-    <meta property="og:title" content="Case Study | Nexlink IT" />
-    <meta property="og:description" content="See how Nexlink IT delivers secure, reliable self-hosted platforms with fast turnaround." />
+    <title>Nextcloud Recovery for a Large European Private School | Nexlink IT</title>
+    <meta name="description" content="How Nexlink IT stabilized and upgraded a 1,000-student school's Nextcloud after permissions, sharing, and updates broke." />
+    <meta property="og:title" content="Nextcloud Recovery for a Large European Private School | Nexlink IT" />
+    <meta property="og:description" content="How Nexlink IT stabilized and upgraded a 1,000-student school's Nextcloud after permissions, sharing, and updates broke." />
     <meta property="og:type" content="article" />
     <meta name="theme-color" content="#1f73d1" />
 
@@ -63,6 +63,7 @@
         <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
           <a href="../about.html" class="nav-link">About</a>
           <a href="../pricing.html" class="nav-link">Pricing</a>
+          <a href="../case-studies/index.html" class="nav-link">Case Studies</a>
           <a href="../contact.html" class="nav-link">Contact</a>
         </nav>
         <div class="flex items-center gap-2">
@@ -85,21 +86,15 @@
       <section class="relative overflow-hidden bg-gradient-to-b from-brand-50 via-white to-white py-10 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950">
         <div class="mx-auto max-w-5xl px-4 lg:px-8">
           <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700 dark:text-brand-200">Case Study</p>
-          <h1 class="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">Zero-downtime Nextcloud upgrade with performance tuning</h1>
-          <p class="mt-3 max-w-3xl text-lg text-neutral-700 dark:text-neutral-300">How a remote team went from sluggish file access to a faster, hardened Nextcloud stack with clear rollback notes and verified backups.</p>
-          <div class="mt-4 flex items-center gap-3 text-sm text-neutral-600 dark:text-neutral-300">
-            <div class="flex items-center gap-2 rounded-full bg-white px-3 py-1 shadow-sm ring-1 ring-neutral-200 dark:bg-neutral-900 dark:ring-neutral-800">
-              <span class="h-8 w-8 rounded-full bg-brand-50 ring-2 ring-brand-100 dark:bg-brand-900/30 dark:ring-brand-800/60"></span>
-              <div class="leading-tight">
-                <div class="font-semibold text-neutral-800 dark:text-neutral-100">Daniel Hammer</div>
-                <div class="text-xs text-neutral-500 dark:text-neutral-400">Owner, Nexlink IT LLC</div>
-              </div>
-            </div>
-          </div>
+          <h1 class="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">Nextcloud Recovery for a Large European Private School</h1>
+          <p class="mt-3 max-w-3xl text-lg text-neutral-700 dark:text-neutral-300">Stabilizing and upgrading a 1,000-student school's Nextcloud after staff turnover broke permissions, sharing, and updates.</p>
+          <p class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">
+            <span class="font-semibold text-neutral-800 dark:text-neutral-100">Daniel Hammer</span> &ndash; Owner/IT consultant, Nexlink IT LLC
+          </p>
           <div class="mt-4 flex flex-wrap gap-3 text-sm text-neutral-600 dark:text-neutral-300">
-            <span class="rounded-full bg-white px-3 py-1 shadow-sm ring-1 ring-neutral-200 dark:bg-neutral-900 dark:ring-neutral-800">Client: Distributed creative agency</span>
-            <span class="rounded-full bg-white px-3 py-1 shadow-sm ring-1 ring-neutral-200 dark:bg-neutral-900 dark:ring-neutral-800">Platform: TrueNAS SCALE + Nextcloud 28</span>
-            <span class="rounded-full bg-white px-3 py-1 shadow-sm ring-1 ring-neutral-200 dark:bg-neutral-900 dark:ring-neutral-800">Timeline: 48 hours</span>
+            <span class="rounded-full bg-white px-3 py-1 shadow-sm ring-1 ring-neutral-200 dark:bg-neutral-900 dark:ring-neutral-800">Client: European private school (~1,000 students)</span>
+            <span class="rounded-full bg-white px-3 py-1 shadow-sm ring-1 ring-neutral-200 dark:bg-neutral-900 dark:ring-neutral-800">Platform: Nextcloud</span>
+            <span class="rounded-full bg-white px-3 py-1 shadow-sm ring-1 ring-neutral-200 dark:bg-neutral-900 dark:ring-neutral-800">Timeline: under 48 hours</span>
           </div>
         </div>
       </section>
@@ -108,21 +103,17 @@
         <div class="mx-auto max-w-5xl px-4 py-8 lg:px-8">
           <article class="space-y-6 leading-relaxed text-neutral-800 dark:text-neutral-100">
             <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">How the engagement unfolded</h2>
-            <p class="text-lg text-neutral-700 leading-relaxed dark:text-neutral-300">The client was a distributed creative agency that lived inside Nextcloud every day. Uploads were sluggish, cron jobs failed, and TLS renewals were hit-or-miss. We agreed on a no-downtime upgrade with a rollback at every phase.</p>
+            <h3 class="text-xl font-semibold">Context</h3>
+            <p class="text-neutral-700 leading-relaxed dark:text-neutral-300">A few months ago, I was approached by a large European private school (of ~1,000 students) after their Nextcloud deployment became unstable following an unexpected staff departure.</p>
+            <p class="text-neutral-700 leading-relaxed dark:text-neutral-300">Permissions were broken, Nextcloud was several releases out of date, and sharing functionality in Nextcloud wasn't working.</p>
 
-            <p class="text-neutral-700 leading-relaxed dark:text-neutral-300">Before touching production, we verified ZFS snapshots and offsite backups, checked app compatibility, and wrote a two-step rollback. During a 48-hour window, we upgraded to Nextcloud 28, tuned Redis/MariaDB, renewed TLS with stricter HSTS/OCSP, and enabled OCSP stapling. Each change was logged with “what/why/rollback” notes the client could follow.</p>
+            <h3 class="text-xl font-semibold">Stabilization and upgrade</h3>
+            <p class="text-neutral-700 leading-relaxed dark:text-neutral-300">After taking on the request, I was quickly able to resolve the issues preventing Nextcloud from being able to update to the latest release. I subsequently managed the Nextcloud upgrade process. Once the newest release was installed, further complications arose affecting the look of the dashboard interface.</p>
+            <p class="text-neutral-700 leading-relaxed dark:text-neutral-300">After troubleshooting, I was able to identify the issue and help provide guidance to any potentially affected users.</p>
 
-            <p class="text-neutral-700 leading-relaxed dark:text-neutral-300">Validation mattered as much as delivery: we load-tested the busiest paths, trimmed app bottlenecks, and tightened alerting to signal only actionable issues. A concise runbook with screenshots and a two-step rollback guide shipped with the handoff.</p>
-
-            <h3 class="text-xl font-semibold">What moved the needle</h3>
-            <ul class="space-y-2 text-neutral-700 leading-relaxed dark:text-neutral-300">
-              <li>Backups verified before and after the upgrade; rollback tested in staging.</li>
-              <li>Redis and MariaDB tuned for concurrency; OPCache revalidation enabled.</li>
-              <li>TLS renewed with tighter HSTS and OCSP; alerts trimmed to essentials.</li>
-              <li>Runbook and rollback notes shipped with concise, stepwise commands.</li>
-            </ul>
-
-            <p class="text-neutral-700 leading-relaxed dark:text-neutral-300">Results: 38% faster page loads, no unplanned downtime, and a 24-hour turnaround from kick-off to handoff.</p>
+            <h3 class="text-xl font-semibold">Sharing restored</h3>
+            <p class="text-neutral-700 leading-relaxed dark:text-neutral-300">I then tackled the sharing issues. I was quickly able to resolve the rest of the school's issues in less than 48 hours, restoring their Nextcloud environment to a functional capacity.</p>
+            <p class="pt-2 text-sm text-neutral-600 dark:text-neutral-300">Nov 30, 2025</p>
           </article>
         </div>
       </section>
@@ -133,7 +124,7 @@
             <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">Want the same outcome?</h2>
             <p class="mt-3 text-white/90">Share your environment and goals; I’ll suggest a plan (or say so if it’s not a fit). No obligation, just clear next steps.</p>
             <div class="mt-5 flex flex-wrap gap-3">
-              <a href="../contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-brand-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-brand-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">Request a consult</a>
+              <a href="../contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-brand-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-brand-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">Free consultation</a>
               <a href="tel:+13072895340" class="inline-flex items-center justify-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-brand-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-brand-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">Call +1 (307) 289-5340</a>
             </div>
           </div>
@@ -163,3 +154,4 @@
     <script src="../script.js"></script>
   </body>
 </html>
+

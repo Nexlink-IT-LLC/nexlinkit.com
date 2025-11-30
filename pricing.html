@@ -1,12 +1,12 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pricing - Nexlink IT LLC</title>
-    <meta name="description" content="Transparent pricing for professional IT services. Choose from hourly rates, project packages, or managed services. No hidden fees, quality guaranteed." />
+    <meta name="description" content="Boutique, owner-led pricing for Nexlink IT: diagnostics, setups, migrations, hourly consulting, support plans, and emergency response." />
     <meta property="og:title" content="Pricing - Nexlink IT LLC" />
-    <meta property="og:description" content="Transparent pricing for professional IT services. Choose from hourly rates, project packages, or managed services." />
+    <meta property="og:description" content="Clear, boutique-style pricing with extended U.S. hours. Diagnostics, setups, migrations, support plans, and emergency rates." />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#1f73d1" />
 
@@ -61,15 +61,13 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="min-h-screen bg-white text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100">
-    <!-- Decorative background -->
-    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
-    </div>
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10"></div>
 
     <!-- Navbar -->
     <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-neutral-900/60">
       <div class="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a href="index.html#home" class="group inline-flex items-center gap-2">
-          <img src="/assets/Image.png" alt="Nexlink IT logo" class="h-8 w-auto dark:brightness-0 dark:invert transition-transform duration-300 group-hover:scale-105" loading="lazy" />
+          <img src="/assets/Image.png" alt="Nexlink IT logo" class="h-8 w-auto transition-transform duration-300 group-hover:scale-105 dark:brightness-0 dark:invert" loading="lazy" />
         </a>
         <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
           <a href="about.html" class="nav-link">About</a>
@@ -84,7 +82,9 @@
               <line x1="3" y1="18" x2="21" y2="18"></line>
             </svg>
           </button>
-          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">&#9790;</button>
+          <button id="themeToggle" class="rounded-full border border-neutral-200 px-3 py-2 text-sm shadow-sm transition hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-900" aria-label="Toggle theme">
+            <img src="/assets/icons/sunny.png" alt="" aria-hidden="true" class="theme-icon" loading="lazy" />
+          </button>
           <button id="requestSupportBtn" class="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 sm:inline-flex">Request Support</button>
         </div>
         <div id="mobileMenu" class="absolute left-0 right-0 top-full mt-2 hidden rounded-2xl border border-neutral-200 bg-white px-4 py-4 shadow-lg sm:hidden dark:border-neutral-800 dark:bg-neutral-950">
@@ -96,7 +96,7 @@
           </nav>
           <div class="mt-4 flex flex-col gap-2">
             <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">Request Support</a>
-            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -104,275 +104,300 @@
     <!-- Hero -->
     <section class="relative overflow-hidden">
       <div class="mx-auto max-w-7xl px-4 py-16 sm:py-20 lg:px-8">
-        <div class="mx-auto max-w-3xl text-center">
-          <div data-animate>
-            <span class="inline-flex items-center gap-2 rounded-full border border-brand-200/60 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 ring-1 ring-brand-100/60 dark:border-brand-900/40 dark:bg-brand-900/30 dark:text-brand-200">Transparent Pricing</span>
-            <h1 class="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Simple, Fair Pricing</h1>
-            <p class="mt-4 max-w-prose text-neutral-600 dark:text-neutral-300">No hidden fees, no surprises. Choose the pricing model that works best for your project and budget.</p>
+        <div class="mx-auto max-w-4xl text-center" data-animate>
+          <span class="inline-flex items-center gap-2 rounded-full border border-brand-200/60 bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-700 ring-1 ring-brand-100/60 dark:border-brand-900/40 dark:bg-brand-900/30 dark:text-brand-200">Boutique, owner-led</span>
+          <h1 class="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Pricing built for fast, reliable help</h1>
+          <p class="mt-4 max-w-3xl text-neutral-600 dark:text-neutral-300">Same transparent pricing for diagnostics, projects, ongoing care, and emergencies—delivered directly by Daniel with extended U.S. hours.</p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <button id="requestSupportBtnHero" class="btn-primary">Request support</button>
+            <a href="contact.html" class="btn-secondary">Talk to Daniel</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Pricing Toggle -->
+    <!-- At a glance + Standards -->
     <section class="relative">
-      <div class="mx-auto max-w-7xl px-4 py-8 lg:px-8">
-        <div class="flex justify-center" data-animate>
-          <div class="inline-flex rounded-lg border border-neutral-200 bg-neutral-100 p-1 dark:border-neutral-800 dark:bg-neutral-800">
-            <button id="hourlyToggle" class="px-4 py-2 text-sm font-medium rounded-md transition-colors bg-white text-neutral-900 shadow-sm dark:bg-neutral-700 dark:text-neutral-100">Hourly Rates</button>
-            <button id="projectToggle" class="px-4 py-2 text-sm font-medium rounded-md transition-colors text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100">Project Packages</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Hourly Rates -->
-    <section id="hourlyPricing" class="relative">
-      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center" data-animate>
-          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Hourly Rates</h2>
-          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Perfect for one-time projects, consultations, and troubleshooting.</p>
-        </div>
-        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <div class="card" data-animate>
-            <div class="text-center">
-              <div class="card-icon">ðŸ”§</div>
-              <h3 class="card-title">General IT Support</h3>
-              <div class="mt-4">
-                <span class="text-3xl font-bold text-brand-600">$30</span>
-                <span class="text-neutral-600 dark:text-neutral-400">/hour</span>
+      <div class="mx-auto max-w-7xl px-4 pb-10 lg:px-8">
+        <div class="grid gap-6 lg:grid-cols-3">
+          <div class="card lg:col-span-2" data-animate>
+            <div class="flex items-start gap-3">
+              <div class="card-icon"><img src="assets/icons/invoice.png" alt="Invoice icon" loading="lazy" /></div>
+              <div class="w-full">
+                <h2 class="card-title">Pricing at a glance</h2>
+                <div class="mt-4 overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
+                  <table class="min-w-full divide-y divide-neutral-200 text-sm dark:divide-neutral-800">
+                    <tbody class="divide-y divide-neutral-200 text-neutral-800 dark:divide-neutral-800 dark:text-neutral-100">
+                      <tr><td class="px-3 py-2">Free Consultation</td><td class="px-3 py-2 font-semibold">$0 – schedule anytime</td></tr>
+                      <tr><td class="px-3 py-2">Diagnostics & Fix</td><td class="px-3 py-2 font-semibold">$120 flat</td></tr>
+                      <tr><td class="px-3 py-2">Standard Hourly</td><td class="px-3 py-2 font-semibold">$50/hr</td></tr>
+                      <tr><td class="px-3 py-2">Full Setup (Basic)</td><td class="px-3 py-2 font-semibold">$300</td></tr>
+                      <tr><td class="px-3 py-2">Full Setup (Advanced)</td><td class="px-3 py-2 font-semibold">$450–$500</td></tr>
+                      <tr><td class="px-3 py-2">Migrations / Large Work</td><td class="px-3 py-2 font-semibold">$400–$800</td></tr>
+                      <tr><td class="px-3 py-2">Basic Care Plan</td><td class="px-3 py-2 font-semibold">$60/month</td></tr>
+                      <tr><td class="px-3 py-2">Premium Care Plan</td><td class="px-3 py-2 font-semibold">$120–$150/month</td></tr>
+                      <tr><td class="px-3 py-2">Same-Day Emergency</td><td class="px-3 py-2 font-semibold">$120/hr</td></tr>
+                      <!-- <tr><td class="px-3 py-2">After-Hours Emergency</td><td class="px-3 py-2 font-semibold">$150/hr</td></tr> -->
+                    </tbody>
+                  </table>
+                </div>
               </div>
-              <p class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">Troubleshooting, maintenance, and general IT tasks.</p>
-              <ul class="mt-4 space-y-2 text-sm text-neutral-600 dark:text-neutral-300 text-left">
-                <li>â€¢ System troubleshooting</li>
-                <li>â€¢ Software installation</li>
-                <li>â€¢ Basic server maintenance</li>
-                <li>â€¢ User support</li>
-              </ul>
             </div>
           </div>
-
-          <div class="card border-brand-200 dark:border-brand-800" data-animate>
-            <div class="text-center">
-              <div class="card-icon">ðŸ§©</div>
-              <h3 class="card-title">Nextcloud Specialist</h3>
-              <div class="mt-4">
-                <span class="text-3xl font-bold text-brand-600">$30</span>
-                <span class="text-neutral-600 dark:text-neutral-400">/hour</span>
-              </div>
-              <p class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">Expert Nextcloud installation, configuration, and optimization.</p>
-              <ul class="mt-4 space-y-2 text-sm text-neutral-600 dark:text-neutral-300 text-left">
-                <li>â€¢ Nextcloud installation & setup</li>
-                <li>â€¢ App integration (Collabora/ONLYOFFICE)</li>
-                <li>â€¢ Performance optimization</li>
-                <li>â€¢ Migration from other platforms</li>
-              </ul>
-            </div>
-          </div>
-
           <div class="card" data-animate>
-            <div class="text-center">
-              <div class="card-icon">ðŸ§</div>
-              <h3 class="card-title">Linux & Servers</h3>
-              <div class="mt-4">
-                <span class="text-3xl font-bold text-brand-600">$35</span>
-                <span class="text-neutral-600 dark:text-neutral-400">/hour</span>
+            <div class="flex items-start gap-3">
+              <div class="card-icon"><img src="assets/icons/shield.png" alt="" loading="lazy" /></div>
+              <div class="space-y-2">
+                <h3 class="card-title">Standards & availability</h3>
+                <ul class="space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
+                  <li>• Minimum project: $120 Diagnostics</li>
+                  <li>• No work under $50</li>
+                  <li>• Long-term support after a successful project</li>
+                  <li>• Clear, responsive communication required</li>
+                  <li>• Hours: 9AM–4PM EST (3PM–10PM CET)</li>
+                </ul>
+                <p class="text-xs text-neutral-500 dark:text-neutral-400">If a call is missed, it will be returned promptly.</p>
               </div>
-              <p class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">Advanced Linux server administration and management.</p>
-              <ul class="mt-4 space-y-2 text-sm text-neutral-600 dark:text-neutral-300 text-left">
-                <li>â€¢ Server setup & configuration</li>
-                <li>â€¢ Security hardening</li>
-                <li>â€¢ Performance tuning</li>
-                <li>â€¢ Service management</li>
-              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Project Packages -->
-    <section id="projectPricing" class="relative bg-transparent hidden">
-      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center" data-animate>
-          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Project Packages</h2>
-          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Fixed-price packages for common projects. Includes planning, implementation, and testing.</p>
+    <!-- Core offers -->
+    <section class="relative">
+      <div class="mx-auto max-w-7xl px-4 py-12 lg:px-8 space-y-10">
+        <div class="space-y-2" data-animate>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Services by category</h2>
+          <p class="text-neutral-600 dark:text-neutral-300">Pick what you need: discovery, fixed projects, hourly help, ongoing care, or emergency response.</p>
         </div>
-        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <div class="card" data-animate>
-            <div class="text-center">
-              <div class="card-icon">ðŸ§©</div>
-              <h3 class="card-title">Nextcloud Setup</h3>
-              <div class="mt-4">
-                <span class="text-3xl font-bold text-brand-600">$70</span>
-                <span class="text-neutral-600 dark:text-neutral-400">/project</span>
-              </div>
-              <p class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">Complete Nextcloud installation with basic configuration.</p>
-              <ul class="mt-4 space-y-2 text-sm text-neutral-600 dark:text-neutral-300 text-left">
-                <li>â€¢ Nextcloud installation</li>
-                <li>â€¢ Basic security setup</li>
-                <li>â€¢ SSL certificate</li>
-                <li>â€¢ User account setup</li>
-                <li>â€¢ Basic app installation</li>
-                <li>â€¢ Documentation</li>
-              </ul>
-            </div>
-          </div>
 
-          <div class="card border-brand-200 dark:border-brand-800" data-animate>
-            <div class="text-center">
-              <div class="card-icon">ðŸš€</div>
-              <h3 class="card-title">Deploy other applications</h3>
-              <div class="mt-4">
-                <span class="text-2xl font-bold text-brand-600">Contact us for a quote!</span>
-              </div>
-              <p class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">Deploy and configure various applications on your server infrastructure.</p>
-              <ul class="mt-4 space-y-2 text-sm text-neutral-600 dark:text-neutral-300 text-left">
-                <li>â€¢ Application installation</li>
-                <li>â€¢ Configuration & setup</li>
-                <li>â€¢ Database integration</li>
-                <li>â€¢ SSL/TLS setup</li>
-                <li>â€¢ Performance optimization</li>
-                <li>â€¢ Documentation & training</li>
-              </ul>
-            </div>
+        <!-- Start here -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-3" data-animate>
+            <div class="card-icon"><img src="assets/icons/wave-hand.png" alt="" loading="lazy" /></div>
+            <h3 class="text-lg font-semibold">Start here</h3>
           </div>
-          <div class="card" data-animate>
-            <div class="text-center">
-              <div class="card-icon">ðŸ§</div>
-              <h3 class="card-title">General Linux Support</h3>
-              <div class="mt-4">
-                <span class="text-3xl font-bold text-brand-600">$80</span>
-                <span class="text-neutral-600 dark:text-neutral-400">/project</span>
+          <div class="grid gap-4 lg:grid-cols-2">
+            <article class="card" data-animate>
+              <div class="flex items-start gap-3">
+                <div class="card-icon"><img src="assets/icons/calendar.png" alt="" loading="lazy" /></div>
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between gap-3">
+                    <h4 class="card-title">Free consultation</h4>
+                    <span class="rounded-full bg-brand-50 px-3 py-1 text-sm font-semibold text-brand-700 dark:bg-brand-900/30 dark:text-brand-200">$0</span>
+                  </div>
+                  <p class="card-body">Schedule anytime to align on goals, scope work, or decide if diagnostics are the right first step.</p>
+                  <p class="text-xs text-neutral-500 dark:text-neutral-400">No obligation; you leave with clear next steps.</p>
+                </div>
               </div>
-              <p class="mt-4 text-sm text-neutral-600 dark:text-neutral-300">Comprehensive Linux system support and troubleshooting.</p>
-              <ul class="mt-4 space-y-2 text-sm text-neutral-600 dark:text-neutral-300 text-left">
-                <li>â€¢ System troubleshooting</li>
-                <li>â€¢ Package management</li>
-                <li>â€¢ Service configuration</li>
-                <li>â€¢ Performance optimization</li>
-                <li>â€¢ Security updates</li>
-                <li>â€¢ Documentation & guidance</li>
-              </ul>
-            </div>
+            </article>
+            <article class="card" data-animate>
+              <div class="flex items-start gap-3">
+                <div class="card-icon"><img src="assets/icons/recovery.png" alt="" loading="lazy" /></div>
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between gap-3">
+                    <h4 class="card-title">Diagnostics & Fix</h4>
+                    <span class="rounded-full bg-brand-50 px-3 py-1 text-sm font-semibold text-brand-700 dark:bg-brand-900/30 dark:text-brand-200">$120 flat</span>
+                  </div>
+                  <ul class="space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
+                    <li>• Up to 1 hour of in-depth diagnostics</li>
+                    <li>• Fix one major issue (Nextcloud, TrueNAS, Docker, Proxmox, SSL, NPM, etc.)</li>
+                    <li>• Written summary of findings and what was fixed</li>
+                  </ul>
+                  <p class="text-xs text-neutral-500 dark:text-neutral-400">If the scope is larger, you'll get a clear recommendation before continuing.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Project packages -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-3" data-animate>
+            <div class="card-icon"><img src="assets/icons/box.png" alt="" loading="lazy" /></div>
+            <h3 class="text-lg font-semibold">Project packages</h3>
+          </div>
+          <div class="grid gap-4 lg:grid-cols-2">
+            <article class="card" data-animate>
+              <div class="flex items-start gap-3">
+                <div class="card-icon"><img src="assets/icons/cloud-computing.png" alt="" loading="lazy" /></div>
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between gap-3">
+                    <h4 class="card-title">Full System Setup</h4>
+                    <span class="rounded-full bg-brand-50 px-3 py-1 text-sm font-semibold text-brand-700 dark:bg-brand-900/30 dark:text-brand-200">$300–$500</span>
+                  </div>
+                  <ul class="space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
+                    <li>• Nextcloud setup on TrueNAS or Ubuntu</li>
+                    <li>• Docker stack deployments</li>
+                    <li>• Proxmox installation and VM setup</li>
+                    <li>• Reverse proxy + SSL configuration</li>
+                  </ul>
+                  <div class="grid gap-3 sm:grid-cols-2">
+                    <div class="rounded-xl border border-neutral-200 p-3 dark:border-neutral-800">
+                      <div class="text-sm font-semibold text-brand-700 dark:text-brand-200">Basic Setup</div>
+                      <div class="text-lg font-bold text-neutral-900 dark:text-neutral-100">$300</div>
+                    </div>
+                    <div class="rounded-xl border border-neutral-200 p-3 dark:border-neutral-800">
+                      <div class="text-sm font-semibold text-brand-700 dark:text-brand-200">Advanced Setup</div>
+                      <div class="text-lg font-bold text-neutral-900 dark:text-neutral-100">$450–$500</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="card" data-animate>
+              <div class="flex items-start gap-3">
+                <div class="card-icon"><img src="assets/icons/recovery.png" alt="" loading="lazy" /></div>
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between gap-3">
+                    <h4 class="card-title">Migrations & Large Repairs</h4>
+                    <span class="rounded-full bg-brand-50 px-3 py-1 text-sm font-semibold text-brand-700 dark:bg-brand-900/30 dark:text-brand-200">$400–$800</span>
+                  </div>
+                  <ul class="space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
+                    <li>• Server migrations and Nextcloud data transfers</li>
+                    <li>• Rebuilding or repairing broken systems</li>
+                    <li>• Security hardening and cleanup</li>
+                    <li>• Multi-service reconfiguration</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Consulting -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-3" data-animate>
+            <div class="card-icon"><img src="assets/icons/interview.png" alt="" loading="lazy" /></div>
+            <h3 class="text-lg font-semibold">Consulting</h3>
+          </div>
+          <div class="grid gap-4 lg:grid-cols-2">
+            <article class="card" data-animate>
+              <div class="flex items-start gap-3">
+                <div class="card-icon"><img src="assets/icons/calendar.png" alt="" loading="lazy" /></div>
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between gap-3">
+                    <h4 class="card-title">Hourly consulting</h4>
+                    <span class="text-xl font-bold text-brand-600">$50/hr</span>
+                  </div>
+                  <p class="card-body">Used only when a flat-rate package isn’t the right fit. Ideal for incremental work, guidance, or small fixes.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Support plans -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-3" data-animate>
+            <div class="card-icon"><img src="assets/icons/computer-wrench.png" alt="" loading="lazy" /></div>
+            <h3 class="text-lg font-semibold">Support plans</h3>
+          </div>
+          <div class="grid gap-4 lg:grid-cols-2">
+            <article class="card" data-animate>
+              <div class="flex items-start gap-3">
+                <div class="card-icon"><img src="assets/icons/shield.png" alt="" loading="lazy" /></div>
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between gap-3">
+                    <h4 class="card-title">Monthly support plans</h4>
+                    <span class="text-sm font-semibold text-brand-700 dark:text-brand-200">After a successful project</span>
+                  </div>
+                  <div class="grid gap-3 sm:grid-cols-2">
+                    <div class="rounded-xl border border-neutral-200 p-3 dark:border-neutral-800">
+                      <div class="flex items-center justify-between gap-3">
+                        <div class="text-sm font-semibold text-brand-700 dark:text-brand-200">Basic Care</div>
+                        <span class="text-lg font-bold text-brand-600">$60/mo</span>
+                      </div>
+                      <ul class="mt-2 space-y-1 text-sm text-neutral-700 dark:text-neutral-300">
+                        <li>• Email support</li>
+                        <li>• Limited small incidents</li>
+                        <li>• Priority over one-off clients</li>
+                      </ul>
+                    </div>
+                    <div class="rounded-xl border border-neutral-200 p-3 dark:border-neutral-800">
+                      <div class="flex items-center justify-between gap-3">
+                        <div class="text-sm font-semibold text-brand-700 dark:text-brand-200">Premium Care</div>
+                        <span class="text-lg font-bold text-brand-600">$120–$150/mo</span>
+                      </div>
+                      <ul class="mt-2 space-y-1 text-sm text-neutral-700 dark:text-neutral-300">
+                        <li>• Priority support</li>
+                        <li>• One included call per month</li>
+                        <li>• Faster response times</li>
+                        <li>• Ideal for critical services</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Emergency -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-3" data-animate>
+            <div class="card-icon"><img src="assets/icons/emergency.png" alt="" loading="lazy" /></div>
+            <h3 class="text-lg font-semibold">Emergency response</h3>
+          </div>
+          <div class="grid gap-4 lg:grid-cols-2">
+            <article class="card" data-animate>
+              <div class="flex items-start gap-3">
+                <div class="card-icon"><img src="assets/icons/recovery.png" alt="" loading="lazy" /></div>
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between gap-3">
+                    <h4 class="card-title">Same-day emergency</h4>
+                    <span class="text-lg font-bold text-brand-600">$120/hr</span>
+                  </div>
+                  <p class="card-body">Immediate daytime response. Billed separately from other packages.</p>
+                </div>
+              </div>
+            </article>
+            <!-- <article class="card" data-animate>
+              <div class="flex items-start gap-3">
+                <div class="card-icon"><img src="assets/icons/recovery.png" alt="" loading="lazy" /></div>
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between gap-3">
+                    <h4 class="card-title">After-hours emergency</h4>
+                    <span class="text-lg font-bold text-brand-600">$150/hr</span>
+                  </div>
+                  <p class="card-body">After midnight EST. Billed separately from other packages.</p>
+                </div>
+              </div>
+            </article> -->
           </div>
         </div>
       </div>
     </section>
-
-
-    <!-- Additional Services -->
-    <!-- <section class="relative">
-      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center" data-animate>
-          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Additional Services</h2>
-          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Add-on services to enhance your IT infrastructure.</p>
-        </div>
-        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="card text-center" data-animate>
-            <div class="card-icon">ðŸ“ž</div>
-            <h3 class="card-title">Emergency Support</h3>
-            <div class="mt-2">
-              <span class="text-xl font-bold text-brand-600">$150</span>
-              <span class="text-neutral-600 dark:text-neutral-400">/hour</span>
-            </div>
-            <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">24/7 emergency support for critical issues.</p>
-          </div>
-          <div class="card text-center" data-animate>
-            <div class="card-icon">ðŸ“š</div>
-            <h3 class="card-title">Training</h3>
-            <div class="mt-2">
-              <span class="text-xl font-bold text-brand-600">$125</span>
-              <span class="text-neutral-600 dark:text-neutral-400">/hour</span>
-            </div>
-            <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Staff training on systems and best practices.</p>
-          </div>
-          <div class="card text-center" data-animate>
-            <div class="card-icon">ðŸ“‹</div>
-            <h3 class="card-title">Consultation</h3>
-            <div class="mt-2">
-              <span class="text-xl font-bold text-brand-600">$100</span>
-              <span class="text-neutral-600 dark:text-neutral-400">/hour</span>
-            </div>
-            <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Strategic IT planning and architecture review.</p>
-          </div>
-          <div class="card text-center" data-animate>
-            <div class="card-icon">ðŸ”„</div>
-            <h3 class="card-title">Migration</h3>
-            <div class="mt-2">
-              <span class="text-xl font-bold text-brand-600">$85</span>
-              <span class="text-neutral-600 dark:text-neutral-400">/hour</span>
-            </div>
-            <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Data and system migration services.</p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- FAQ -->
-    <!-- <section class="relative bg-transparent-50 dark:bg-transparent-900/50">
-      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center" data-animate>
-          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Frequently Asked Questions</h2>
-          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Common questions about our pricing and services.</p>
-        </div>
-        <div class="mt-10 max-w-3xl mx-auto space-y-6">
-          <div class="card" data-animate>
-            <h3 class="text-lg font-semibold">What's included in the project packages?</h3>
-            <p class="mt-2 text-neutral-600 dark:text-neutral-300">Each project package includes planning, implementation, testing, and documentation. The fixed price covers all work time, research, and basic follow-up support for 30 days after completion.</p>
-          </div>
-          <div class="card" data-animate>
-            <h3 class="text-lg font-semibold">How do I know if I need hourly support or a project package?</h3>
-            <p class="mt-2 text-neutral-600 dark:text-neutral-300">Project packages are perfect for well-defined tasks like Nextcloud setup or general Linux support. Hourly rates work best for troubleshooting, consultations, or custom work that doesn't fit our standard packages.</p>
-          </div>
-          <div class="card" data-animate>
-            <h3 class="text-lg font-semibold">What if my project needs more work than the package covers?</h3>
-            <p class="mt-2 text-neutral-600 dark:text-neutral-300">We'll discuss any additional requirements before starting work. If your project needs more than the standard package, we can either upgrade to a custom solution or add hourly work at our standard rates.</p>
-          </div>
-          <div class="card" data-animate>
-            <h3 class="text-lg font-semibold">Do you provide estimates before starting work?</h3>
-            <p class="mt-2 text-neutral-600 dark:text-neutral-300">Yes! For hourly work, we provide time estimates and keep you updated on progress. For project packages, the price is fixed, but we'll confirm the scope covers your specific needs before starting.</p>
-          </div>
-          <div class="card" data-animate>
-            <h3 class="text-lg font-semibold">What if I need ongoing support after a project?</h3>
-            <p class="mt-2 text-neutral-600 dark:text-neutral-300">All project packages include 30 days of basic support. After that, you can continue with hourly support as needed, or we can discuss a custom ongoing support arrangement for your specific requirements.</p>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <!-- CTA -->
     <section class="relative">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
         <div class="mx-auto max-w-3xl text-center" data-animate>
-          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Ready to get started?</h2>
-          <p class="mt-4 text-neutral-600 dark:text-neutral-300">Contact us for a free consultation and custom quote tailored to your needs.</p>
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Ready to move forward?</h2>
+          <p class="mt-4 text-neutral-600 dark:text-neutral-300">Book diagnostics, scope a project, or set up ongoing support with a direct line to Daniel.</p>
           <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <button id="requestSupportBtnHero" class="btn-primary">Get Free Quote</button>
-            <a href="contact.html" class="btn-secondary">Contact Us</a>
+            <button id="requestSupportBtnCta" class="btn-primary">Schedule help</button>
+            <a href="contact.html" class="btn-secondary">Contact us</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="border-t border-neutral-200 py-10 text-sm dark:border-neutral-800">
       <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:flex-row sm:text-left lg:px-8">
         <div>
           <div class="text-neutral-500 dark:text-neutral-400">© 2025 Nexlink IT LLC. All rights reserved.</div>
         </div>
         <div class="flex items-center gap-4">
-          <!-- Sitemap -->
-          <nav aria-label="Sitemap" class="flex flex-wrap gap-4 justify-center">
+          <nav aria-label="Sitemap" class="flex flex-wrap justify-center gap-4">
             <a class="footer-link" href="index.html">Home</a>
             <a class="footer-link" href="about.html">About</a>
-            <!-- <a class="footer-link" href="services.html">Services</a> -->
-            <!-- <a class="footer-link" href="portfolio.html">Portfolio</a> -->
             <a class="footer-link" href="pricing.html">Pricing</a>
             <a class="footer-link" href="contact.html">Contact</a>
-            
             <a class="footer-link" href="legal/terms-of-service.html">Customer Agreement</a>
             <a class="footer-link" href="legal/privacy-policy.html">Privacy</a>
+            <a class="footer-link" href="credits.html">Credits</a>
           </nav>
         </div>
       </div>
@@ -384,7 +409,7 @@
       <div class="relative mx-4 w-full max-w-4xl scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
         <div class="relative flex items-center justify-between border-b border-neutral-200 p-4 dark:border-neutral-800">
           <h3 class="text-lg font-semibold">Request Support</h3>
-          <button id="supportModalClose" class="rounded-full p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">âœ•</button>
+          <button id="supportModalClose" class="rounded-full p-2 text-xl text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">&times;</button>
         </div>
         <form id="supportForm" class="relative space-y-4 p-6">
           <div>
@@ -471,7 +496,7 @@
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
       <div class="relative mx-4 w-full max-w-md scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
         <div class="relative p-6 text-center">
-          <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">âœ“</div>
+          <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">✓</div>
           <h3 class="text-lg font-semibold">Request sent successfully</h3>
           <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Thanks! I'll get back to you shortly.</p>
           <div class="mt-6 flex justify-center">
@@ -482,56 +507,5 @@
     </div>
 
     <script src="script.js"></script>
-    <script>
-      // Pricing toggle functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        const hourlyToggle = document.getElementById('hourlyToggle');
-        const projectToggle = document.getElementById('projectToggle');
-        
-        const hourlyPricing = document.getElementById('hourlyPricing');
-        const projectPricing = document.getElementById('projectPricing');
-
-        function showPricing(section) {
-          // Hide all sections
-          hourlyPricing.classList.add('hidden');
-          projectPricing.classList.add('hidden');
-          
-          // Remove active state from all buttons
-          hourlyToggle.classList.remove('bg-white', 'text-neutral-900', 'shadow-sm', 'dark:bg-neutral-700', 'dark:text-neutral-100');
-          projectToggle.classList.remove('bg-white', 'text-neutral-900', 'shadow-sm', 'dark:bg-neutral-700', 'dark:text-neutral-100');
-          
-          hourlyToggle.classList.add('text-neutral-600', 'hover:text-neutral-900', 'dark:text-neutral-400', 'dark:hover:text-neutral-100');
-          projectToggle.classList.add('text-neutral-600', 'hover:text-neutral-900', 'dark:text-neutral-400', 'dark:hover:text-neutral-100');
-          
-          // Show selected section
-          section.classList.remove('hidden');
-        }
-
-        function setActiveButton(button) {
-          button.classList.remove('text-neutral-600', 'hover:text-neutral-900', 'dark:text-neutral-400', 'dark:hover:text-neutral-100');
-          button.classList.add('bg-white', 'text-neutral-900', 'shadow-sm', 'dark:bg-neutral-700', 'dark:text-neutral-100');
-        }
-
-        hourlyToggle.addEventListener('click', () => {
-          showPricing(hourlyPricing);
-          setActiveButton(hourlyToggle);
-        });
-
-        projectToggle.addEventListener('click', () => {
-          showPricing(projectPricing);
-          setActiveButton(projectToggle);
-        });
-      });
-    </script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-

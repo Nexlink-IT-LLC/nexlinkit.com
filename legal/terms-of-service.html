@@ -103,127 +103,192 @@
 
     <!-- Content -->
     <section class="relative overflow-hidden">
-      <div class="mx-auto max-w-4xl px-4 py-16 sm:py-20 lg:px-8">
-        <div class="mx-auto max-w-3xl">
-          <div data-animate>
-            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Customer Agreement</h1>
-            <p class="mt-4 text-neutral-600 dark:text-neutral-300">Effective: 28th of November 2025</p>
+      <div class="mx-auto max-w-6xl px-4 py-16 sm:py-20 lg:px-8">
+        <div class="flex flex-col gap-8">
+          <div class="max-w-4xl" data-animate>
+            <p class="text-sm uppercase tracking-wide text-brand-600 dark:text-brand-300 font-semibold">Legal</p>
+            <h1 class="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">Customer Agreement</h1>
+            <p class="mt-3 text-neutral-600 dark:text-neutral-300">Effective: 28 November 2025</p>
           </div>
 
-          <div class="mt-12 prose prose-neutral max-w-none dark:prose-invert">
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">1. Acceptance of Terms</h2>
+          <div class="grid gap-10 lg:grid-cols-[320px,1fr]">
+            <!-- Navigator -->
+            <aside class="lg:sticky lg:top-24">
+              <div class="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-950/80">
+                <div class="flex items-center justify-between text-sm font-semibold text-neutral-600 dark:text-neutral-300">
+                  <span>Navigate</span>
+                  <span class="text-xs text-neutral-400">Jump to section</span>
+                </div>
+                <div class="mt-3 space-y-2 text-sm">
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#acceptance">Acceptance</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#services">Services</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#remote-access">Remote access</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#service-levels">Service levels</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#payments">Payments</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#data-security">Data & security</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#liability">Liability</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#indemnification">Indemnification</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#ip">Intellectual property</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#open-source">Open source</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#termination">Termination</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#force-majeure">Force majeure</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#law">Governing law</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#changes">Changes</a>
+                  <a class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-900" href="#contact">Contact</a>
+                </div>
+              </div>
+            </aside>
 
-            <p>By engaging Nexlink IT LLC ("Company," "we," "us," or "our") for IT services, you ("Client," "you," or "your") agree to be bound by this Customer Agreement ("Terms"). If you do not agree to these Terms, please do not use our services.</p>
-            <br>
+            <!-- Main content -->
+            <div class="space-y-8">
+              <section id="acceptance" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">1) Acceptance of Terms</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300">By engaging Nexlink IT LLC ("Company," "we," "us," or "our") for IT services, you ("Client," "you," or "your") agree to be bound by this Customer Agreement ("Terms"). If you do not agree to these Terms, please do not use our services.</p>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">2. Company Information and Services</h2>
-            <p>Serving our first client in September 2024, we are a provider of professional IT services including but not limited to:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>Nextcloud installation, configuration, and maintenance</li>
-              <li>Linux server administration and management</li>
-              <li>Web hosting and DNS management</li>
-              <li>Security hardening and system optimization</li>
-              <li>Container deployment and virtualization</li>
-              <li>System monitoring and backup solutions</li>
-              <li>Technical support and troubleshooting</li>
-            </ul>
-            <br>
-            <p>We proudly support open-source software and strive to contribute to the wider IT community through release of our own software, and contribution to existing software projects.</p>
-            <br>
+              <section id="services" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">2) Company Information and Services</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300">Serving our first client in September 2024, we are a provider of professional IT services including but not limited to:</p>
+                <ul class="mt-3 space-y-2 text-neutral-700 dark:text-neutral-300 list-disc pl-5">
+                  <li>Nextcloud installation, configuration, and maintenance</li>
+                  <li>Linux server administration and management</li>
+                  <li>Web hosting and DNS management</li>
+                  <li>Security hardening and system optimization</li>
+                  <li>Container deployment and virtualization</li>
+                  <li>System monitoring and backup solutions</li>
+                  <li>Technical support and troubleshooting</li>
+                </ul>
+                <p class="mt-4 text-neutral-700 dark:text-neutral-300">We proudly support open-source software and strive to contribute to the wider IT community through release of our own software and contributions to existing projects.</p>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">3. Remote Access Agreement</h2>
-            <p><strong>3.1 Grant of Access:</strong> By engaging our services, you explicitly grant Nexlink IT permission to access your systems remotely for the purpose of providing contracted IT services. For more information, please refer to our <a href="/legal/remote-access-agreement.html" class="text-brand-600 hover:text-brand-500">Remote Access Agreement</a> and section 6 of our <a href="/legal/privacy-policy.html" class="text-brand-600 hover:text-brand-500">Privacy Policy</a>.</p>
+              <section id="remote-access" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">3) Remote Access Agreement</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>3.1 Grant of Access:</strong> By engaging our services, you explicitly grant Nexlink IT permission to access your systems remotely for the purpose of providing contracted IT services. For more information, please refer to our <a class="text-brand-600 hover:text-brand-500" href="/legal/remote-access-agreement.html">Remote Access Agreement</a> and section 6 of our <a class="text-brand-600 hover:text-brand-500" href="/legal/privacy-policy.html">Privacy Policy</a>.</p>
+              </section>
 
-            </ul>
+              <section id="service-levels" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">4) Service Levels and Availability</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>4.1 Response Times:</strong> We strive to respond to service requests within the following timeframes:</p>
+                <ul class="mt-3 space-y-2 text-neutral-700 dark:text-neutral-300 list-disc pl-5">
+                  <li>High priority: Within 3 hours</li>
+                  <li>Normal priority: Within 6 hours</li>
+                  <li>Low priority: Within 24 hours</li>
+                </ul>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">4. Service Levels and Availability</h2>
-            <p><strong>4.1 Response Times:</strong> We strive to respond to service requests within the following timeframes:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>High priority: Within 3 hours</li>
-              <li>Normal priority: Within 6 hours</li>
-              <li>Low priority: Within 24 hours</li>
-            </ul>
+              <section id="payments" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">5) Payment Terms</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>5.1 Hourly Services:</strong> Hourly services are billed at a price agreed upon before the service is rendered. Payment is due within 30 days of invoice date.</p>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>5.2 Project Services:</strong> Project services may require 50% payment upfront, with the remaining balance due upon completion, as agreed upon in the project proposal.</p>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>5.3 Late Payments:</strong> Late payments may incur a 1.5% monthly service charge. Services may be suspended for accounts more than 30 days past due. If payment is not received within 60 days, we reserve the right to suspend your Customer Account and access to future services, and pursue collection efforts as necessary.</p>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>5.4 Payment Methods:</strong> Payments are accepted through Stripe (credit/debit card). Other payments may be used as agreed upon by the customer and Nexlink IT.</p>
+                <div class="mt-4 overflow-hidden rounded-xl border border-neutral-200 shadow-sm dark:border-neutral-800">
+                  <table class="min-w-full text-sm">
+                    <thead class="bg-neutral-50 text-neutral-700 dark:bg-neutral-900/60 dark:text-neutral-200">
+                      <tr>
+                        <th class="px-4 py-3 text-left font-semibold">Detail</th>
+                        <th class="px-4 py-3 text-left font-semibold">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-neutral-200 bg-white dark:divide-neutral-800 dark:bg-neutral-950">
+                      <tr>
+                        <td class="px-4 py-3">Stripe Account Name</td>
+                        <td class="px-4 py-3">Nexlink IT</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">5. Payment Terms</h2>
-            <p><strong>5.1 Hourly Services:</strong> Hourly services are billed at a price agreed upon before the service is rendered. Payment is due within 30 days of invoice date.</p>
-            <p><strong>5.2 Project Services:</strong> Project services may require 50% payment upfront, with the remaining balance due upon completion, as agreed upon in the project proposal.</p>
-            <br>
-            <p><strong>5.3 Late Payments:</strong> Late payments may incur a 1.5% monthly service charge. Services may be suspended for accounts more than 30 days past due. If payment is not received within 60 days, we reserve the right to suspend your Customer Account and access to future services, and pursue collection efforts as necessary.</p>
-            <br>
-            <p><strong>5.4 Payment Methods:</strong> Payments are accepted through Stripe (credit/debit card). Other payments may be used as agreed upon by the customer and Nexlink IT.</p>
-            <p><strong>5.4.1 Stripe Account Information</strong></p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li><strong>Account Name:</strong> Nexlink IT</li>
-            </ul>
+              <section id="data-security" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">6) Data Usage, Security and Privacy</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>6.1 Confidentiality:</strong> We maintain strict confidentiality regarding your data, systems, and business information. We will not disclose confidential information to third parties without your written consent.</p>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>6.2 Data Protection:</strong> We implement appropriate technical and organizational measures to protect your data against unauthorized access, alteration, disclosure, or destruction.</p>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>6.3 Data Backup:</strong> While we may assist with backup solutions, you remain responsible for maintaining adequate data backups. We are not liable for data loss unless specifically contracted for backup services.</p>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>6.4 Storage and use of data from external platforms:</strong> If you have interacted with Nexlink IT via external freelance or hire platforms, we may migrate, archive, and use relevant details of past transactions. This information may be available to view in your Customer Account. For more information, see our <a class="text-brand-600 hover:text-brand-500" href="/legal/privacy-policy.html">Privacy Policy</a>.</p>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">6. Data Usage, Security and Privacy</h2>
-            <p><strong>6.1 Confidentiality:</strong> We maintain strict confidentiality regarding your data, systems, and business information. We will not disclose confidential information to third parties without your written consent.</p>
-            <p><strong>6.2 Data Protection:</strong> We implement appropriate technical and organizational measures to protect your data against unauthorized access, alteration, disclosure, or destruction.</p>
-            <p><strong>6.3 Data Backup:</strong> While we may assist with backup solutions, you remain responsible for maintaining adequate data backups. We are not liable for data loss unless specifically contracted for backup services.</p>
-            <p><strong>6.4 Storage and use of data from external platforms:</strong> If you have interacted with Nexlink IT, whether as a company or as an independent contractor, via external freelance or hire platforms, we may of our own accord migrate, archive, and use any relevant details of past transactions you may have had with us on these platforms. This information may be available to view in your Customer Account. For more information on how we process and store such data, please see our <a class="text-brand-600 hover:text-brand-500" href="/legal/privacy-policy.html">Privacy Policy</a>.</p>
+              <section id="liability" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">7) Limitation of Liability</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>7.1 Service Limitations:</strong> Our services are provided "as is" and we make no warranties regarding uninterrupted service or error-free operation.</p>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>7.2 Liability Cap:</strong> Our total liability for any claims arising from our services shall not exceed the total amount paid by you for the specific service in question.</p>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>7.3 Exclusions:</strong> We are not liable for indirect, incidental, special, or consequential damages, including but not limited to loss of profits, data, or business opportunities.</p>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">7. Limitation of Liability</h2>
-            <p><strong>7.1 Service Limitations:</strong> Our services are provided "as is" and we make no warranties regarding uninterrupted service or error-free operation.</p>
-            <p><strong>7.2 Liability Cap:</strong> Our total liability for any claims arising from our services shall not exceed the total amount paid by you for the specific service in question.</p>
-            <p><strong>7.3 Exclusions:</strong> We are not liable for indirect, incidental, special, or consequential damages, including but not limited to loss of profits, data, or business opportunities.</p>
+              <section id="indemnification" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">8) Indemnification</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300">You agree to indemnify and hold harmless Nexlink IT from any claims, damages, or expenses arising from:</p>
+                <ul class="mt-3 space-y-2 text-neutral-700 dark:text-neutral-300 list-disc pl-5">
+                  <li>Your violation of these Terms</li>
+                  <li>Your use of our services in violation of applicable laws</li>
+                  <li>Your failure to maintain adequate security measures</li>
+                  <li>Third-party claims related to your systems or data</li>
+                </ul>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">8. Indemnification</h2>
-            <p>You agree to indemnify and hold harmless Nexlink IT from any claims, damages, or expenses arising from:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>Your violation of these Terms</li>
-              <li>Your use of our services in violation of applicable laws</li>
-              <li>Your failure to maintain adequate security measures</li>
-              <li>Third-party claims related to your systems or data</li>
-            </ul>
+              <section id="ip" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">9) Intellectual Property</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>9.1 Client Data:</strong> You retain all rights to your data, systems, and intellectual property. We do not claim ownership of your data.</p>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>9.2 Tools, scripts, documentation and other work products:</strong> Any tools, software, scripts, and other work products developed by Nexlink IT during the course of contract work, with the exception of documentation, remain the intellectual property of Nexlink IT LLC unless otherwise agreed in writing. You are granted a non-exclusive, non-transferable license to use such products for the purposes they were developed for during the contract work.</p>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">9. Intellectual Property</h2>
-            <p><strong>9.1 Client Data:</strong> You retain all rights to your data, systems, and intellectual property. We do not claim ownership of your data.</p>
-            <p><strong>9.2 Tools, scripts, documentation and other work products:</strong> Any tools, software, scripts, and other work products developed by Nexlink IT during the course of contract work, with the exception of documentation, remain the intellectual property of Nexlink IT LLC unless otherwise agreed in writing. You are granted a non-exclusive, non-transferable license to use such products for the purposes they were developed for during the contract work.</p>
+              <section id="open-source" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">10) Open-Source Software</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300">We strive to give back to the open-source community by releasing our own software as open-source projects, and by contributing to existing open-source projects. The open-source spirit is fundamental to our values.</p>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>10.1 Release of Open-Source Software:</strong> Nexlink IT may release software, tools, utilities, or scripts as open-source projects for public use ("Open-Source Software"). Unless otherwise stated, such software is governed by the specific open-source license included with the software, not by this Customer Agreement. You are responsible for reviewing and complying with the applicable license terms before using or redistributing any Open-Source Software.</p>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>10.2 Limitation of Liability:</strong> While Nexlink IT strives to ensure the reliability and security of its open-source releases, all Open-Source Software is provided "as is," without warranty of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement. Nexlink IT is not liable for any damages or losses arising from the use of its Open-Source Software.</p>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>10.3 Custom Services:</strong> If you engage Nexlink IT to provide customization, integration, or support services related to our Open-Source Software, those specific services are governed by this Customer Agreement and any applicable project proposal, but the open-source code itself remains under its respective public license.</p>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">10. Open-Source Software</h2>             
+              <section id="termination" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">11) Termination</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>11.1 Termination by Client:</strong> You may terminate services with 30 days written notice. Payment for services already rendered remains due.</p>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>11.2 Termination by Company:</strong> We may terminate services immediately for non-payment, violation of these Terms, or if continued service poses a security risk.</p>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300"><strong>11.3 Data Return:</strong> Upon termination, we will return your data and access credentials within 30 days, subject to payment of outstanding invoices.</p>
+              </section>
 
-            <p>We strive to give back to the open-source community by releasing our own software as open-source projects, and by contributing to existing open-source projects. The open-source spirit is fundamental to our values.</p><br>
-            <p><strong>10.1 Release of Open-Source Software:</strong> Nexlink IT may release software, tools, utilities, or scripts as open-source projects for public use (â€œOpen-Source Softwareâ€). Unless otherwise stated, such software is governed by the specific open-source license included with the software, not by this Customer Agreement. You are responsible for reviewing and complying with the applicable license terms before using or redistributing any Open-Source Software.</p>
-            <br>
-            <p><strong>10.2 Limitation of Liability:</strong> While Nexlink IT strives to ensure the reliability and security of its open-source releases, all Open-Source Software is provided â€œas is,â€ without warranty of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement. Nexlink IT is not liable for any damages or losses arising from the use of its Open-Source Software.</p>
-            <br>
-            <p><strong>10.3 Custom Services:</strong> If you engage Nexlink IT to provide customization, integration, or support services related to our Open-Source Software, those specific services are governed by this Customer Agreement and any applicable project proposal, but the open-source code itself remains under its respective public license.</p>
+              <section id="force-majeure" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">12) Force Majeure</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300">We are not liable for delays or failures in performance due to circumstances beyond our reasonable control, including but not limited to natural disasters, cyber attacks beyond reasonable control, government actions, or internet service provider outages.</p>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">11. Termination</h2>
-            <p><strong>11.1 Termination by Client:</strong> You may terminate services with 30 days written notice. Payment for services already rendered remains due.</p>
-            <p><strong>11.2 Termination by Company:</strong> We may terminate services immediately for non-payment, violation of these Terms, or if continued service poses a security risk.</p>
-            <p><strong>11.3 Data Return:</strong> Upon termination, we will return your data and access credentials within 30 days, subject to payment of outstanding invoices.</p>
+              <section id="law" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">13) Governing Law</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300">These Terms are governed by the laws of Wyoming, United States.</p>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">12. Force Majeure</h2>
-            <p>We are not liable for delays or failures in performance due to circumstances beyond our reasonable control, including but not limited to natural disasters, cyber attacks beyond reasonable control, government actions, or internet service provider outages.</p>
+              <section id="changes" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">14) Changes to Terms</h2>
+                <p class="mt-3 text-neutral-700 dark:text-neutral-300">We reserve the right to modify these Terms at any time. Changes will be effective upon posting on our website. Continued use of our services constitutes acceptance of modified Terms.</p>
+              </section>
 
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">13. Governing Law</h2>
-            <p>These Terms are governed by the laws of Wyoming, United States.</p>
-
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">14. Changes to Terms</h2>
-            <p>We reserve the right to modify these Terms at any time. Changes will be effective upon posting on our website. Continued use of our services constitutes acceptance of modified Terms.</p>
-            <h2 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 mt-8 first:mt-0">15. Contact Information</h2>
-
-            <p><strong>Director & technical contact</strong></p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li><strong>Name:</strong> Daniel Hammer</li>
-              <li><strong>Email:</strong> daniel@nexlinkit.com</li>
-              <li><strong>Phone:</strong> +1 (307) 289-5340</li>
-            </ul><br>
-            <p><strong>Company contact information</strong></p>
-            <p>For questions about these Terms, or other inquiries, please contact us by:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li><strong>Phone:</strong> +1 (307) 289-5340</li>
-              <li><strong>Website:</strong> <a href="../index.html" class="text-brand-600 hover:text-brand-500">nexlinkit.com</a></li>
-              <li><strong>Mailing Address:</strong> Available upon request (just contact us by phone or email)</li>
-            </ul>
-            <br>
-            <p>We strive to respond to any inquiries within 1 business day.</p>
+              <section id="contact" class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
+                <h2 class="text-xl font-bold">15) Contact Information</h2>
+                <div class="mt-3 grid gap-4 sm:grid-cols-2">
+                  <div class="rounded-xl border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-700 dark:border-neutral-800 dark:bg-neutral-900/60 dark:text-neutral-200">
+                    <div class="font-semibold text-neutral-900 dark:text-neutral-100">Director & technical contact</div>
+                    <ul class="mt-2 space-y-1 list-disc pl-4">
+                      <li><strong>Name:</strong> Daniel Hammer</li>
+                      <li><strong>Email:</strong> daniel@nexlinkit.com</li>
+                      <li><strong>Phone:</strong> +1 (307) 289-5340</li>
+                    </ul>
+                  </div>
+                  <div class="rounded-xl border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-700 dark:border-neutral-800 dark:bg-neutral-900/60 dark:text-neutral-200">
+                    <div class="font-semibold text-neutral-900 dark:text-neutral-100">Company contact information</div>
+                    <ul class="mt-2 space-y-1 list-disc pl-4">
+                      <li><strong>Phone:</strong> +1 (307) 289-5340</li>
+                      <li><strong>Website:</strong> <a class="text-brand-600 hover:text-brand-500" href="https://nexlinkit.com">nexlinkit.com</a></li>
+                      <li><strong>Mailing Address:</strong> Available upon request (contact us by phone or email)</li>
+                    </ul>
+                    <p class="mt-2 text-xs text-neutral-500 dark:text-neutral-400">We strive to respond to any inquiries within 1 business day.</p>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- Footer -->
     <footer class="border-t border-neutral-200 py-10 text-sm dark:border-neutral-800">
       <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:flex-row sm:text-left lg:px-8">
@@ -242,6 +307,7 @@
             
             <a class="footer-link" href="terms-of-service.html">Customer Agreement</a>
             <a class="footer-link" href="privacy-policy.html">Privacy</a>
+            <a class="footer-link" href="../credits.html">Credits</a>
           </nav>
         </div>
       </div>

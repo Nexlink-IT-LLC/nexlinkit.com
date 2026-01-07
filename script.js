@@ -239,12 +239,17 @@ function createReviewCard(review) {
 
   const stars = '\u2605'.repeat(review.stars); // ★
 
+  /*
+
+          <div class="grid h-10 w-10 place-items-center rounded-full bg-brand-50 text-sm font-semibold text-brand-700 dark:bg-brand-900/40 dark:text-brand-200">
+          ${review.stars}.0
+        </div>
+
+  */
   card.innerHTML = `
     <div class="flex items-center justify-between gap-3 mb-3">
       <div class="flex items-center gap-3">
-        <div class="grid h-10 w-10 place-items-center rounded-full bg-brand-50 text-sm font-semibold text-brand-700 dark:bg-brand-900/40 dark:text-brand-200">
-          ${review.stars}.0
-        </div>
+
         <div>
           <div class="font-semibold text-gray-900 dark:text-white">${review.reviewer}</div>
           <div class="text-sm text-gray-600 dark:text-gray-400">${review.title} · ${review.country}</div>

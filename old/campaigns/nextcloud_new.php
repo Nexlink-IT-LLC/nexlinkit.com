@@ -774,7 +774,7 @@
                 certified: 'Certified Fiverr review',
                 footer1: 'Daniel Hammer — Professional IT & Nextcloud Services',
                 footer2: 'Based in Akershus, Norway',
-                footer3: '© 2025 Daniel Hammer. All rights reserved.'
+                footer3: '© 2026 Daniel Hammer. All rights reserved.'
             },
             no: {
                 reviews: 'Anmeldelser',
@@ -802,7 +802,7 @@
                 certified: 'Sertifisert Fiverr-anmeldelse',
                 footer1: 'Daniel Hammer — Profesjonelle IT- og Nextcloud-tjenester',
                 footer2: 'Basert i Akershus, Norge',
-                footer3: '© 2025 Daniel Hammer. Alle rettigheter reservert.'
+                footer3: '© 2026 Daniel Hammer. Alle rettigheter reservert.'
             }
         };
 

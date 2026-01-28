@@ -1,2 +1,4 @@
+# Nexlink IT LLC supports freedom for robots!
+
 User-Agent: *
 Allow: /

@@ -108,78 +108,126 @@
     </header>
 
     <!-- Hero -->
-    <section id="home" class="relative overflow-hidden bg-gradient-to-b from-brand-50 via-white to-white dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950">
-      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">
-        <div class="space-y-8 lg:max-w-5xl">
-          <div class="inline-flex items-center gap-2 rounded-full border border-brand-200/60 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-700 shadow-sm ring-1 ring-brand-100/60 dark:border-brand-900/40 dark:bg-neutral-900 dark:text-brand-200">Serving clients since 2024</div>
-          <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Simple, reliable IT for home and small business</h1>
-          <p class="max-w-3xl text-lg text-neutral-700 dark:text-neutral-300">A one-person company keeping home and small-business servers, Nextcloud, and Unraid setups secure and fast. You get direct access, quick responses, and changes explained in plain English.</p>
-          <div class="flex flex-wrap items-center gap-3">
-            <button id="requestSupportBtnHero" class="inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">Get started</button>
-            <a href="#contact" class="inline-flex items-center justify-center rounded-full border border-neutral-200 px-5 py-3 text-sm font-semibold text-neutral-700 transition hover:bg-neutral-50 dark:border-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-900">Free consultation</a>
-            <a href="tel:+13072895340" class="text-sm font-semibold text-brand-700 underline decoration-2 underline-offset-4 transition hover:text-brand-600 dark:text-brand-300">Call +1 (307) 289-5340</a>
-          </div>
-          <div class="grid gap-3 sm:grid-cols-3 lg:max-w-4xl">
-            <div class="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
-              <div class="text-3xl font-bold text-brand-600">1 hr</div>
-              <p class="text-sm text-neutral-600 dark:text-neutral-300">Avg first response</p>
-            </div>
-            <div class="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
-              <div class="text-3xl font-bold text-brand-600">4+</div>
-              <p class="text-sm text-neutral-600 dark:text-neutral-300">Continents served</p>
-            </div>
-            <div class="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
-              <div class="text-3xl font-bold text-brand-600">8+</div>
-              <p class="text-sm text-neutral-600 dark:text-neutral-300">Countries served</p>
-            </div>
+    <section id="home" class="relative bg-white dark:bg-neutral-950">
+      <div class="mx-auto max-w-7xl px-4 py-24 lg:px-8 lg:py-32">
+        <div class="mx-auto max-w-4xl text-center">
+          <!-- Simplified headline -->
+          <h1 class="mb-6 text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl lg:text-6xl">
+            Professional IT for home and small business
+          </h1>
+
+          <!-- Cleaner description -->
+          <p class="mb-8 text-lg text-neutral-600 dark:text-neutral-400 sm:text-xl">
+            Expert help with Linux servers, Nextcloud, and self-hosted platforms. Fast responses, clear communication, and reliable solutions.
+          </p>
+
+          <!-- Simplified CTAs -->
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <button id="requestSupportBtnHero" class="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-6 py-3 font-semibold text-white transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">
+              Get started
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+            </button>
+            <a href="tel:+13072895340" class="inline-flex items-center gap-2 font-semibold text-brand-600 transition hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              +1 (307) 289-5340
+            </a>
           </div>
         </div>
       </div>
-    </section>    <!-- Trust Bar -->
-    <section class="border-b border-neutral-200 bg-white py-10 dark:border-neutral-800 dark:bg-neutral-950">
-      <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 text-sm font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400 lg:px-8">
-        <span>Self-hosted platforms</span>
-        <span>Nextcloud support</span>
-        <span>Home server support</span>
-        <span>Security-first service</span>
+    </section>    <!-- Trust Bar - Animated Marquee -->
+    <section class="border-y border-neutral-200 bg-neutral-50 py-8 dark:border-neutral-800 dark:bg-neutral-900/50 overflow-hidden">
+      <div class="trust-marquee">
+        <div class="trust-marquee-content">
+          <div class="trust-badge">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+            <span>Self-hosted platforms</span>
+          </div>
+          <div class="trust-badge">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+            <span>Nextcloud expertise</span>
+          </div>
+          <div class="trust-badge">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            <span>Home server support</span>
+          </div>
+          <div class="trust-badge">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <span>Security-first service</span>
+          </div>
+          <div class="trust-badge">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <span>99.9% uptime</span>
+          </div>
+          <div class="trust-badge">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            <span>Direct communication</span>
+          </div>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="trust-marquee-content" aria-hidden="true">
+          <div class="trust-badge">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+            <span>Self-hosted platforms</span>
+          </div>
+          <div class="trust-badge">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+            <span>Nextcloud experts</span>
+          </div>
+          <div class="trust-badge">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            <span>Home server support</span>
+          </div>
+          <div class="trust-badge">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <span>Security-first service</span>
+          </div>
+          <div class="trust-badge">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <span>99.9% uptime</span>
+          </div>
+          <div class="trust-badge">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            <span>Direct communication</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="relative">
-      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+    <section id="services" class="relative py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
         <div class="mx-auto max-w-3xl text-center" data-animate>
-          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Where we make the biggest impact</h2>
-          <p class="mt-3 text-neutral-600 dark:text-neutral-300">Focused on reliability, recoveries, and practical upgrades for teams who run critical systems without massive internal ops teams.</p>
+          <h2 class="text-4xl font-bold tracking-tight sm:text-5xl">Where we make the biggest impact</h2>
+          <p class="mt-4 text-lg text-neutral-600 dark:text-neutral-300">Focused on reliability, recoveries, and practical upgrades for teams who run critical systems without massive internal ops teams.</p>
         </div>
-        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <article class="card" data-animate>
-            <div class="card-icon"><img src="assets/icons/recovery.png" alt="Recovery icon" loading="lazy" /></div>
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="service-card group" data-animate>
+            <div class="service-card-icon"><img src="assets/icons/recovery.png" alt="Recovery icon" loading="lazy" /></div>
             <h3 class="card-title">Recovery</h3>
             <p class="card-body">Debug outages, SSL/DNS issues, Nextcloud issues, and application deployments.</p>
           </article>
-          <article class="card" data-animate>
-            <div class="card-icon"><img src="assets/icons/cloud-computing.png" alt="Cloud collaboration icon" loading="lazy" /></div>
+          <article class="service-card group" data-animate>
+            <div class="service-card-icon"><img src="assets/icons/cloud-computing.png" alt="Cloud collaboration icon" loading="lazy" /></div>
             <h3 class="card-title">Nextcloud & Collaboration</h3>
             <p class="card-body">Clean installs, upgrades, app tuning, Collabora/ONLYOFFICE integration - all set up reliably so you never have to worry about issues.</p>
           </article>
-          <article class="card" data-animate>
-            <div class="card-icon"><img src="assets/icons/shield.png" alt="Security icon" loading="lazy" /></div>
+          <article class="service-card group" data-animate>
+            <div class="service-card-icon"><img src="assets/icons/shield.png" alt="Security icon" loading="lazy" /></div>
             <h3 class="card-title">Security</h3>
             <p class="card-body">Security is always priority number one when we handle your systems.</p>
           </article>
-          <article class="card" data-animate>
-            <div class="card-icon"><img src="assets/icons/lock.png" alt="Performance and scaling icon" loading="lazy" /></div>
+          <article class="service-card group" data-animate>
+            <div class="service-card-icon"><img src="assets/icons/lock.png" alt="Performance and scaling icon" loading="lazy" /></div>
             <h3 class="card-title">Performance & Scaling</h3>
             <p class="card-body">Optimize caching, storage, and compute footprints. Baseline metrics, right-size resources, and remove bottlenecks.</p>
           </article>
-          <article class="card" data-animate>
-            <div class="card-icon"><img src="assets/icons/box-truck.png" alt="Platform migrations icon" loading="lazy" /></div>
+          <article class="service-card group" data-animate>
+            <div class="service-card-icon"><img src="assets/icons/box-truck.png" alt="Platform migrations icon" loading="lazy" /></div>
             <h3 class="card-title">Platform Migrations</h3>
             <p class="card-body">We can help with seamless migrations to new platforms, ensuring minimal downtime and data integrity.</p>
           </article>
-          <article class="card" data-animate>
-            <div class="card-icon"><img src="assets/icons/calendar.png" alt="Flexible support icon" loading="lazy" /></div>
+          <article class="service-card group" data-animate>
+            <div class="service-card-icon"><img src="assets/icons/calendar.png" alt="Flexible support icon" loading="lazy" /></div>
             <h3 class="card-title">Flexible Support</h3>
             <p class="card-body">Simply contact us for a tailored support experience that fits your needs.</p>
           </article>
@@ -321,41 +369,97 @@
       </div>
     </section>
 
-    <!-- Contact CTA -->
-    <section id="contact" class="relative">
-      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="grid items-center gap-10 lg:grid-cols-12">
-          <div class="space-y-4 lg:col-span-7" data-animate>
-            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Contact & Support</h2>
-            <p class="text-neutral-600 dark:text-neutral-300">Don't hesitate to reach out for any of your IT needs.</p>
-            <div class="flex flex-wrap gap-3">
-              <button id="requestSupportBtnContact" class="btn-primary">Open a support request</button>
-              <a href="tel:+13072895340" class="btn-secondary">Call +1 (307) 289-5340</a>
-            </div>
+    <!-- Contact -->
+    <section id="contact" class="relative bg-neutral-50 py-20 dark:bg-neutral-950 lg:py-28">
+      <div class="mx-auto max-w-4xl px-4 lg:px-8">
+        <div class="text-center">
+          <h2 class="mb-4 text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl">Get in touch</h2>
+          <p class="mb-12 text-lg text-neutral-600 dark:text-neutral-400">Ready to get started? Reach out and we'll respond quickly.</p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <button id="requestSupportBtnContact" class="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-6 py-3 font-semibold text-white transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">
+              Request support
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+            </button>
+            <a href="tel:+13072895340" class="inline-flex items-center gap-2 font-semibold text-brand-600 transition hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              +1 (307) 289-5340
+            </a>
+            <!-- <a href="mailto:support@nexlink-it.com" class="inline-flex items-center gap-2 font-semibold text-brand-600 transition hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              support@nexlink-it.com
+            </a> -->
           </div>
         </div>
       </div>
     </section>
-    <footer class="border-t border-neutral-200 py-10 text-sm dark:border-neutral-800">
-      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:flex-row sm:text-left lg:px-8">
-        <div>
-          <div class="text-neutral-500 dark:text-neutral-400">© 2026 Nexlink IT LLC. All rights reserved.</div>
+
+    <footer class="border-t border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900/50">
+      <!-- Newsletter Section -->
+      <!-- <div class="border-b border-neutral-200 dark:border-neutral-800">
+        <div class="mx-auto max-w-7xl px-4 py-12 lg:px-8">
+          <div class="grid items-center gap-8 lg:grid-cols-2">
+            <div>
+              <h3 class="text-2xl font-bold tracking-tight">Stay updated with IT tips & insights</h3>
+              <p class="mt-2 text-neutral-600 dark:text-neutral-400">Get monthly tips on server management, security best practices, and Nextcloud updates.</p>
+            </div>
+            <form class="flex flex-col gap-3 sm:flex-row">
+              <input type="email" placeholder="Enter your email" class="flex-1 rounded-full border border-neutral-200 bg-white px-5 py-3 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 dark:border-neutral-800 dark:bg-neutral-900 dark:focus:border-brand-400" required />
+              <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-6 py-3 font-semibold text-white transition hover:bg-brand-500">
+                Subscribe
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+              </button>
+            </form>
+          </div>
         </div>
-        <div class="flex items-center gap-4">
-          <!-- Sitemap -->
-          <nav aria-label="Sitemap" class="flex flex-wrap gap-4 justify-center">
-            <a class="footer-link" href="index.html">Home</a>
-            <a class="footer-link" href="about.html">About</a>
-            <!-- <a class="footer-link" href="services.html">Services</a> -->
-            <!-- <a class="footer-link" href="portfolio.html">Portfolio</a> -->
-            <a class="footer-link" href="pricing.html">Pricing</a>
-            <a class="footer-link" href="case-studies/index.html">Case Studies</a>
-            <a class="footer-link" href="contact.html">Contact</a>
-            
-            <a class="footer-link" href="legal/terms-of-service.html">Customer Agreement</a>
-            <a class="footer-link" href="legal/privacy-policy.html">Privacy</a>
-            <a class="footer-link" href="credits.html">Credits</a>
-          </nav>
+      </div> -->
+
+      <!-- Main Footer -->
+      <div class="mx-auto max-w-7xl px-4 py-12 lg:px-8">
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Company Info -->
+          <div>
+            <img src="/assets/Image.png" alt="Nexlink IT logo" class="h-8 w-auto dark:brightness-0 dark:invert mb-4" loading="lazy" />
+            <p class="text-sm text-neutral-600 dark:text-neutral-400">Professional IT services for home and small business. Expert help with Linux, servers, hosting, and Nextcloud.</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="mb-4 text-sm font-semibold uppercase tracking-wide text-neutral-900 dark:text-white">Company</h4>
+            <nav class="flex flex-col gap-2 text-sm">
+              <a class="footer-link" href="index.html">Home</a>
+              <a class="footer-link" href="about.html">About</a>
+              <a class="footer-link" href="pricing.html">Pricing</a>
+              <a class="footer-link" href="case-studies/index.html">Case Studies</a>
+              <a class="footer-link" href="contact.html">Contact</a>
+            </nav>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h4 class="mb-4 text-sm font-semibold uppercase tracking-wide text-neutral-900 dark:text-white">Legal</h4>
+            <nav class="flex flex-col gap-2 text-sm">
+              <a class="footer-link" href="legal/terms-of-service.html">Customer Agreement</a>
+              <a class="footer-link" href="legal/privacy-policy.html">Privacy Policy</a>
+              <a class="footer-link" href="credits.html">Credits</a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-neutral-200 pt-8 text-sm dark:border-neutral-800 sm:flex-row">
+          <div class="text-neutral-500 dark:text-neutral-400">© 2026 Nexlink IT LLC. All rights reserved.</div>
+          <div class="flex items-center gap-4">
+            <!-- <a href="#" class="text-neutral-400 transition hover:text-brand-600 dark:hover:text-brand-400" aria-label="LinkedIn">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="#" class="text-neutral-400 transition hover:text-brand-600 dark:hover:text-brand-400" aria-label="Twitter">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a> -->
+            <a href="https://github.com/Nexlink-IT-LLC" class="text-neutral-400 transition hover:text-brand-600 dark:hover:text-brand-400" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
@@ -363,12 +467,14 @@
     <!-- Request Support Modal -->
     <div id="supportModal" class="invisible fixed inset-0 z-[100] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-      <div class="relative mx-4 w-full max-w-4xl scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
-        <div class="relative flex items-center justify-between border-b border-neutral-200 p-4 dark:border-neutral-800">
-          <h3 class="text-lg font-semibold">Request Support</h3>
-          <button id="supportModalClose" class="rounded-full p-2 text-xl text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900" aria-label="Close">&times;</button>
+      <div class="relative mx-4 w-full max-w-2xl scale-95 overflow-hidden rounded-xl bg-white shadow-xl transition dark:bg-neutral-950" data-modal-panel>
+        <div class="relative flex items-center justify-between border-b border-neutral-200 px-6 py-4 dark:border-neutral-800">
+          <h3 class="text-xl font-bold text-neutral-900 dark:text-white">Request Support</h3>
+          <button id="supportModalClose" class="rounded-lg p-2 text-neutral-500 transition hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-900 dark:hover:text-white" aria-label="Close">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
         </div>
-        <form id="supportForm" class="relative space-y-4 p-6">
+        <form id="supportForm" class="relative space-y-5 p-6">
           <div>
             <label for="serviceType" class="label">Service Type</label>
             <select id="serviceType" name="serviceType" class="input">
@@ -407,23 +513,17 @@
               </select>
             </div>
           </div>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div>
-              <label for="platform" class="label">Platform / Environment</label>
-              <select id="platform" name="platform" class="input">
-                <option>Linux</option>
-                <option>Windows Server</option>
-                <option>Docker</option>
-                <option>TrueNAS SCALE</option>
-                <option>Proxmox</option>
-                <option>Hosting/Cloud</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div>
-              <label for="versions" class="label">Version details (optional)</label>
-              <input id="versions" name="versions" type="text" class="input" placeholder="e.g., Ubuntu 22.04, Docker 27, Nextcloud 28.x" />
-            </div>
+          <div>
+            <label for="platform" class="label">Platform / Environment</label>
+            <select id="platform" name="platform" class="input">
+              <option>Linux</option>
+              <option>Windows Server</option>
+              <option>Docker</option>
+              <option>TrueNAS SCALE</option>
+              <option>Proxmox</option>
+              <option>Hosting/Cloud</option>
+              <option>Other</option>
+            </select>
           </div>
           <div>
             <label for="urgency" class="label">Urgency</label>
@@ -435,14 +535,14 @@
           </div>
           <div>
             <label for="message" class="label">How can we help?</label>
-            <textarea id="message" name="message" rows="4" class="input" placeholder="Short description (systems affected, errors, goals)"></textarea>
+            <textarea id="message" name="message" rows="5" class="input" placeholder="Describe your issue or question"></textarea>
           </div>
-          <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
-            <div class="text-xs text-neutral-500">You can also contact us via the Contact section or by US phone at (307) 289-5340.</div>
-            <div class="flex gap-3">
-              <button type="button" class="btn-secondary" data-close>Cancel</button>
-              <button type="submit" class="btn-primary">Send Request</button>
-            </div>
+          <div class="flex flex-col-reverse gap-3 border-t border-neutral-200 pt-5 dark:border-neutral-800 sm:flex-row sm:justify-end">
+            <button type="button" class="inline-flex items-center justify-center gap-2 rounded-lg border border-neutral-300 bg-white px-5 py-2.5 font-semibold text-neutral-700 transition hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-800" data-close>Cancel</button>
+            <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-5 py-2.5 font-semibold text-white transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">
+              Send Request
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
           </div>
         </form>
       </div>
@@ -451,13 +551,13 @@
     <!-- Success Modal -->
     <div id="successModal" class="invisible fixed inset-0 z-[110] grid place-items-center opacity-0 transition" aria-hidden="true" role="dialog" aria-modal="true">
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-      <div class="relative mx-4 w-full max-w-md scale-95 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-2xl outline-none ring-1 ring-neutral-900/5 transition dark:border-neutral-800 dark:bg-neutral-950" data-modal-panel>
-        <div class="relative p-6 text-center">
-          <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">âœ“</div>
-          <h3 class="text-lg font-semibold">Request sent successfully</h3>
-          <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300">Thanks! I'll get back to you shortly.</p>
+      <div class="relative mx-4 w-full max-w-md scale-95 overflow-hidden rounded-xl bg-white shadow-xl transition dark:bg-neutral-950" data-modal-panel>
+        <div class="relative p-8 text-center">
+          <div class="mx-auto mb-4 grid h-16 w-16 place-items-center rounded-full bg-emerald-100 text-2xl text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400">âœ"</div>
+          <h3 class="mb-2 text-xl font-bold text-neutral-900 dark:text-white">Request sent successfully</h3>
+          <p class="text-neutral-600 dark:text-neutral-400">Thanks! I'll get back to you shortly.</p>
           <div class="mt-6 flex justify-center">
-            <button id="successOk" class="btn-primary inline-flex items-center justify-center rounded-full bg-brand-600 px-5 py-2 font-semibold text-white shadow-glow transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">OK</button>
+            <button id="successOk" class="inline-flex items-center justify-center rounded-lg bg-brand-600 px-6 py-2.5 font-semibold text-white transition hover:bg-brand-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">Got it</button>
           </div>
         </div>
       </div>

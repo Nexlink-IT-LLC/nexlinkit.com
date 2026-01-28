@@ -6,6 +6,48 @@
   --brand-weak: #38bdf8;
 }
 
+/* Animated gradient mesh background for hero */
+.animated-gradient-mesh {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(31, 115, 209, 0.08) 0%, rgba(14, 165, 233, 0.05) 50%, rgba(56, 189, 248, 0.08) 100%);
+  animation: gradientShift 15s ease infinite;
+  z-index: 0;
+}
+
+.dark .animated-gradient-mesh {
+  background: linear-gradient(135deg, rgba(31, 115, 209, 0.03) 0%, rgba(14, 165, 233, 0.02) 50%, rgba(56, 189, 248, 0.03) 100%);
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; background-size: 200% 200%; }
+  50% { background-position: 100% 50%; background-size: 200% 200%; }
+}
+
+/* Hero gradient text */
+.text-gradient-hero {
+  background: linear-gradient(135deg, #1f73d1 0%, #0ea5e9 50%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientSlide 8s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradientSlide {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Enhanced shadow utilities */
+.shadow-glow-lg {
+  box-shadow: 0 10px 40px -10px rgba(31, 115, 209, 0.5);
+}
+
+.shadow-glow-xl {
+  box-shadow: 0 20px 60px -15px rgba(31, 115, 209, 0.6);
+}
+
 html, body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji"; }
 
 /* Icon utility */
@@ -201,6 +243,186 @@ html, body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe 
 @keyframes floaty {
   0% { transform: translate3d(-10%, -6%, 0) scale(1); }
   100% { transform: translate3d(6%, 10%, 0) scale(1.05); }
+}
+
+/* Trust marquee animation */
+.trust-marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 2rem;
+}
+
+.trust-marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  min-width: 100%;
+  animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgb(228 228 231);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(82 82 91);
+  white-space: nowrap;
+  transition: all var(--duration) var(--easing);
+}
+
+.dark .trust-badge {
+  background: rgba(23, 23, 23, 0.8);
+  border-color: rgb(38 38 38);
+  color: rgb(212 212 216);
+}
+
+.trust-badge:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .trust-badge:hover {
+  background: rgba(23, 23, 23, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Stat cards in hero */
+.stat-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(228 228 231);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  transition: all var(--duration) var(--easing);
+}
+
+.dark .stat-card {
+  background: rgba(12, 12, 12, 0.8);
+  border-color: rgb(46 46 46);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(31, 115, 209, 0.3);
+  border-color: rgba(31, 115, 209, 0.3);
+}
+
+/* Service cards */
+.service-card {
+  position: relative;
+  background: white;
+  border: 1px solid rgb(228 228 231);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  transition: all var(--duration) var(--easing);
+  overflow: hidden;
+}
+
+.dark .service-card {
+  background: rgb(12 12 12);
+  border-color: rgb(46 46 46);
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1f73d1, #0ea5e9, #38bdf8);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--duration) var(--easing);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px -18px rgba(31, 115, 209, 0.35);
+  border-color: rgba(31, 115, 209, 0.3);
+}
+
+.dark .service-card:hover {
+  box-shadow: 0 24px 48px -18px rgba(14, 165, 233, 0.25);
+}
+
+.service-card-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  transition: transform var(--duration) var(--easing);
+}
+
+.service-card-icon img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.service-card:hover .service-card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-card-arrow {
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  color: rgb(31 115 209);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all var(--duration) var(--easing);
+}
+
+.dark .service-card-arrow {
+  color: rgb(14 165 233);
+}
+
+.service-card:hover .service-card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Trust metric cards */
+.trust-metric-card {
+  background: white;
+  border: 1px solid rgb(228 228 231);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all var(--duration) var(--easing);
+}
+
+.dark .trust-metric-card {
+  background: rgb(12 12 12);
+  border-color: rgb(46 46 46);
+}
+
+.trust-metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.15);
+  border-color: rgb(200 200 200);
+}
+
+.dark .trust-metric-card:hover {
+  border-color: rgb(60 60 60);
 }
 
 @media (min-width: 640px) {

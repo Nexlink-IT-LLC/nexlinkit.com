@@ -554,14 +554,50 @@ const ctaThemeBtn = document.getElementById('ctaTheme');
 ctaThemeBtn?.addEventListener('click', toggleTheme);
 
 /* ========================================
+   Animated Counter for Stats
+   ======================================== */
+function animateCounter(element) {
+  const target = parseInt(element.getAttribute('data-counter'));
+  const duration = 2000; // 2 seconds
+  const start = 0;
+  const increment = target / (duration / 16); // 60fps
+  let current = start;
+
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      element.textContent = target + (target > 1 ? '+' : '');
+      clearInterval(timer);
+    } else {
+      element.textContent = Math.floor(current) + (target > 1 ? '+' : '');
+    }
+  }, 16);
+}
+
+// Observe counter elements
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+      entry.target.classList.add('counted');
+      animateCounter(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+// Observe all counter elements
+document.querySelectorAll('[data-counter]').forEach((element) => {
+  counterObserver.observe(element);
+});
+
+/* ========================================
    Initialization
    ======================================== */
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize theme
   initializeTheme();
-  
+
   // Add loaded class for CSS animations
-  document.body.classList.add('loaded');  
+  document.body.classList.add('loaded');
 });
 
 // Handle page visibility changes (for analytics if needed)

@@ -4,7 +4,7 @@
 
 **Professional IT services delivered with expertise and care.**
 
-🌐 **Live Site:** [nexlinkit.com](https://nexlinkit.com)
+**Live Site:** [nexlinkit.com](https://nexlinkit.com)
 
 ---
 
@@ -13,10 +13,10 @@
 This repository contains the source code for the official Nexlink IT LLC website. We provide professional IT services including Linux administration, server management, hosting solutions, Nextcloud deployments, and comprehensive technical support — at affordable prices with fast response times.
 
 **Key Highlights:**
-- 🚀 Average response time: 1 hour
-- 🌍 Europe-based, serving clients worldwide
-- 🔒 Secure, reliable infrastructure management
-- 💼 Over a year of operation with dozens of satisfied clients
+- Average response time: 1 hour
+- Europe-based, serving clients worldwide
+- Secure, reliable infrastructure management
+- Over a year of operation with dozens of satisfied clients
 
 ---
 
@@ -31,20 +31,31 @@ This repository contains the source code for the official Nexlink IT LLC website
 
 ## Project Structure
 
-```
-.
-├── index.html              # Homepage
-├── about.html              # About page
-├── contact.html            # Contact form & info
-├── pricing.html            # Service pricing
-├── styles.css              # Custom styles
-├── script.js               # Interactive functionality
-├── assets/                 # Images, icons, media
-├── case-studies/           # Client success stories
-├── campaigns/              # Marketing campaign pages
-├── legal/                  # Terms, privacy policy, agreements
-└── backend/                # Server-side logic (if applicable)
-```
+### Root Files
+- `index.html` - Homepage
+- `about.html` - About page
+- `contact.html` - Contact form and information
+- `pricing.html` - Service pricing
+- `credits.html` - Credits and acknowledgments
+- `maintenance.html` - Maintenance mode page
+- `styles.css` - Custom CSS styles
+- `script.js` - Interactive functionality and client-side logic
+- `robots.txt` - Search engine crawling directives
+- `favicon.ico` - Site favicon
+
+### Directories
+
+| Directory | Description |
+|-----------|-------------|
+| `assets/` | Images, icons, logos, and other media files |
+| `backend/` | Server-side scripts and API endpoints |
+| `campaigns/` | Marketing campaign landing pages (Nextcloud assessments, consultations, etc.) |
+| `case-studies/` | Client success stories and project showcases |
+| `legal/` | Legal documents (terms of service, privacy policy, remote access agreements) |
+| `archives/` | Archived versions of pages for historical reference |
+| `partials/` | Reusable HTML components and fragments |
+| `samples/` | Sample files and examples |
+| `old/` | Deprecated or legacy files kept for reference |
 
 ---
 
@@ -103,9 +114,9 @@ This repository is managed by Nexlink IT LLC. For internal contributions:
 
 **Nexlink IT LLC**
 
-📧 Email: [contact@nexlinkit.com](mailto:contact@nexlinkit.com)  
-🌐 Website: [nexlinkit.com](https://nexlinkit.com)  
-🐙 GitHub: [@Nexlink-IT-LLC](https://github.com/Nexlink-IT-LLC)
+Email: [contact@nexlinkit.com](mailto:contact@nexlinkit.com)  
+Website: [nexlinkit.com](https://nexlinkit.com)  
+GitHub: [@Nexlink-IT-LLC](https://github.com/Nexlink-IT-LLC)
 
 ---
 
@@ -117,4 +128,4 @@ This repository contains proprietary code. Unauthorized copying, modification, o
 
 ---
 
-**Built with care by the Nexlink IT team.** 🛡️
+**Built with care by the Nexlink IT team.**
